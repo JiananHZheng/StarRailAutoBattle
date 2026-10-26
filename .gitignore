@@ -1,0 +1,15 @@
+# Build output
+bin/
+obj/
+dist/
+publish/
+*.user
+.vs/
+TestResults/
+
+# Local secrets / machine-specific files
+.env
+.env.*
+
+# Local test shortcuts (point at paths on one person's computer)
+*.lnk

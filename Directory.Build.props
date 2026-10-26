@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Pin NuGet dependency versions in packages.lock.json for reproducible restores. -->
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+</Project>
