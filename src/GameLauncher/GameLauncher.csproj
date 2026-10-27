@@ -12,6 +12,10 @@
     <Product>StarRailAutoBattle 启动器</Product>
     <Version>1.0.0</Version>
     <SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
+    <!-- No packages of its own (OpenCvSharp and WebView2 come pinned through the referenced projects' lock files);
+         the SDK's ILLink pack appears only in the win-x64 publish restore and would make a lock file flip on every
+         publish. The SDK is pinned by global.json. -->
+    <RestorePackagesWithLockFile>false</RestorePackagesWithLockFile>
     <!-- IShellLink (.lnk reading) uses built-in COM interop; never trim it away. -->
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <PublishTrimmed>false</PublishTrimmed>
@@ -24,10 +28,13 @@
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
     <DebugType>none</DebugType>
+    <!-- Keep dist\ to the single exe (WebView2 ships API docs that would otherwise be copied next to it). -->
+    <PublishReferencesDocumentationFiles>false</PublishReferencesDocumentationFiles>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GameLauncher.Core\GameLauncher.Core.csproj" />
+    <ProjectReference Include="..\VideoRecorder\VideoRecorder.csproj" />
   </ItemGroup>
 
 </Project>

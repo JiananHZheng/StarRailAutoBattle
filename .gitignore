@@ -13,3 +13,6 @@ TestResults/
 
 # Local test shortcuts (point at paths on one person's computer)
 *.lnk
+
+# Action-axis knowledge base, test runs and inbox: local game screenshots/recordings (up to ~2 GB)
+axis-data/

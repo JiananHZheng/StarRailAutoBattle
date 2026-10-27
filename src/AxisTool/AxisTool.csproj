@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- axis record hosts the recorder's WPF/WebView2 window on its own STA thread. -->
+    <UseWPF>true</UseWPF>
+    <AssemblyName>axis</AssemblyName>
+    <RootNamespace>AxisTool</RootNamespace>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AxisRecognizer.Core\AxisRecognizer.Core.csproj" />
+    <ProjectReference Include="..\VideoRecorder\VideoRecorder.csproj" />
+  </ItemGroup>
+
+</Project>

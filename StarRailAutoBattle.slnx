@@ -1,9 +1,14 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/AxisRecognizer.Core/AxisRecognizer.Core.csproj" />
+    <Project Path="src/AxisTool/AxisTool.csproj" />
     <Project Path="src/GameLauncher.Core/GameLauncher.Core.csproj" />
     <Project Path="src/GameLauncher/GameLauncher.csproj" />
+    <Project Path="src/VideoRecorder/VideoRecorder.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/AxisRecognizer.Tests/AxisRecognizer.Tests.csproj" />
     <Project Path="tests/GameLauncher.Tests/GameLauncher.Tests.csproj" />
+    <Project Path="tests/VideoRecorder.Tests/VideoRecorder.Tests.csproj" />
   </Folder>
 </Solution>
