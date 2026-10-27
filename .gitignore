@@ -16,3 +16,7 @@ TestResults/
 
 # Action-axis knowledge base, test runs and inbox: local game screenshots/recordings (up to ~2 GB)
 axis-data/
+
+# Python
+__pycache__/
+*.pyc
