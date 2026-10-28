@@ -295,6 +295,79 @@ public class ScreenCueTests : IDisposable
         Assert.Equal(expected, CueReader.PhaseDots(frame, new Rect(0, 0, 1920, 1080)));
     }
 
+    /// <summary>
+    /// A synthetic round / action-value bar (121×35 at 1080p): pale cap, an hourglass-like mark, then the text with a
+    /// thin "|". Digits are drawn one by one at fixed positions, like the game's fixed-width font.
+    /// </summary>
+    private static Mat Bar(string text)
+    {
+        var bar = new Mat(35, 121, MatType.CV_8UC3, new Scalar(120, 60, 110));
+        Cv2.Rectangle(bar, new Rect(20, 9, 8, 17), new Scalar(230, 230, 235), -1);   // hourglass
+        var x = 38;
+        foreach (var ch in text)
+        {
+            if (ch == '|')
+            {
+                Cv2.Line(bar, new Point(x + 1, 8), new Point(x + 1, 27), new Scalar(235, 235, 240), 2);
+                x += 12;
+                continue;
+            }
+
+            Cv2.PutText(bar, ch.ToString(), new Point(x, 27), HersheyFonts.HersheySimplex, 0.65, new Scalar(240, 240, 245), 2);
+            x += 14;
+        }
+
+        return bar;
+    }
+
+    [Fact]
+    public void Round_and_action_value_are_read_from_learned_digits_and_unknown_digits_stay_unclear()
+    {
+        var kb = KnowledgeBase.Create(Path.Combine(_dir.Path, "kb"));
+        // Digits 5, 6 and 7 are never seen.
+        foreach (var label in new[] { "2|194", "2|380" })
+        {
+            using var sample = Bar(label);
+            kb.AddCueSample(CueNames.AvBar, label, sample, Source, "user", null);
+        }
+
+        kb.Commit("测试", ["合成轮次行动值条"]);
+        using var reader = new CueReader(kb);
+        Assert.Empty(reader.AvBarProblems);
+
+        // The bar somewhere down the axis column of a 1080p frame.
+        using var frame = new Mat(1080, 1920, MatType.CV_8UC3, new Scalar(70, 30, 50));
+        using (var bar = Bar("2|839"))
+        using (var place = new Mat(frame, new Rect(55, 610, 121, 35)))
+        {
+            bar.CopyTo(place);
+        }
+
+        var reading = reader.ReadAvBar(frame, new Rect(0, 0, 1920, 1080));
+        Assert.NotNull(reading);
+        Assert.Equal((2, 839), (reading.Round, reading.ActionValue));
+        Assert.InRange(reading.Rect.Y, 608, 612);
+
+        using var unknown = new Mat(1080, 1920, MatType.CV_8UC3, new Scalar(70, 30, 50));
+        using (var bar = Bar("2|567"))
+        using (var place = new Mat(unknown, new Rect(55, 610, 121, 35)))
+        {
+            bar.CopyTo(place);
+        }
+
+        Assert.Null(reader.ReadAvBar(unknown, new Rect(0, 0, 1920, 1080)));
+    }
+
+    [Fact]
+    public void Bar_labels_must_be_round_bar_value()
+    {
+        Assert.True(CueNames.IsAvBarLabel("2|194"));
+        Assert.True(CueNames.IsAvBarLabel("10|0"));
+        Assert.False(CueNames.IsAvBarLabel("2 194"));
+        Assert.False(CueNames.IsAvBarLabel("2|"));
+        Assert.Throws<ArgumentException>(() => CueNames.Check(CueNames.AvBar, "x|1"));
+    }
+
     [Fact]
     public void Turn_start_flash_shows_as_low_saturation_in_the_current_cell()
     {

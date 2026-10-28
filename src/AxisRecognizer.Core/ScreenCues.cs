@@ -15,6 +15,17 @@ public static class CueNames
     public const string Reticle = "reticle";
 
     /// <summary>
+    /// The bar under the action axis: hourglass, round number, "|", remaining action value. Labels are the reading,
+    /// e.g. "2|194" (see <see cref="IsAvBarLabel"/>).
+    /// </summary>
+    public const string AvBar = "av-bar";
+
+    public static bool IsAvBarLabel(string label) =>
+        label.Split('|') is [var round, var value]
+        && round.Length is >= 1 and <= 2 && value.Length is >= 1 and <= 4
+        && round.All(char.IsAsciiDigit) && value.All(char.IsAsciiDigit);
+
+    /// <summary>
     /// Big texts at the top center: "战斗开始" at the start of every wave ("战斗开始 2/2" when there are several),
     /// "结束战斗" when the battle ends, then "挑战成功" (with a mode subtitle above it) on the result screen.
     /// </summary>
@@ -42,12 +53,23 @@ public static class CueNames
         (Banner, "battle-start") => "“战斗开始”横幅",
         (Banner, "battle-end") => "“结束战斗”横幅",
         (Banner, "challenge-success") => "结算“挑战成功”",
+        (AvBar, _) => $"轮次 {label.Split('|')[0]}，剩余行动值 {label.Split('|').ElementAtOrDefault(1)}",
         (_, "none") => "无",
         _ => label,
     };
 
     public static void Check(string cue, string label)
     {
+        if (cue == AvBar)
+        {
+            if (!IsAvBarLabel(label))
+            {
+                throw new ArgumentException($"轮次行动值条的标签写成“轮次|行动值”，例如 2|194：{label}");
+            }
+
+            return;
+        }
+
         if (!Labels.TryGetValue(cue, out var labels))
         {
             throw new ArgumentException($"未知线索 {cue}（可用：{string.Join("、", Labels.Keys)}）。");
@@ -80,10 +102,12 @@ public sealed record ScreenCueFrame(
     double Banner = 0,
     double BannerX = 0,
     /// <summary>Lit boss phase dots (remaining phases); 0 when no boss bar is shown.</summary>
-    int PhaseDots = 0);
+    int PhaseDots = 0,
+    /// <summary>Round and remaining action value from the bar under the axis, or null when unclear.</summary>
+    AvBarReading? AvBar = null);
 
 /// <summary>Reads screen cues by comparing crops with the knowledge base's labeled cue samples (no model calls).</summary>
-public sealed class CueReader : IDisposable
+public sealed partial class CueReader : IDisposable
 {
     /// <summary>Edge maps of the reticle samples.</summary>
     private readonly List<Mat> _reticles = [];
@@ -116,7 +140,7 @@ public sealed class CueReader : IDisposable
     {
         _kb = kb;
         _feature = kb.Meta.Cues.AsFeatureSettings();
-        foreach (var sample in kb.Cues)
+        foreach (var sample in kb.Cues.Where(c => c.Excluded is null))
         {
             using var crop = kb.ReadCue(sample);
             if (sample.Cue == CueNames.Marker)
@@ -141,6 +165,12 @@ public sealed class CueReader : IDisposable
                 Cv2.CvtColor(crop, gray, ColorConversionCodes.BGR2GRAY);
                 gray.GetArray(out byte[] pixels);
                 _banners.Add((sample.Label, pixels, gray.Width, gray.Height));
+                continue;
+            }
+
+            if (sample.Cue == CueNames.AvBar)
+            {
+                LearnAvBar(sample.Label, crop);
                 continue;
             }
 
@@ -550,7 +580,8 @@ public sealed class CueReader : IDisposable
 
         var (bannerLabel, banner, bannerX) = ReadBanner(frame, axisResult.Content);
         return new ScreenCueFrame(marker, phase, brightness, saturation, BattleStartScore(frame, axisResult.Content),
-            ReadSelection(frame, axisResult.Content), bannerLabel, banner, bannerX, PhaseDots(frame, axisResult.Content));
+            ReadSelection(frame, axisResult.Content), bannerLabel, banner, bannerX, PhaseDots(frame, axisResult.Content),
+            ReadAvBar(frame, axisResult.Content));
     }
 
     /// <summary>Area of the basic-attack and skill buttons (bottom right), relative to game height (16:9).</summary>

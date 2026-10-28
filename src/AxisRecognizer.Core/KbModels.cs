@@ -236,6 +236,9 @@ public sealed class CueSample
 
     public int AddedInKbVersion { get; init; }
     public string? Notes { get; set; }
+
+    /// <summary>Set (with the reason) when the sample turned out wrong, e.g. a mislocated crop; it is kept but not used.</summary>
+    public string? Excluded { get; set; }
 }
 
 public sealed class CueSettings

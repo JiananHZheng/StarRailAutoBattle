@@ -139,8 +139,10 @@ internal static class Program
                                       phase-text：ally 我方行动中、enemy 敌方行动中、none；
                                       reticle：main 主目标圈，需加 --center x,y（以游戏画面高度为单位）指明圈心；
                                       banner：battle-start “战斗开始”、battle-end “结束战斗”、challenge-success 结算“挑战成功”，需加 --rect x,y,w,h
-                                      （同上，只框这四个字，取自 1080p 画面））
+                                      （同上，只框这四个字，取自 1080p 画面）；
+                                      av-bar：行动轴下方的轮次行动值条，标签写读数如 2|194；第一次加 --rect 框整条（取自 1080p），之后可省略，自动定位）
               axis cue relabel --id C000001 --label 标签 --reason 依据
+              axis cue exclude --id C000001 --reason 原因         停用取错的样本（文件保留，不再用于识别）
               axis cue list
               axis cue scan <视频> [--every 秒] [--start 秒] [--end 秒] [--sheet 标记拼图.jpg]
                                     （逐帧打印各线索的读数，供核对；--sheet 把每帧的标记裁剪和读数拼成一张图）
@@ -1216,9 +1218,24 @@ internal static class Program
                 }
 
                 Console.WriteLine($"共 {kb.Cues.Count} 个线索样本（知识库 v{kb.Version}）");
+                using (var check = new CueReader(kb))
+                {
+                    Console.WriteLine($"数字字形 {check.DigitGlyphs} 个");
+                    foreach (var problem in check.AvBarProblems)
+                    {
+                        Console.WriteLine("轮次行动值样本问题：" + problem);
+                    }
+                }
                 if (args.Get("geometry") is not null)
                 {
                     // Developer view: core geometry of every marker sample, to set the shape thresholds.
+                    foreach (var sample in kb.Cues.Where(c => c.Cue == CueNames.AvBar))
+                    {
+                        using var crop = kb.ReadCue(sample);
+                        var boxes = CueReader.SegmentGlyphs(crop).Select(g => $"x{g.Box.X} w{g.Box.Width} h{g.Box.Height}");
+                        Console.WriteLine($"{sample.Id}\t{sample.Label}\t{crop.Width}×{crop.Height}\t{string.Join("  ", boxes)}{(sample.Excluded is null ? "" : "\t（已停用）")}");
+                    }
+
                     foreach (var sample in kb.Cues.Where(c => c.Cue == CueNames.Marker))
                     {
                         using var crop = kb.ReadCue(sample);
@@ -1227,6 +1244,18 @@ internal static class Program
                     }
                 }
 
+                return 0;
+            }
+
+            case "exclude":
+            {
+                var id = args.Require("id");
+                var reason = args.Require("reason");
+                var sample = kb.Cues.FirstOrDefault(c => c.Id.Equals(id, StringComparison.OrdinalIgnoreCase))
+                    ?? throw new KeyNotFoundException($"知识库中没有线索样本 {id}。");
+                sample.Excluded = reason;
+                kb.Commit($"停用线索样本：{id}", [$"{sample.Cue} {id}（{sample.Label}）不再使用，文件保留；原因：{reason}"]);
+                Console.WriteLine($"已停用 {id}，知识库 v{kb.Version}");
                 return 0;
             }
 
@@ -1258,7 +1287,7 @@ internal static class Program
                 }
 
                 RelRect? relRect = null;
-                if (cue == CueNames.Banner)
+                if (cue == CueNames.Banner || (cue == CueNames.AvBar && args.Get("rect") is not null))
                 {
                     var v = args.Require("rect").Split(',').Select(t => double.Parse(t, CultureInfo.InvariantCulture)).ToArray();
                     relRect = v.Length == 4 ? new RelRect(v[0], v[1], v[2], v[3]) : throw new UsageException("--rect 应为 x,y,w,h（以游戏画面高度为单位，原点在左上角）。");
@@ -1290,11 +1319,12 @@ internal static class Program
                             CueNames.Marker => reader.MarkerRect(result),
                             CueNames.Reticle => center is { } p ? Geometry.Clamp(reader.ReticleRect(result.Content, p.X, p.Y), frame.Width, frame.Height) : null,
                             CueNames.Banner => Geometry.Clamp(relRect!.ToPixels(result.Content), frame.Width, frame.Height),
+                            CueNames.AvBar => relRect is { } bar ? Geometry.Clamp(bar.ToPixels(result.Content), frame.Width, frame.Height) : reader.LocateAvBar(frame, result.Content),
                             _ => reader.PhaseTextRect(result.Content, frame.Width, frame.Height),
                         };
                         if (rect is not { } r)
                         {
-                            details.Add($"{wanted:0.00} 秒：没有找到行动轴，跳过");
+                            details.Add($"{wanted:0.00} 秒：没有找到{(cue == CueNames.AvBar ? "轮次行动值条" : "行动轴")}，跳过");
                             continue;
                         }
 
@@ -1326,15 +1356,19 @@ internal static class Program
                 var sheetPath = args.Get("sheet");
                 var tiles = new List<Mat>();
                 Rect? lastCurrent = null;
-                Console.WriteLine("时间\t标记\t分数\t次选\t状态文字\t分数\t当前格亮度\t饱和度\t战斗开始\t选招\t横幅\t横幅中心\t阶段点");
+                var timing = new List<(double Axis, double Cues)>();
+                Console.WriteLine("时间\t标记\t分数\t次选\t状态文字\t分数\t当前格亮度\t饱和度\t战斗开始\t选招\t横幅\t横幅中心\t阶段点\t轮次|行动值");
                 try
                 {
                     foreach (var (time, frame) in VideoFrames.Sample(video, args.Double("every", 0.25), args.Double("start", 0), end))
                     {
                         using (frame)
                         {
+                            var watch = System.Diagnostics.Stopwatch.StartNew();
                             var result = recognizer.Recognize(frame);
+                            var axisMs = watch.Elapsed.TotalMilliseconds;
                             var cues = reader.ReadFrame(frame, result, lastCurrent);
+                            timing.Add((axisMs, watch.Elapsed.TotalMilliseconds - axisMs));
                             if (result.AxisFound && result.Slots.FirstOrDefault(s => s.Kind == SlotKind.Current) is { } cur)
                             {
                                 lastCurrent = cur.FeatureRect;
@@ -1353,7 +1387,8 @@ internal static class Program
                                 cues.Selection ?? "",
                                 $"{cues.BannerLabel} {cues.Banner.ToString("0.00", CultureInfo.InvariantCulture)}",
                                 cues.BannerX.ToString("0.000", CultureInfo.InvariantCulture),
-                                cues.PhaseDots.ToString(CultureInfo.InvariantCulture)));
+                                cues.PhaseDots.ToString(CultureInfo.InvariantCulture),
+                                cues.AvBar is { } av ? $"{av.Text} {av.Score:0.00}" : ""));
 
                             if (args.Get("probe") is not null && reader.MarkerRect(result) is { } pr)
                             {
@@ -1390,6 +1425,12 @@ internal static class Program
                                 tiles.Add(tile);
                             }
                         }
+                    }
+
+                    if (timing.Count > 0)
+                    {
+                        Console.WriteLine($"每帧用时：行动轴头像 平均 {timing.Average(t => t.Axis):0} ms、最长 {timing.Max(t => t.Axis):0} ms；" +
+                            $"画面线索 平均 {timing.Average(t => t.Cues):0} ms、最长 {timing.Max(t => t.Cues):0} ms（{timing.Count} 帧，不含解码）");
                     }
 
                     if (sheetPath is not null && tiles.Count > 0)

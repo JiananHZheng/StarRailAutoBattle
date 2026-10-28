@@ -507,7 +507,7 @@ public sealed class KnowledgeBase
         var png = ImageIO.EncodePng(crop);
         var sha = Convert.ToHexString(SHA256.HashData(png)).ToLowerInvariant();
         var id = "C" + (Cues.Count + 1).ToString("000000");
-        var file = Path.Combine("cues", cue, label, $"{id}.png");
+        var file = Path.Combine("cues", cue, CueFolder(label), $"{id}.png");
         Directory.CreateDirectory(Path.GetDirectoryName(P(file))!);
         File.WriteAllBytes(P(file), png);
         var sample = new CueSample
@@ -528,13 +528,16 @@ public sealed class KnowledgeBase
 
     public Mat ReadCue(CueSample sample) => ImageIO.Read(P(sample.File));
 
+    /// <summary>Folder for a cue label; readings like "2|194" can't be folder names as they are.</summary>
+    private static string CueFolder(string label) => label.Replace('|', '_');
+
     /// <summary>Moves a cue sample to another label (file and record). The caller commits.</summary>
     public CueSample RelabelCue(string id, string label)
     {
         var sample = Cues.FirstOrDefault(c => c.Id.Equals(id, StringComparison.OrdinalIgnoreCase))
             ?? throw new KeyNotFoundException($"知识库中没有线索样本 {id}。");
         CueNames.Check(sample.Cue, label);
-        var target = Path.Combine("cues", sample.Cue, label, Path.GetFileName(sample.File));
+        var target = Path.Combine("cues", sample.Cue, CueFolder(label), Path.GetFileName(sample.File));
         Directory.CreateDirectory(Path.GetDirectoryName(P(target))!);
         File.Move(P(sample.File), P(target), overwrite: false);
         sample.File = target;
