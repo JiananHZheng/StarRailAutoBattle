@@ -50,6 +50,8 @@ internal static class Program
                     return Test(words.ElementAtOrDefault(1) ?? "", args, dataRoot);
                 case "video":
                     return Video(words.ElementAtOrDefault(1) ?? "", args);
+                case "cue":
+                    return Cue(words.ElementAtOrDefault(1) ?? "", args, dataRoot);
                 case "record":
                     return Record(args, dataRoot);
                 case "help":
@@ -128,6 +130,20 @@ internal static class Program
                                       默认保存到 <数据目录>/recordings/）
               axis video probe <视频>
               axis video frames <视频> --out <目录> [--every 1.0] [--start 秒] [--end 秒]
+              axis video sheet <视频> --out <图.jpg> [--crop x,y,w,h（画面比例）] [--every 秒] [--start 秒] [--end 秒] [--cols 6] [--width 320]
+                                    （开发用：把多帧的同一区域拼成一张图，方便对照画面线索）
+
+            画面线索（行动轴以外的识别：当前格左侧标记、右下角状态文字、回合开始白闪、战斗开始）
+              axis cue add <视频> --at 秒[,秒…] --cue marker|phase-text --label 标签 [--label-source claude-assisted|user] [--notes 备注]
+                                    （marker：ally-main 青色圆点、ally-extra 青色四角星、enemy-main 红色圆点、boss-mechanism 红色菱形、none；
+                                      phase-text：ally 我方行动中、enemy 敌方行动中、none；
+                                      reticle：main 主目标圈，需加 --center x,y（以游戏画面高度为单位）指明圈心；
+                                      banner：battle-start “战斗开始”、battle-end “结束战斗”、challenge-success 结算“挑战成功”，需加 --rect x,y,w,h
+                                      （同上，只框这四个字，取自 1080p 画面））
+              axis cue relabel --id C000001 --label 标签 --reason 依据
+              axis cue list
+              axis cue scan <视频> [--every 秒] [--start 秒] [--end 秒] [--sheet 标记拼图.jpg]
+                                    （逐帧打印各线索的读数，供核对；--sheet 把每帧的标记裁剪和读数拼成一张图）
             """);
     }
 
@@ -1122,9 +1138,301 @@ internal static class Program
                 return 0;
             }
 
+            case "sheet":
+            {
+                // Contact sheet for studying screen cues: one region of many frames, tiled with their times.
+                var outFile = args.Require("out");
+                var crop = (args.Get("crop") ?? "0,0,1,1").Split(',').Select(v => double.Parse(v, CultureInfo.InvariantCulture)).ToArray();
+                if (crop.Length != 4)
+                {
+                    throw new UsageException("--crop 应为 x,y,w,h（画面比例 0–1）。");
+                }
+
+                var cols = (int)args.Double("cols", 6);
+                var tileWidth = (int)args.Double("width", 320);
+                double? end = args.Get("end") is { } e ? double.Parse(e, CultureInfo.InvariantCulture) : null;
+                var tiles = new List<Mat>();
+                try
+                {
+                    foreach (var (time, frame) in VideoFrames.Sample(video, args.Double("every", 1.0), args.Double("start", 0), end))
+                    {
+                        using (frame)
+                        {
+                            var rect = new Rect((int)(crop[0] * frame.Width), (int)(crop[1] * frame.Height),
+                                (int)(crop[2] * frame.Width), (int)(crop[3] * frame.Height)).Intersect(new Rect(0, 0, frame.Width, frame.Height));
+                            using var part = new Mat(frame, rect);
+                            var tile = new Mat();
+                            Cv2.Resize(part, tile, new Size(tileWidth, Math.Max(1, (int)Math.Round(rect.Height * (double)tileWidth / rect.Width))));
+                            Cv2.Rectangle(tile, new Rect(0, 0, 74, 20), Scalar.Black, -1);
+                            Cv2.PutText(tile, time.ToString("0.00", CultureInfo.InvariantCulture), new Point(3, 15), HersheyFonts.HersheySimplex, 0.5, Scalar.Yellow);
+                            tiles.Add(tile);
+                        }
+                    }
+
+                    if (tiles.Count == 0)
+                    {
+                        throw new UsageException("这个区间没有帧。");
+                    }
+
+                    var rows = (tiles.Count + cols - 1) / cols;
+                    var th = tiles[0].Height;
+                    using var sheet = new Mat(rows * (th + 2), cols * (tileWidth + 2), MatType.CV_8UC3, new Scalar(40, 40, 40));
+                    for (var i = 0; i < tiles.Count; i++)
+                    {
+                        var h = Math.Min(th, tiles[i].Height);
+                        using var src = new Mat(tiles[i], new Rect(0, 0, tileWidth, h));
+                        using var dst = new Mat(sheet, new Rect(i % cols * (tileWidth + 2), i / cols * (th + 2), tileWidth, h));
+                        src.CopyTo(dst);
+                    }
+
+                    ImageIO.WriteJpeg(outFile, sheet, 90);
+                    Console.WriteLine($"已拼接 {tiles.Count} 帧到 {outFile}");
+                }
+                finally
+                {
+                    tiles.ForEach(t => t.Dispose());
+                }
+
+                return 0;
+            }
+
             default:
                 throw new UsageException($"未知 video 子命令：{sub}");
         }
+    }
+
+    // ---------------- cue ----------------
+
+    private static int Cue(string sub, Args args, string dataRoot)
+    {
+        var kb = KnowledgeBase.Load(KbRoot(dataRoot));
+        switch (sub)
+        {
+            case "list":
+            {
+                foreach (var group in kb.Cues.GroupBy(c => (c.Cue, c.Label)).OrderBy(g => g.Key.Cue).ThenBy(g => g.Key.Label))
+                {
+                    Console.WriteLine($"{group.Key.Cue}\t{group.Key.Label}\t{CueNames.Describe(group.Key.Cue, group.Key.Label)}\t{group.Count()} 个");
+                }
+
+                Console.WriteLine($"共 {kb.Cues.Count} 个线索样本（知识库 v{kb.Version}）");
+                if (args.Get("geometry") is not null)
+                {
+                    // Developer view: core geometry of every marker sample, to set the shape thresholds.
+                    foreach (var sample in kb.Cues.Where(c => c.Cue == CueNames.Marker))
+                    {
+                        using var crop = kb.ReadCue(sample);
+                        var g = CueReader.GlyphGeometry(crop);
+                        Console.WriteLine($"{sample.Id}\t{sample.Label}\t{(g is { } v ? $"面积 {v.Area:0.0000}\t轴/斜 {v.AxisRatio:0.00}\t→ {CueReader.ShapeByGeometry(sample.Label.StartsWith("ally", StringComparison.Ordinal), v.Area) ?? "?"}" : "无核心")}");
+                    }
+                }
+
+                return 0;
+            }
+
+            case "relabel":
+            {
+                var id = args.Require("id");
+                var label = args.Require("label");
+                var reason = args.Require("reason");
+                var sample = kb.RelabelCue(id, label);
+                kb.Commit($"线索样本改标签：{id} → {label}", [$"{sample.Cue} {id} 改为 {label}（{CueNames.Describe(sample.Cue, label)}）；依据：{reason}"]);
+                Console.WriteLine($"已把 {id} 改为 {label}，知识库 v{kb.Version}");
+                return 0;
+            }
+
+            case "add":
+            {
+                var video = args.Positional.ElementAtOrDefault(2) ?? throw new UsageException("缺少视频路径。");
+                var cue = args.Require("cue");
+                var label = args.Require("label");
+                CueNames.Check(cue, label);
+                var labelSource = args.Get("label-source") ?? "claude-assisted";
+                var times = args.Require("at").Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                    .Select(t => double.Parse(t, CultureInfo.InvariantCulture)).Order().ToList();
+                (double X, double Y)? center = null;
+                if (cue == CueNames.Reticle)
+                {
+                    var xy = args.Require("center").Split(',').Select(v => double.Parse(v, CultureInfo.InvariantCulture)).ToArray();
+                    center = xy.Length == 2 ? (xy[0], xy[1]) : throw new UsageException("--center 应为 x,y（以游戏画面高度为单位，原点在左上角）。");
+                }
+
+                RelRect? relRect = null;
+                if (cue == CueNames.Banner)
+                {
+                    var v = args.Require("rect").Split(',').Select(t => double.Parse(t, CultureInfo.InvariantCulture)).ToArray();
+                    relRect = v.Length == 4 ? new RelRect(v[0], v[1], v[2], v[3]) : throw new UsageException("--rect 应为 x,y,w,h（以游戏画面高度为单位，原点在左上角）。");
+                }
+
+                var recognizer = new Recognizer(kb);
+                using var reader = new CueReader(kb);
+                var origin = OriginOf(video);
+                var details = new List<string>();
+                var pending = new Queue<double>(times);
+                foreach (var (time, frame) in VideoFrames.Sample(video, VideoRecognition.DefaultEvery, Math.Max(0, times[0] - 0.1), times[^1] + 0.1))
+                {
+                    using (frame)
+                    {
+                        if (pending.Count == 0)
+                        {
+                            break;
+                        }
+
+                        if (time + 0.5 * VideoRecognition.DefaultEvery < pending.Peek())
+                        {
+                            continue;
+                        }
+
+                        var wanted = pending.Dequeue();
+                        var result = recognizer.Recognize(frame);
+                        Rect? rect = cue switch
+                        {
+                            CueNames.Marker => reader.MarkerRect(result),
+                            CueNames.Reticle => center is { } p ? Geometry.Clamp(reader.ReticleRect(result.Content, p.X, p.Y), frame.Width, frame.Height) : null,
+                            CueNames.Banner => Geometry.Clamp(relRect!.ToPixels(result.Content), frame.Width, frame.Height),
+                            _ => reader.PhaseTextRect(result.Content, frame.Width, frame.Height),
+                        };
+                        if (rect is not { } r)
+                        {
+                            details.Add($"{wanted:0.00} 秒：没有找到行动轴，跳过");
+                            continue;
+                        }
+
+                        using var crop = new Mat(frame, r);
+                        var sample = kb.AddCueSample(cue, label, crop,
+                            new SourceInfo { Type = "user-video", Origin = $"{origin}@{time.ToString("0.000", CultureInfo.InvariantCulture)}", License = "本地算法沙箱内研究使用" },
+                            labelSource, args.Get("notes"));
+                        details.Add($"{sample.Id}：{cue} = {label}（{CueNames.Describe(cue, label)}），{time:0.000} 秒");
+                    }
+                }
+
+                foreach (var missed in pending)
+                {
+                    details.Add($"{missed:0.00} 秒：视频里没有这一帧，跳过");
+                }
+
+                kb.Commit($"添加画面线索样本：{cue} = {label}", details);
+                details.ForEach(Console.WriteLine);
+                Console.WriteLine($"知识库 v{kb.Version}");
+                return 0;
+            }
+
+            case "scan":
+            {
+                var video = args.Positional.ElementAtOrDefault(2) ?? throw new UsageException("缺少视频路径。");
+                double? end = args.Get("end") is { } e ? double.Parse(e, CultureInfo.InvariantCulture) : null;
+                var recognizer = new Recognizer(kb);
+                var reader = new CueReader(kb);
+                var sheetPath = args.Get("sheet");
+                var tiles = new List<Mat>();
+                Rect? lastCurrent = null;
+                Console.WriteLine("时间\t标记\t分数\t次选\t状态文字\t分数\t当前格亮度\t饱和度\t战斗开始\t选招\t横幅\t横幅中心\t阶段点");
+                try
+                {
+                    foreach (var (time, frame) in VideoFrames.Sample(video, args.Double("every", 0.25), args.Double("start", 0), end))
+                    {
+                        using (frame)
+                        {
+                            var result = recognizer.Recognize(frame);
+                            var cues = reader.ReadFrame(frame, result, lastCurrent);
+                            if (result.AxisFound && result.Slots.FirstOrDefault(s => s.Kind == SlotKind.Current) is { } cur)
+                            {
+                                lastCurrent = cur.FeatureRect;
+                            }
+                            var m = cues.Marker;
+                            Console.WriteLine(string.Join('\t',
+                                time.ToString("0.00", CultureInfo.InvariantCulture),
+                                m is null ? "（无行动轴）" : m.Label ?? $"?{m.Best}",
+                                m is null ? "" : m.Score.ToString("0.000", CultureInfo.InvariantCulture),
+                                m?.Second is null ? "" : $"{m.Second} {m.SecondScore:0.000}",
+                                cues.PhaseText.Label ?? $"?{cues.PhaseText.Best}",
+                                cues.PhaseText.Score.ToString("0.000", CultureInfo.InvariantCulture),
+                                cues.CellBrightness.ToString("0", CultureInfo.InvariantCulture),
+                                cues.CellSaturation.ToString("0", CultureInfo.InvariantCulture),
+                                cues.BattleStart.ToString("0.00", CultureInfo.InvariantCulture),
+                                cues.Selection ?? "",
+                                $"{cues.BannerLabel} {cues.Banner.ToString("0.00", CultureInfo.InvariantCulture)}",
+                                cues.BannerX.ToString("0.000", CultureInfo.InvariantCulture),
+                                cues.PhaseDots.ToString(CultureInfo.InvariantCulture)));
+
+                            if (args.Get("probe") is not null && reader.MarkerRect(result) is { } pr)
+                            {
+                                // Developer probe: glyph pixel counts and the HSV of the crop center.
+                                using var crop = new Mat(frame, pr);
+                                var (_, teal, red) = CueReader.GlyphMask(crop);
+                                using var hsv = new Mat();
+                                Cv2.CvtColor(crop, hsv, ColorConversionCodes.BGR2HSV);
+                                using var center = new Mat(hsv, new Rect(crop.Width / 2 - 2, crop.Height / 2 - 2, 4, 4));
+                                var c = Cv2.Mean(center);
+                                Console.WriteLine($"\t探针：青 {teal} 红 {red} / {crop.Width * crop.Height}，中心 HSV {c.Val0:0} {c.Val1:0} {c.Val2:0}");
+                                var circles = CueReader.ButtonCircles(frame, result.Content);
+                                Console.WriteLine("\t按钮圆：" + (circles.Count == 0 ? "无" : string.Join("  ", circles.Select(b => $"({b.X:0.000},{b.Y:0.000}) r={b.R:0.000}"))));
+                                var dots = CueReader.PhaseDotCandidates(frame, result.Content);
+                                Console.WriteLine("\t阶段点候选：" + (dots.Count == 0 ? "无" : string.Join("  ", dots.Select(d => $"({d.X:0.000},{d.Y:0.000}) {d.W}×{d.H} 面积{d.Area} 红{d.Glow}{(d.Lit ? " ✓" : "")}"))));
+                                var reticles = reader.TargetReticles(frame, result.Content);
+                                Console.WriteLine("\t目标圈：" + (reticles.Count == 0 ? "无" : string.Join("  ", reticles.Select(b => $"({b.X:0.000},{b.Y:0.000}) ×{b.Scale:0.00} {b.Score:0.00}"))));                                if (Directory.Exists(args.Get("probe")))
+                                {
+                                    using var phase = new Mat(frame, reader.PhaseTextRect(result.Content, frame.Width, frame.Height));
+                                    using var side = reader.SideCrop(phase);
+                                    ImageIO.WritePng(Path.Combine(args.Get("probe")!, $"side_{time:000.00}.png"), side);
+                                    Console.WriteLine($"\t状态文字裁剪 {phase.Width}×{phase.Height}，前两字 {side.Width}×{side.Height}");
+                                }
+                            }
+
+                            if (sheetPath is not null && reader.MarkerRect(result) is { } r)
+                            {
+                                using var crop = new Mat(frame, r);
+                                var tile = new Mat();
+                                Cv2.Resize(crop, tile, new Size(72, 72));
+                                Cv2.Rectangle(tile, new Rect(0, 0, 72, 14), Scalar.Black, -1);
+                                var tag = m?.Label switch { "ally-main" => "AM", "ally-extra" => "AX", "enemy-main" => "EM", "boss-mechanism" => "BM", "none" => "--", _ => "??" };
+                                Cv2.PutText(tile, $"{time:0.0} {tag}", new Point(2, 11), HersheyFonts.HersheySimplex, 0.36, Scalar.Yellow);
+                                tiles.Add(tile);
+                            }
+                        }
+                    }
+
+                    if (sheetPath is not null && tiles.Count > 0)
+                    {
+                        const int cols = 20;
+                        using var sheet = new Mat((tiles.Count + cols - 1) / cols * 74, cols * 74, MatType.CV_8UC3, new Scalar(40, 40, 40));
+                        for (var i = 0; i < tiles.Count; i++)
+                        {
+                            using var dst = new Mat(sheet, new Rect(i % cols * 74, i / cols * 74, 72, 72));
+                            tiles[i].CopyTo(dst);
+                        }
+
+                        ImageIO.WriteJpeg(sheetPath, sheet, 90);
+                        Console.WriteLine($"标记拼图：{sheetPath}");
+                    }
+                }
+                finally
+                {
+                    tiles.ForEach(t => t.Dispose());
+                }
+
+                return 0;
+            }
+
+            default:
+                throw new UsageException($"未知 cue 子命令：{sub}");
+        }
+    }
+
+    /// <summary>"BV1EM8Q69EqZ recording.avi" for a recorder folder (its info file names the video), else the file name.</summary>
+    private static string OriginOf(string video)
+    {
+        var info = Path.Combine(Path.GetDirectoryName(Path.GetFullPath(video))!, BilibiliRecorder.InfoFileName);
+        if (File.Exists(info))
+        {
+            var id = File.ReadLines(info).FirstOrDefault(l => l.StartsWith("视频编号：", StringComparison.Ordinal))?["视频编号：".Length..];
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                return $"{id} {Path.GetFileName(video)}";
+            }
+        }
+
+        return Path.GetFileName(video);
     }
 
     // ---------------- record ----------------

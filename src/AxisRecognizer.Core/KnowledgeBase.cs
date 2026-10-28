@@ -15,9 +15,10 @@ namespace AxisRecognizer;
 /// kb/screenshots.json   original screenshots with source, license, split, truth labels
 /// kb/samples.json       cropped avatar samples with labels and provenance
 /// kb/layouts.json       action-axis layouts in relative coordinates
+/// kb/cues.json          labeled crops of other screen cues (side marker, phase text…)
 /// kb/changelog.md       one entry per change
 /// kb/corrections.log    misrecognitions reported by the user
-/// kb/screenshots/*.png, kb/samples/&lt;unit&gt;/*.png
+/// kb/screenshots/*.png, kb/samples/&lt;unit&gt;/*.png, kb/cues/&lt;cue&gt;/&lt;label&gt;/*.png
 /// </code>
 /// </summary>
 public sealed class KnowledgeBase
@@ -43,6 +44,7 @@ public sealed class KnowledgeBase
     public List<SampleRecord> Samples { get; private set; } = [];
     public List<LayoutProfile> Layouts { get; private set; } = [];
     public List<WebLinkRecord> WebLinks { get; private set; } = [];
+    public List<CueSample> Cues { get; private set; } = [];
 
     public int Version => Meta.Version;
     public RecognitionSettings Settings => Meta.Settings;
@@ -88,6 +90,7 @@ public sealed class KnowledgeBase
             Samples = ReadJson<List<SampleRecord>>(Path.Combine(root, "samples.json")) ?? [],
             Layouts = ReadJson<List<LayoutProfile>>(Path.Combine(root, "layouts.json")) ?? [],
             WebLinks = ReadJson<List<WebLinkRecord>>(Path.Combine(root, "web_links.json")) ?? [],
+            Cues = ReadJson<List<CueSample>>(Path.Combine(root, "cues.json")) ?? [],
         };
         return kb;
     }
@@ -112,6 +115,7 @@ public sealed class KnowledgeBase
         WriteJson(P("samples.json"), Samples);
         WriteJson(P("layouts.json"), Layouts);
         WriteJson(P("web_links.json"), WebLinks);
+        WriteJson(P("cues.json"), Cues);
         WriteUnitsText();
 
         var entry = new StringBuilder();
@@ -130,11 +134,21 @@ public sealed class KnowledgeBase
     public string ContentHash()
     {
         using var sha = SHA256.Create();
-        var text = string.Join("\n",
+        var parts = new List<string>
+        {
             JsonSerializer.Serialize(Meta.Settings, JsonOptions),
             JsonSerializer.Serialize(Units, JsonOptions),
             JsonSerializer.Serialize(Samples, JsonOptions),
-            JsonSerializer.Serialize(Layouts, JsonOptions));
+            JsonSerializer.Serialize(Layouts, JsonOptions),
+        };
+        if (Cues.Count > 0)
+        {
+            // Only once cues exist, so the hash of a KB without them stays what it was.
+            parts.Add(JsonSerializer.Serialize(Cues, JsonOptions));
+            parts.Add(JsonSerializer.Serialize(Meta.Cues, JsonOptions));
+        }
+
+        var text = string.Join("\n", parts);
         return Convert.ToHexString(sha.ComputeHash(Encoding.UTF8.GetBytes(text)))[..12].ToLowerInvariant();
     }
 
@@ -481,6 +495,50 @@ public sealed class KnowledgeBase
             shot.Truth[sample.Slot] = unit.Id;
         }
 
+        return sample;
+    }
+
+    // ---------- Screen cues ----------
+
+    /// <summary>Stores a labeled cue crop (PNG). The caller commits.</summary>
+    public CueSample AddCueSample(string cue, string label, Mat crop, SourceInfo source, string labelSource, string? notes)
+    {
+        CueNames.Check(cue, label);
+        var png = ImageIO.EncodePng(crop);
+        var sha = Convert.ToHexString(SHA256.HashData(png)).ToLowerInvariant();
+        var id = "C" + (Cues.Count + 1).ToString("000000");
+        var file = Path.Combine("cues", cue, label, $"{id}.png");
+        Directory.CreateDirectory(Path.GetDirectoryName(P(file))!);
+        File.WriteAllBytes(P(file), png);
+        var sample = new CueSample
+        {
+            Id = id,
+            Cue = cue,
+            Label = label,
+            File = file,
+            Sha256 = sha,
+            Source = source,
+            LabelSource = labelSource,
+            AddedInKbVersion = Version + 1,
+            Notes = notes,
+        };
+        Cues.Add(sample);
+        return sample;
+    }
+
+    public Mat ReadCue(CueSample sample) => ImageIO.Read(P(sample.File));
+
+    /// <summary>Moves a cue sample to another label (file and record). The caller commits.</summary>
+    public CueSample RelabelCue(string id, string label)
+    {
+        var sample = Cues.FirstOrDefault(c => c.Id.Equals(id, StringComparison.OrdinalIgnoreCase))
+            ?? throw new KeyNotFoundException($"知识库中没有线索样本 {id}。");
+        CueNames.Check(sample.Cue, label);
+        var target = Path.Combine("cues", sample.Cue, label, Path.GetFileName(sample.File));
+        Directory.CreateDirectory(Path.GetDirectoryName(P(target))!);
+        File.Move(P(sample.File), P(target), overwrite: false);
+        sample.File = target;
+        sample.Label = label;
         return sample;
     }
 

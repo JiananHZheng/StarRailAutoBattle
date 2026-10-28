@@ -25,7 +25,8 @@ public enum SkillKind
 
 /// <summary>
 /// The main target: "敌2" (counted from the left), "敌(-1)" (relative to the boss, 敌(0)), "我3" (ally, from the left).
-/// Left out = the game's default target.
+/// Left out = the boss (敌(0)), or the game's default target when there is no boss. Target reticles can't be read
+/// reliably yet, so sequences taken from videos leave it out.
 /// </summary>
 public sealed record TargetRef(bool Enemy, bool BossRelative, int Number)
 {
@@ -150,7 +151,8 @@ public sealed record UnitLookup(string? UnitId, string? Error)
 /// 1 U0005 普攻 敌(0)
 /// == 转阶段 ==  @ 行动值=50~100
 /// </code>
-/// Enemy actions are not written. Skill and target may be left out (the target then is the game's default). Text
+/// Enemy actions are not written. Skill and target may be left out (the target then is the boss, or the game's
+/// default without one). Text
 /// after # is a comment; full-width （）＝～＠ are accepted, and an older "→敌2" still reads as "敌2".
 /// </summary>
 public sealed partial class ExpectedSequence

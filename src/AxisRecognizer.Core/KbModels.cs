@@ -215,6 +215,70 @@ public sealed class RecognitionSettings
     public double GroupJoinScore { get; set; } = 0.72;
 }
 
+/// <summary>
+/// A labeled crop of a screen cue other than an avatar: the current cell's side marker (ally/enemy, main/extra),
+/// the bottom-right phase text, and so on. Readers compare a frame's crop with these, like avatars.
+/// </summary>
+public sealed class CueSample
+{
+    public required string Id { get; init; }
+
+    /// <summary>Which cue: see <see cref="CueNames"/>.</summary>
+    public required string Cue { get; init; }
+
+    public required string Label { get; set; }
+    public required string File { get; set; }
+    public required string Sha256 { get; init; }
+    public required SourceInfo Source { get; init; }
+
+    /// <summary>user (told by the user), claude-assisted (labeled by Claude from an open video, needs user confirmation).</summary>
+    public required string LabelSource { get; init; }
+
+    public int AddedInKbVersion { get; init; }
+    public string? Notes { get; set; }
+}
+
+public sealed class CueSettings
+{
+    public int FeatureSize { get; set; } = 24;
+    public double Inset { get; set; } = 0.0;
+    public double WeightGray { get; set; } = 0.3;
+    public double WeightEdge { get; set; } = 0.3;
+    public double WeightHist { get; set; } = 0.4;
+
+    /// <summary>Minimum score and gap to the best other label for a confident reading.</summary>
+    public double AcceptScore { get; set; } = 0.6;
+
+    public double AcceptMargin { get; set; } = 0.04;
+
+    /// <summary>Side of the marker crop, in notch radii, centered on the notch of the current cell's left edge.</summary>
+    public double MarkerSize { get; set; } = 3.4;
+
+    /// <summary>Bottom-right phase text box ("我方行动中"/"敌方行动中"), relative to game height (16:9).</summary>
+    public RelRect PhaseText { get; set; } = new(1.53, 0.895, 0.24, 0.055);
+
+    /// <summary>
+    /// The first two characters ("我方" / "敌方") as fractions of the phase-text crop. The whole box can't tell the two
+    /// apart (the shared "行动中" dominates), so the side is read from this part alone.
+    /// </summary>
+    public RelRect PhaseSide { get; set; } = new(0.247, 0.164, 0.252, 0.727);
+
+    /// <summary>Side of a stored target-reticle sample, relative to game height (the main target's ring is r ≈ 0.04).</summary>
+    public double ReticleSide { get; set; } = 0.11;
+
+    /// <summary>Minimum edge correlation for a reticle match.</summary>
+    public double ReticleScore { get; set; } = 0.5;
+
+    internal RecognitionSettings AsFeatureSettings() => new()
+    {
+        FeatureSize = FeatureSize,
+        Inset = Inset,
+        WeightGray = WeightGray,
+        WeightEdge = WeightEdge,
+        WeightHist = WeightHist,
+    };
+}
+
 public sealed class KbMeta
 {
     public int Version { get; set; }
@@ -222,4 +286,5 @@ public sealed class KbMeta
     public string Game { get; init; } = "崩坏：星穹铁道";
     public string Scope { get; init; } = "3.0 版本至今的行动轴单位头像";
     public RecognitionSettings Settings { get; init; } = new();
+    public CueSettings Cues { get; init; } = new();
 }
