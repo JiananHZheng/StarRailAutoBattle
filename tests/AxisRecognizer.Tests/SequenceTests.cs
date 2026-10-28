@@ -152,6 +152,25 @@ public class SequenceTests
     }
 
     [Fact]
+    public void Flickering_main_axis_cell_does_not_hide_a_turn()
+    {
+        var analyzer = new SequenceAnalyzer(null!, stableFrames: 3);
+        FrameResult F(string current, params string[] main)
+        {
+            var slots = new List<SlotResult> { new("current", SlotKind.Current, 1, new Rect(), false, current, 1, []) };
+            slots.AddRange(main.Select((m, i) => new SlotResult($"main{i + 2}", SlotKind.Main, i + 2, new Rect(), false, m, 1, [])));
+            return new FrameResult(100, 100, new Rect(0, 0, 100, 100), "L", null, slots, 1);
+        }
+
+        // main3 alternates between two labels every frame; the current cell is steady.
+        var analysis = analyzer.Analyze([
+            (0.0, F("A", "B", "C")), (0.1, F("A", "B", "X")), (0.2, F("A", "B", "C")), (0.3, F("A", "B", "X")),
+            (0.4, F("B", "C", "A")), (0.5, F("B", "X", "A")), (0.6, F("B", "C", "A")),
+        ]);
+        Assert.Equal(["A", "B"], analysis.Actions.Select(a => a.State.Current));
+    }
+
+    [Fact]
     public void Frame_counts_follow_time_spans_at_any_sampling_rate()
     {
         var fast = ForInterval(null!, 1.0 / 15);

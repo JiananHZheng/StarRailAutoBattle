@@ -24,6 +24,13 @@ public static class ImageIO
         File.WriteAllBytes(path, bytes);
     }
 
+    public static void WriteJpeg(string path, Mat mat, int quality = 95)
+    {
+        Cv2.ImEncode(".jpg", mat, out var bytes, new ImageEncodingParam(ImwriteFlags.JpegQuality, quality));
+        Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(path))!);
+        File.WriteAllBytes(path, bytes);
+    }
+
     public static byte[] EncodePng(Mat mat)
     {
         Cv2.ImEncode(".png", mat, out var bytes);

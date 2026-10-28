@@ -226,7 +226,8 @@ public partial class MainWindow
             SetVideoStatus(StatusKind.Busy, "正在识别…", "正在逐帧识别行动轴（在本机运行，不调用大模型）。", progress: 0);
             var progress = new Progress<double>(f => VideoProgress.Value = f * 100);
             var result = await Task.Run(
-                () => VideoRecognition.Run(kb, new Recognizer(kb), videoPath, SampleInterval, recognizeStart, recognizeEnd, sourceLabel, progress, token),
+                () => VideoRecognition.Run(kb, new Recognizer(kb), videoPath, SampleInterval, recognizeStart, recognizeEnd, sourceLabel, progress, token, runDir,
+                    timeOffset: link is not null ? start ?? 0 : 0),
                 token);
             var header = ResultText.Header(kb, "行动轴识别结果（工具首次生成，原始结果只读；修改请用“编辑结果”打开副本）", "视频");
             VideoRunFiles.WriteResult(runDir, result with { Text = header + Environment.NewLine + result.Text });

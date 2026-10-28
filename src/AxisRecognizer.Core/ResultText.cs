@@ -19,15 +19,13 @@ public static class ResultText
             return unitId;
         }
 
-        var pending = unit.NameStatus == "candidate" ? "（名称待确认）" : string.Empty;
+        // Every unit is shown by its global id; the name (given by the user) is only a note after it.
+        var pending = (unit.NameStatus == "candidate" ? "（名称待确认）" : string.Empty) + (unit.Provisional ? "（临时）" : string.Empty);
         return unit.Kind switch
         {
-            UnitKind.Character => (unit.Name ?? unit.Id) + pending,
-            UnitKind.CharacterSummon => unit.Name is null ? $"角色召唤物（{unit.Id}）" : unit.Name + pending,
-            UnitKind.Monster => unit.Name is null ? unit.Id : $"{unit.Id} {unit.Name}{pending}",
-            UnitKind.MonsterSummon => $"{unit.Id} {(unit.Name ?? "怪物召唤物")}{pending}",
+            UnitKind.Empty => "空格",
             UnitKind.Marker or UnitKind.Attachment => unit.Name ?? unit.Id,
-            _ => "空格",
+            _ => unit.Name is null ? unit.Id + pending : $"{unit.Id} {unit.Name}{pending}",
         };
     }
 

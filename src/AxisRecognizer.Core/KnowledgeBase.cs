@@ -142,12 +142,14 @@ public sealed class KnowledgeBase
     {
         var sb = new StringBuilder();
         sb.AppendLine($"# 单位登记表（知识库 v{Meta.Version}，由 units.json 生成，请勿手改）");
-        sb.AppendLine("# 编号\t类型\t名称\t名称状态\t样本数\t备注");
-        foreach (var unit in Units.OrderBy(u => u.Kind).ThenBy(u => u.Id, StringComparer.Ordinal))
+        sb.AppendLine("# 编号\t类型\t名称\t名称状态\t样本数\t旧编号（别名）\t备注");
+        foreach (var unit in Units.OrderBy(u => u.Id, StringComparer.Ordinal))
         {
             var count = Samples.Count(s => s.UnitId == unit.Id);
             var notes = unit.MergedInto is null ? unit.Notes : $"已合并到 {unit.MergedInto}。{unit.Notes}";
-            sb.AppendLine($"{unit.Id}\t{KindText(unit.Kind)}\t{unit.Name ?? "-"}\t{unit.NameStatus}\t{count}\t{notes}");
+            var aliases = unit.Aliases.Count == 0 ? "-" : string.Join("、", unit.Aliases);
+            var status = unit.Provisional ? "临时（未核对）" : unit.NameStatus;
+            sb.AppendLine($"{unit.Id}\t{KindText(unit.Kind)}\t{unit.Name ?? "-"}\t{status}\t{count}\t{aliases}\t{notes}");
         }
 
         File.WriteAllText(P("units.txt"), sb.ToString(), new UTF8Encoding(false));
@@ -161,6 +163,7 @@ public sealed class KnowledgeBase
         UnitKind.MonsterSummon => "怪物召唤物",
         UnitKind.Marker => "非单位提醒条目",
         UnitKind.Attachment => "附属格（并入上一条目）",
+        UnitKind.Unclassified => "未分类",
         _ => "空格",
     };
 
@@ -176,7 +179,12 @@ public sealed class KnowledgeBase
 
     // ---------- Units ----------
 
-    public UnitRecord? FindUnit(string id) => Units.FirstOrDefault(u => string.Equals(u.Id, id, StringComparison.OrdinalIgnoreCase));
+    /// <summary>By global id or by any earlier id (alias).</summary>
+    public UnitRecord? FindUnit(string id) =>
+        Units.FirstOrDefault(u => string.Equals(u.Id, id, StringComparison.OrdinalIgnoreCase))
+        ?? Units.FirstOrDefault(u => u.Aliases.Contains(id, StringComparer.OrdinalIgnoreCase));
+
+    public static bool IsGlobalId(string id) => id.Length == 5 && id[0] == 'U' && id[1..].All(char.IsAsciiDigit);
 
     /// <summary>Follows merges to the unit that now owns the samples.</summary>
     public UnitRecord ResolveUnit(string id)
@@ -191,24 +199,11 @@ public sealed class KnowledgeBase
         return unit;
     }
 
-    public string NextId(UnitKind kind)
+    /// <summary>The next global id: one sequence for all kinds (the kind is a note, not part of the id).</summary>
+    public string NextId()
     {
-        var (prefix, digits) = kind switch
-        {
-            UnitKind.Monster => ("M", 4),
-            UnitKind.MonsterSummon => ("MS", 4),
-            UnitKind.CharacterSummon => ("CS", 3),
-            UnitKind.Marker => ("MK", 3),
-            UnitKind.Attachment => ("AT", 3),
-            _ => ("CH", 3),
-        };
-        var used = Units
-            .Select(u => u.Id)
-            .Where(id => id.StartsWith(prefix, StringComparison.Ordinal) && id.Length == prefix.Length + digits && id[prefix.Length..].All(char.IsDigit))
-            .Select(id => int.Parse(id[prefix.Length..]))
-            .DefaultIfEmpty(0)
-            .Max();
-        return prefix + (used + 1).ToString(new string('0', digits));
+        var used = Units.Select(u => u.Id).Where(IsGlobalId).Select(id => int.Parse(id[1..])).DefaultIfEmpty(0).Max();
+        return "U" + (used + 1).ToString("0000");
     }
 
     public UnitRecord AddUnit(UnitKind kind, string? id, string? name, string nameStatus, string? nameSource, string? notes)
@@ -218,14 +213,7 @@ public sealed class KnowledgeBase
             throw new ArgumentException("EMPTY 是内置单位，不能再添加。");
         }
 
-        if (kind == UnitKind.Character && string.IsNullOrWhiteSpace(id) && string.IsNullOrWhiteSpace(name))
-        {
-            throw new ArgumentException("角色需要名称（或指定编号）。");
-        }
-
-        id = string.IsNullOrWhiteSpace(id)
-            ? kind == UnitKind.Character ? "CH-" + name!.Trim() : NextId(kind)
-            : id.Trim();
+        id = string.IsNullOrWhiteSpace(id) ? NextId() : id.Trim();
         if (FindUnit(id) is not null)
         {
             throw new InvalidOperationException($"单位编号 {id} 已存在。");
@@ -243,6 +231,22 @@ public sealed class KnowledgeBase
         unit.History.Add($"{DateTimeOffset.Now:yyyy-MM-dd HH:mm} 创建（{KindText(kind)}）");
         Units.Add(unit);
         return unit;
+    }
+
+    /// <summary>The user checked a 临时 unit: it becomes a normal unit and its samples count as confirmed.</summary>
+    public void Confirm(UnitRecord unit)
+    {
+        if (!unit.Provisional)
+        {
+            return;
+        }
+
+        unit.Provisional = false;
+        unit.History.Add($"{DateTimeOffset.Now:yyyy-MM-dd HH:mm} 用户核对，取消临时标记");
+        foreach (var sample in Samples.Where(s => s.UnitId == unit.Id))
+        {
+            sample.Status = "confirmed";
+        }
     }
 
     public int Merge(string fromId, string intoId)
@@ -279,6 +283,62 @@ public sealed class KnowledgeBase
         return moved;
     }
 
+    /// <summary>
+    /// Gives every unit (except EMPTY) a global id U0001… in creation order. The old id becomes an alias, sample files
+    /// move to the new folder, and screenshot truths and merge links follow. Returns (old, new) pairs; the caller commits.
+    /// </summary>
+    public List<(string Old, string New)> MigrateToGlobalIds()
+    {
+        var renames = new List<(string Old, string New)>();
+        var next = Units.Select(u => u.Id).Where(IsGlobalId).Select(id => int.Parse(id[1..])).DefaultIfEmpty(0).Max();
+        foreach (var unit in Units.Where(u => u.Id != EmptyUnitId && !IsGlobalId(u.Id)).OrderBy(u => u.CreatedAt).ThenBy(u => u.Id, StringComparer.Ordinal).ToList())
+        {
+            var newId = "U" + (++next).ToString("0000");
+            renames.Add((unit.Id, newId));
+            unit.Aliases.Add(unit.Id);
+            unit.History.Add($"{DateTimeOffset.Now:yyyy-MM-dd HH:mm} 改用全局编号 {newId}（原编号 {unit.Id} 保留为别名）");
+            unit.Id = newId;
+        }
+
+        var map = renames.ToDictionary(r => r.Old, r => r.New, StringComparer.OrdinalIgnoreCase);
+        foreach (var unit in Units.Where(u => u.MergedInto is not null && map.ContainsKey(u.MergedInto)))
+        {
+            unit.MergedInto = map[unit.MergedInto!];
+        }
+
+        foreach (var sample in Samples.Where(s => map.ContainsKey(s.UnitId)))
+        {
+            sample.UnitId = map[sample.UnitId];
+            var target = Path.Combine("samples", SafeName(sample.UnitId), Path.GetFileName(sample.File));
+            if (!string.Equals(target, sample.File, StringComparison.OrdinalIgnoreCase))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(P(target))!);
+                File.Move(P(sample.File), P(target), overwrite: false);
+                sample.File = target;
+            }
+        }
+
+        foreach (var shot in Screenshots)
+        {
+            foreach (var key in shot.Truth.Keys.Where(k => map.ContainsKey(shot.Truth[k])).ToList())
+            {
+                shot.Truth[key] = map[shot.Truth[key]];
+            }
+        }
+
+        // Folders of the old ids are empty now.
+        foreach (var (old, _) in renames)
+        {
+            var folder = P(Path.Combine("samples", SafeName(old)));
+            if (Directory.Exists(folder) && !Directory.EnumerateFileSystemEntries(folder).Any())
+            {
+                Directory.Delete(folder);
+            }
+        }
+
+        return renames;
+    }
+
     public static string SafeName(string id) =>
         string.Concat(id.Select(c => Path.GetInvalidFileNameChars().Contains(c) ? '_' : c));
 
@@ -297,10 +357,13 @@ public sealed class KnowledgeBase
 
         using var mat = ImageIO.Read(imagePath);
         var id = "S" + (Screenshots.Count + 1).ToString("00000");
-        var file = Path.Combine("screenshots", $"{id}_{sha[..8]}.png");
-        if (Path.GetExtension(imagePath).Equals(".png", StringComparison.OrdinalIgnoreCase))
+        var extension = Path.GetExtension(imagePath).ToLowerInvariant();
+        var keepJpeg = extension is ".jpg" or ".jpeg";
+        var file = Path.Combine("screenshots", $"{id}_{sha[..8]}{(keepJpeg ? ".jpg" : ".png")}");
+        Directory.CreateDirectory(P("screenshots"));
+        if (keepJpeg || extension == ".png")
         {
-            Directory.CreateDirectory(P("screenshots"));
+            // Stored byte for byte: video frames stay JPEG, screenshots stay PNG.
             File.WriteAllBytes(P(file), bytes);
         }
         else
@@ -324,6 +387,33 @@ public sealed class KnowledgeBase
         Screenshots.Add(record);
         alreadyPresent = false;
         return record;
+    }
+
+    /// <summary>
+    /// Re-saves video-frame screenshots stored as PNG as JPEG (quality <paramref name="quality"/>): the frames came from
+    /// lossy video, so PNG only cost space. Samples are separate crops and are not touched. Returns (files, bytes before,
+    /// bytes after); the caller commits.
+    /// </summary>
+    public (int Files, long Before, long After) ConvertVideoFramesToJpeg(int quality = 95)
+    {
+        var (files, before, after) = (0, 0L, 0L);
+        foreach (var shot in Screenshots.Where(s => s.Source.Type == "user-video" && s.File.EndsWith(".png", StringComparison.OrdinalIgnoreCase)))
+        {
+            var oldPath = P(shot.File);
+            before += new FileInfo(oldPath).Length;
+            using var mat = ImageIO.Read(oldPath);
+            Cv2.ImEncode(".jpg", mat, out var jpeg, new ImageEncodingParam(ImwriteFlags.JpegQuality, quality));
+            var newFile = Path.ChangeExtension(shot.File, ".jpg");
+            File.WriteAllBytes(P(newFile), jpeg);
+            File.Delete(oldPath);
+            shot.File = newFile;
+            shot.Sha256 = Convert.ToHexString(SHA256.HashData(jpeg)).ToLowerInvariant();
+            shot.Notes = (shot.Notes is null ? string.Empty : shot.Notes + "；") + $"已由 PNG 转存为 JPEG（质量 {quality}）";
+            after += jpeg.Length;
+            files++;
+        }
+
+        return (files, before, after);
     }
 
     public ScreenshotRecord GetScreenshot(string id) =>
@@ -374,6 +464,25 @@ public sealed class KnowledgeBase
     }
 
     public Mat ReadSample(SampleRecord sample) => ImageIO.Read(P(sample.File));
+
+    /// <summary>Moves a wrongly filed sample to its correct unit (file, label and the screenshot's truth). The caller commits.</summary>
+    public SampleRecord RelabelSample(string sampleId, string unitId)
+    {
+        var sample = Samples.FirstOrDefault(s => s.Id.Equals(sampleId, StringComparison.OrdinalIgnoreCase))
+            ?? throw new KeyNotFoundException($"知识库中没有样本 {sampleId}。");
+        var unit = ResolveUnit(unitId);
+        var target = Path.Combine("samples", SafeName(unit.Id), Path.GetFileName(sample.File));
+        Directory.CreateDirectory(Path.GetDirectoryName(P(target))!);
+        File.Move(P(sample.File), P(target), overwrite: false);
+        sample.File = target;
+        sample.UnitId = unit.Id;
+        if (Screenshots.FirstOrDefault(s => s.Id == sample.ScreenshotId) is { } shot)
+        {
+            shot.Truth[sample.Slot] = unit.Id;
+        }
+
+        return sample;
+    }
 
     // ---------- Layouts ----------
 

@@ -2,6 +2,7 @@ using System.Globalization;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json;
 using AxisRecognizer;
 using OpenCvSharp;
 using VideoRecorder;
@@ -12,7 +13,7 @@ internal static class Program
 {
     private static readonly HashSet<string> Flags = new(StringComparer.OrdinalIgnoreCase)
     {
-        "holdout", "no-refine", "sequence", "all", "copy-video",
+        "holdout", "no-refine", "sequence", "all", "copy-video", "confirmed",
     };
 
     private static readonly string[] ImageExtensions = [".png", ".jpg", ".jpeg", ".bmp", ".webp"];
@@ -83,12 +84,23 @@ internal static class Program
             知识库
               axis kb init
               axis kb stats
-              axis kb unit add --kind character|character-summon|monster|monster-summon [--name 名称] [--id 编号]
+              axis kb unit add [--kind unclassified|character|character-summon|monster|monster-summon|marker|attachment] [--name 名称]
                                [--name-status confirmed|candidate] [--name-source 来源] [--notes 备注]
+                                    （编号自动为下一个 U0001…；类型和名称只是注释）
               axis kb unit list
               axis kb unit rename --id 编号 [--name 名称 --name-status ... --name-source ...] [--kind 新类型] [--notes 备注] [--insert true|false]
-                                    （改名或改类型，编号保持不变；marker = 非单位提醒条目，识别后不列入结果）
-              axis kb unit merge --from 编号 --into 编号          （仅在用户确认是同一单位后使用）
+                                    （改名或改类型，编号保持不变；旧编号作为别名仍可使用；marker = 非单位提醒条目，识别后不列入结果）
+              axis kb settings [--weight-gray x --weight-edge x --weight-hist x --feature-size n --accept x --margin x --candidate x --group-join x] --reason 依据
+                                    （不带参数时显示当前识别参数；修改会记入 changelog，知识库版本 +1）
+              axis kb relabel --sample A000123 --unit U0002 --reason 依据       把归错单位的样本改归正确单位
+              axis kb jpeg-frames                                  把以 PNG 保存的视频帧截图转存为 JPEG（新存入的视频帧本来就保持 JPEG）
+              axis kb migrate-ids                                 把旧编号（CH-…、M0001…）改为全局编号 U0001…，旧编号保留为别名
+              axis kb promote <测试目录> [--answers <答案.txt>] [--rest provisional]
+                                    （把核对过的临时编号（新01…）转为全局编号，示例帧存为样本；--rest provisional 把其余未核对的
+                                      临时编号存为“临时”单位，结果里显示“（临时）”，用 rename --name … --name-status confirmed 或
+                                      --provisional false 取消临时标记）
+                                    （答案每行：新01 = new [名称] / 新01 = U0012 / 新01 = 新02 / 新01 = skip / 新01 = marker [名称]（非单位条目））
+              axis kb unit merge --from 编号 --into 编号 [--confirmed]   （仅在用户确认是同一单位后使用；--confirmed 同时把临时单位的样本记为已确认）
               axis kb add-image <图片> --source-type user-screenshot|user-video|local-capture|web --origin 说明
                                [--url 链接] [--license 许可] [--game-version 3.x] [--holdout] [--notes 备注]
               axis kb add-link --url 链接 [--title 标题] [--uploader UP主] [--notice 页面转载声明] [--notes 备注]
@@ -107,9 +119,10 @@ internal static class Program
               axis recognize <图片>                                 开发用，直接打印结果
               axis test run --name 名称 <图片或视频...> [--sequence] [--every 秒，视频默认 1/15] [--start 秒] [--end 秒]
               axis test correct <测试目录> --answers <答案.txt>
+              axis test rerun <测试目录>                            用当前知识库重跑同一段，另存为修正后结果（原始结果不变）
 
             视频
-              axis record <B站链接> [--start 1:14] [--end 2:30] [--out 目录]
+              axis record <B站链接> [--start 1:14] [--end 2:30] [--fps 15] [--out 目录]
                                     （开发用：在屏幕外的录制窗口里播放并按每秒 15 帧录下这一段，保存为 recording.avi + recording_info.txt；
                                       使用启动器里登录过的录制器浏览器；
                                       默认保存到 <数据目录>/recordings/）
@@ -197,6 +210,94 @@ internal static class Program
             case "eval":
                 return KbEval(args, root);
 
+            case "migrate-ids":
+            {
+                var kb = KnowledgeBase.Load(root);
+                var renames = kb.MigrateToGlobalIds();
+                if (renames.Count == 0)
+                {
+                    Console.WriteLine("所有单位已经是全局编号，无需迁移。");
+                    return 0;
+                }
+
+                kb.Commit("改用全局编号 U0001…", renames.Select(r => $"{r.Old} → {r.New}（旧编号保留为别名，样本文件移到 samples/{r.New}/）"));
+                foreach (var (old, @new) in renames)
+                {
+                    Console.WriteLine($"{old} → {@new}");
+                }
+
+                Console.WriteLine($"已迁移 {renames.Count} 个单位，知识库 v{kb.Version}");
+                return 0;
+            }
+
+            case "promote":
+                return KbPromote(args, root);
+
+            case "relabel":
+            {
+                var kb = KnowledgeBase.Load(root);
+                var sampleId = args.Require("sample");
+                var old = kb.Samples.FirstOrDefault(s => s.Id.Equals(sampleId, StringComparison.OrdinalIgnoreCase))?.UnitId ?? "?";
+                var sample = kb.RelabelSample(sampleId, args.Require("unit"));
+                kb.AppendCorrection($"样本 {sample.Id}\t{old} → {sample.UnitId}\t{args.Require("reason")}");
+                kb.Commit($"样本改归 {sample.Id}", [$"{sample.Id}：{old} → {sample.UnitId}；依据：{args.Require("reason")}"]);
+                Console.WriteLine($"{sample.Id}：{old} → {sample.UnitId}，知识库 v{kb.Version}");
+                return 0;
+            }
+
+            case "jpeg-frames":
+            {
+                var kb = KnowledgeBase.Load(root);
+                var (files, before, after) = kb.ConvertVideoFramesToJpeg();
+                if (files == 0)
+                {
+                    Console.WriteLine("没有需要转换的视频帧截图。");
+                    return 0;
+                }
+
+                var summary = $"{files} 张视频帧截图由 PNG 转存为 JPEG（质量 95）：{before / 1048576.0:0.0} MB → {after / 1048576.0:0.0} MB。样本（头像裁剪）不变。";
+                kb.Commit("视频帧截图改用 JPEG", [summary, "依据：用户要求节省存储（2026-10-27）；这些帧本身来自有损视频。"]);
+                Console.WriteLine(summary);
+                Console.WriteLine($"知识库 v{kb.Version}");
+                return 0;
+            }
+
+            case "settings":
+            {
+                var kb = KnowledgeBase.Load(root);
+                var s = kb.Settings;
+                var changes = new List<string>();
+                void Set(string option, string label, Func<double> get, Action<double> set)
+                {
+                    if (args.Get(option) is { } text)
+                    {
+                        var value = double.Parse(text, CultureInfo.InvariantCulture);
+                        changes.Add(FormattableString.Invariant($"{label} {get():0.###} → {value:0.###}"));
+                        set(value);
+                    }
+                }
+
+                Set("weight-gray", "灰度权重", () => s.WeightGray, v => s.WeightGray = v);
+                Set("weight-edge", "边缘权重", () => s.WeightEdge, v => s.WeightEdge = v);
+                Set("weight-hist", "颜色直方图权重", () => s.WeightHist, v => s.WeightHist = v);
+                Set("feature-size", "特征尺寸", () => s.FeatureSize, v => s.FeatureSize = (int)v);
+                Set("accept", "确定阈值", () => s.AcceptScore, v => s.AcceptScore = v);
+                Set("margin", "领先差", () => s.AcceptMargin, v => s.AcceptMargin = v);
+                Set("candidate", "候选下限", () => s.CandidateScore, v => s.CandidateScore = v);
+                Set("group-join", "新头像分组阈值", () => s.GroupJoinScore, v => s.GroupJoinScore = v);
+                if (changes.Count == 0)
+                {
+                    Console.WriteLine(JsonSerializer.Serialize(s, KnowledgeBase.JsonOptions));
+                    return 0;
+                }
+
+                var reason = args.Require("reason");
+                kb.Commit("调整识别参数", changes.Append("依据：" + reason));
+                Console.WriteLine(string.Join(Environment.NewLine, changes));
+                Console.WriteLine($"知识库 v{kb.Version}");
+                return 0;
+            }
+
             default:
                 throw new UsageException($"未知 kb 子命令：{sub}");
         }
@@ -209,7 +310,7 @@ internal static class Program
         {
             case "add":
             {
-                var kind = ParseKind(args.Require("kind"));
+                var kind = ParseKind(args.Get("kind") ?? "unclassified");
                 var unit = kb.AddUnit(kind, args.Get("id"), args.Get("name"), args.Get("name-status") ?? "candidate", args.Get("name-source"), args.Get("notes"));
                 kb.Commit($"登记单位 {unit.Id}", [$"{unit.Id}：{KnowledgeBase.KindText(kind)}，名称 {unit.Name ?? "（无）"}（{unit.NameStatus}{(unit.NameSource is null ? "" : "，来源 " + unit.NameSource)}）"]);
                 Console.WriteLine($"已登记 {unit.Id}，知识库 v{kb.Version}");
@@ -252,9 +353,16 @@ internal static class Program
                     changes.Add(insert ? "行动视为插入回合（无论在哪一格）" : "行动按所在位置判断是否为插入回合");
                 }
 
+                // A confirmed name, or --provisional false, means the user has checked this 临时 unit.
+                if (unit.Provisional && (args.Get("provisional") == "false" || (args.Get("name") is not null && unit.NameStatus == "confirmed")))
+                {
+                    kb.Confirm(unit);
+                    changes.Add("用户核对，取消临时标记");
+                }
+
                 if (changes.Count == 0)
                 {
-                    throw new UsageException("至少需要 --name、--kind、--notes 或 --insert 之一。");
+                    throw new UsageException("至少需要 --name、--kind、--notes、--insert 或 --provisional false 之一。");
                 }
 
                 unit.History.AddRange(changes.Select(c => $"{DateTimeOffset.Now:yyyy-MM-dd HH:mm} {c}"));
@@ -267,6 +375,12 @@ internal static class Program
             {
                 var from = args.Require("from");
                 var into = args.Require("into");
+                // --confirmed: the user checked a 临时 unit; its samples count as confirmed from now on.
+                if (args.Flag("confirmed") && kb.FindUnit(from) is { Provisional: true } provisional)
+                {
+                    kb.Confirm(provisional);
+                }
+
                 var moved = kb.Merge(from, into);
                 kb.Commit($"合并 {from} → {into}", [$"用户确认 {from} 与 {into} 为同一单位；移动样本 {moved} 个；{from} 保留为别名。"]);
                 Console.WriteLine($"已合并，移动样本 {moved} 个，知识库 v{kb.Version}");
@@ -278,15 +392,160 @@ internal static class Program
         }
     }
 
+    /// <summary>
+    /// Turns a checked run's temporary ids (新01…) into global units: new ones get the next U id (name as a note),
+    /// the others extend a known unit. Each temporary id's saved example frames become samples. The raw result and
+    /// new_units listing of the run are not changed; the mapping is written next to them.
+    /// </summary>
+    private static int KbPromote(Args args, string root)
+    {
+        var runDir = Path.GetFullPath(args.Positional.ElementAtOrDefault(2) ?? throw new UsageException("缺少测试目录。"));
+        var newUnitsDir = Path.Combine(runDir, NewUnitFiles.Folder);
+        var tablePath = Path.Combine(newUnitsDir, NewUnitFiles.TableFile);
+        if (!File.Exists(tablePath))
+        {
+            throw new InvalidOperationException("这个测试目录没有新单位清单（new_units/new_units.tsv）。");
+        }
+
+        var rows = NewUnitFiles.ParseTable(File.ReadAllText(tablePath)).ToDictionary(r => r.TempId);
+        var restProvisional = args.Get("rest") switch
+        {
+            null => false,
+            "provisional" => true,
+            var other => throw new UsageException($"--rest 只能是 provisional：{other}"),
+        };
+        var decisions = args.Get("answers") is { } answersPath
+            ? NewUnitPromotion.Parse(File.ReadAllText(answersPath))
+            : restProvisional ? [] : throw new UsageException("需要 --answers，或用 --rest provisional 把全部临时编号存为临时单位。");
+        foreach (var id in decisions.Keys.Where(id => !rows.ContainsKey(id)))
+        {
+            throw new FormatException($"{id} 不在这次运行的新单位清单里。");
+        }
+
+        var plan = NewUnitPromotion.Plan(decisions);
+        var kb = KnowledgeBase.Load(root);
+        var runName = Path.GetFileName(runDir);
+        var details = new List<string>();
+        var mapping = new StringBuilder($"# {runName} 临时编号转正（知识库 v{kb.Version + 1}）\n");
+        foreach (var target in plan)
+        {
+            var unit = target.ExistingUnit is { } existing
+                ? kb.ResolveUnit(existing)
+                : kb.AddUnit(target.Kind, null, target.NewName, "confirmed", $"用户（{runName}）",
+                    $"由 {runName} 的 {string.Join("、", target.TempIds)} 转正" + (target.Kind == UnitKind.Marker ? "；非单位条目，识别后不列入结果" : string.Empty));
+            foreach (var tempId in target.TempIds)
+            {
+                foreach (var example in rows[tempId].Examples)
+                {
+                    var origin = FormattableString.Invariant($"{runName}@{example.Time:0.000}");
+                    var shot = kb.AddScreenshot(Path.Combine(newUnitsDir, example.FrameFile), new SourceInfo { Type = "user-video", Origin = origin }, null, "train", $"{runName} 新单位示例帧", out _);
+                    using var frame = kb.ReadScreenshot(shot);
+                    details.AddRange(KbLabeler.LabelFrame(kb, shot, frame, new Dictionary<string, string> { [example.Slot] = unit.Id },
+                        new Dictionary<string, Rect> { [example.Slot] = example.Rect }, "user", "confirmed", $"{runName} {tempId}"));
+                }
+
+                mapping.AppendLine($"{tempId} → {ResultText.UnitLabel(kb, unit.Id)}{(target.ExistingUnit is null ? "（新建）" : "")}");
+                kb.AppendCorrection($"{runName}\t{tempId} → {unit.Id}\t用户核对");
+            }
+        }
+
+        if (restProvisional)
+        {
+            // Temporary ids promoted by an earlier call (recorded in promoted_kbv*.txt) are already in the KB.
+            var earlier = Directory.EnumerateFiles(runDir, "promoted_kbv*.txt")
+                .SelectMany(File.ReadLines)
+                .Select(l => l.Split(" → ", 2)[0].Trim())
+                .Where(NewUnitClusterer.IsTempId)
+                .ToHashSet();
+            foreach (var tempId in rows.Keys.Where(id => !decisions.ContainsKey(id) && !earlier.Contains(id)).OrderBy(id => id, StringComparer.Ordinal).ToList())
+            {
+                var (line, added) = AddProvisional(kb, runName, newUnitsDir, tempId, rows[tempId]);
+                mapping.AppendLine(line);
+                details.AddRange(added);
+                decisions[tempId] = new NewUnitPromotion.Decision(NewUnitPromotion.Action.New, null, null);
+            }
+        }
+
+        var skipped = decisions.Where(d => d.Value.Action == NewUnitPromotion.Action.Skip).Select(d => d.Key).ToList();
+        var promotedBefore = Directory.EnumerateFiles(runDir, "promoted_kbv*.txt").SelectMany(File.ReadLines)
+            .Select(l => l.Split(" → ", 2)[0].Trim()).Where(NewUnitClusterer.IsTempId).ToHashSet();
+        var untouched = rows.Keys.Where(id => !decisions.ContainsKey(id) && !promotedBefore.Contains(id)).ToList();
+        if (skipped.Count > 0)
+        {
+            mapping.AppendLine($"不是单位（skip）：{string.Join("、", skipped)}");
+        }
+
+        if (untouched.Count > 0)
+        {
+            mapping.AppendLine($"未处理（答案里没写）：{string.Join("、", untouched)}");
+        }
+
+        kb.Commit($"转正新单位（{runName}）", mapping.ToString().Split('\n').Skip(1).Where(l => l.Length > 0).Concat(details));
+        var mappingPath = Path.Combine(runDir, $"promoted_kbv{kb.Version}_{DateTime.Now:yyyyMMdd-HHmmss}.txt");
+        File.WriteAllText(mappingPath, mapping.ToString(), Utf8);
+        Console.Write(mapping);
+        Console.WriteLine($"知识库 v{kb.Version}；对照表：{mappingPath}");
+        return 0;
+    }
+
+    /// <summary>
+    /// Stores one unchecked temporary id as a 临时 unit so the user can browse it in the KB. Its examples are first
+    /// recognized with the current KB: when most of them match an existing 临时 unit, they join it; a match with a
+    /// confirmed unit is only noted (疑似), so unchecked samples never go into a confirmed unit.
+    /// </summary>
+    private static (string Line, List<string> Details) AddProvisional(KnowledgeBase kb, string runName, string newUnitsDir, string tempId, NewUnitFiles.Row row)
+    {
+        var recognizer = new Recognizer(kb);
+        var votes = new List<string>();
+        foreach (var example in row.Examples)
+        {
+            using var frame = ImageIO.Read(Path.Combine(newUnitsDir, example.FrameFile));
+            if (recognizer.Recognize(frame).Slots.FirstOrDefault(s => s.Slot == example.Slot)?.UnitId is { } id && id != KnowledgeBase.EmptyUnitId)
+            {
+                votes.Add(id);
+            }
+        }
+
+        var top = votes.GroupBy(v => v).OrderByDescending(g => g.Count()).FirstOrDefault();
+        var matched = top is not null && top.Count() * 2 > row.Examples.Count ? kb.ResolveUnit(top.Key) : null;
+        UnitRecord unit;
+        string line;
+        if (matched is { Provisional: true })
+        {
+            unit = matched;
+            line = $"{tempId} → {ResultText.UnitLabel(kb, unit.Id)}（工具判断与该临时单位相同，已归入）";
+        }
+        else
+        {
+            var suspect = matched is null ? string.Empty : $"；疑似 {ResultText.UnitLabel(kb, matched.Id)}（工具判断，未核对）";
+            unit = kb.AddUnit(UnitKind.Unclassified, null, null, "none", null, $"临时：来自 {runName} 的 {tempId}，未经用户核对{suspect}");
+            unit.Provisional = true;
+            line = $"{tempId} → {unit.Id}（临时，新建{suspect}）";
+        }
+
+        var details = new List<string>();
+        foreach (var example in row.Examples)
+        {
+            var origin = FormattableString.Invariant($"{runName}@{example.Time:0.000}");
+            var shot = kb.AddScreenshot(Path.Combine(newUnitsDir, example.FrameFile), new SourceInfo { Type = "user-video", Origin = origin }, null, "train", $"{runName} 新单位示例帧", out _);
+            using var frame = kb.ReadScreenshot(shot);
+            details.AddRange(KbLabeler.LabelFrame(kb, shot, frame, new Dictionary<string, string> { [example.Slot] = unit.Id },
+                new Dictionary<string, Rect> { [example.Slot] = example.Rect }, "tool", "unconfirmed", $"{runName} {tempId}（临时）"));
+        }
+
+        return (line, details);
+    }
+
     private static UnitKind ParseKind(string text) => text.ToLowerInvariant() switch
     {
+        "unclassified" => UnitKind.Unclassified,
         "character" => UnitKind.Character,
         "character-summon" => UnitKind.CharacterSummon,
         "monster" => UnitKind.Monster,
         "monster-summon" => UnitKind.MonsterSummon,
         "marker" => UnitKind.Marker,
         "attachment" => UnitKind.Attachment,
-        _ => throw new UsageException($"--kind 只能是 character、character-summon、monster、monster-summon、marker（非单位提醒条目）、attachment（附属格，并入上一条目）：{text}"),
+        _ => throw new UsageException($"--kind 只能是 unclassified（未分类）、character、character-summon、monster、monster-summon、marker（非单位提醒条目）、attachment（附属格，并入上一条目）：{text}"),
     };
 
     private static int KbLabel(Args args, string root)
@@ -495,6 +754,7 @@ internal static class Program
     {
         "run" => TestRun(args, dataRoot),
         "correct" => TestCorrect(args, dataRoot),
+        "rerun" => TestRerun(args, dataRoot),
         _ => throw new UsageException($"未知 test 子命令：{sub}"),
     };
 
@@ -540,7 +800,7 @@ internal static class Program
 
         File.WriteAllText(Path.Combine(runDir, "meta.txt"), meta.ToString(), Utf8);
 
-        var (text, detail) = RunRecognition(kb, inputs, args.Flag("sequence"), every, args.Get("start"), args.Get("end"), "行动轴识别结果（原始输出：工具首次生成，不得修改）");
+        var (text, detail) = RunRecognition(kb, inputs, args.Flag("sequence"), every, args.Get("start"), args.Get("end"), "行动轴识别结果（原始输出：工具首次生成，不得修改）", runDir);
         var rawPath = Path.Combine(runDir, "raw_result.txt");
         File.WriteAllText(rawPath, text, Utf8);
         File.WriteAllText(Path.Combine(runDir, "raw_detail.tsv"), detail, Utf8);
@@ -552,8 +812,9 @@ internal static class Program
         return 0;
     }
 
+    /// <param name="runDir">For a first (raw) run of a single video: where new avatars' examples are saved for axis kb promote.</param>
     private static (string Text, string Detail) RunRecognition(
-        KnowledgeBase kb, IReadOnlyList<string> inputs, bool sequence, double every, string? start, string? end, string title)
+        KnowledgeBase kb, IReadOnlyList<string> inputs, bool sequence, double every, string? start, string? end, string title, string? runDir = null)
     {
         var recognizer = new Recognizer(kb);
         var text = new StringBuilder();
@@ -608,7 +869,8 @@ internal static class Program
             double? endSec = end is null ? null : double.Parse(end, CultureInfo.InvariantCulture);
             try
             {
-                var result = VideoRecognition.Run(kb, recognizer, video, every, startSec, endSec, Path.GetFileName(video));
+                var result = VideoRecognition.Run(kb, recognizer, video, every, startSec, endSec, Path.GetFileName(video),
+                    runDirectory: videos.Count == 1 ? runDir : null, timeOffset: RecordingOffset(video));
                 detail.Append(result.Detail);
                 text.Append(result.Text);
             }
@@ -657,7 +919,8 @@ internal static class Program
             }
             else
             {
-                imagePath = Path.Combine(runDir, "frames", $"{Path.GetFileNameWithoutExtension(fileName)}_{seconds.Value.ToString("0.000", CultureInfo.InvariantCulture)}.png");
+                // Video frames are kept as JPEG (they come from lossy video).
+                imagePath = Path.Combine(runDir, "frames", $"{Path.GetFileNameWithoutExtension(fileName)}_{seconds.Value.ToString("0.000", CultureInfo.InvariantCulture)}.jpg");
                 var frameAt = VideoFrames.Sample(source, 1000, seconds.Value, seconds.Value + 1).FirstOrDefault();
                 if (frameAt.Frame is null)
                 {
@@ -666,7 +929,7 @@ internal static class Program
 
                 using (frameAt.Frame)
                 {
-                    ImageIO.WritePng(imagePath, frameAt.Frame);
+                    ImageIO.WriteJpeg(imagePath, frameAt.Frame);
                 }
 
                 origin = $"{fileName}@{seconds.Value.ToString("0.000", CultureInfo.InvariantCulture)}";
@@ -699,31 +962,77 @@ internal static class Program
         }
 
         kb.Commit($"按测试纠正更新：{Path.GetFileName(runDir)}", log);
-
-        var meta = File.ReadAllLines(Path.Combine(runDir, "meta.txt"));
-        var sequence = meta.Any(l => l.Contains("--sequence", StringComparison.Ordinal));
-        var every = ParseEvery(meta);
-        var (text, _) = RunRecognition(kb, inputs, sequence, every, null, null, $"行动轴识别结果（修正后结果，知识库 v{kb.Version}；原始结果见 raw_result.txt）");
-        var correctedPath = Path.Combine(runDir, $"corrected_kbv{kb.Version}_{DateTime.Now:yyyyMMdd-HHmmss}.txt");
-        File.WriteAllText(correctedPath, text, Utf8);
-        Console.WriteLine(text);
+        var correctedPath = WriteCorrected(kb, runDir, inputs);
         Console.WriteLine($"知识库 v{versionBefore} → v{kb.Version}；修正后结果：{correctedPath}");
         return 0;
     }
 
-    private static double ParseEvery(IEnumerable<string> metaLines)
+    /// <summary>Re-runs a test with the current KB (e.g. after axis kb promote) and saves it as a separate corrected result.</summary>
+    private static int TestRerun(Args args, string dataRoot)
+    {
+        var runDir = Path.GetFullPath(args.Positional.ElementAtOrDefault(2) ?? throw new UsageException("缺少测试目录。"));
+        if (!File.Exists(Path.Combine(runDir, "raw_result.txt")))
+        {
+            throw new InvalidOperationException("这不是测试目录（没有 raw_result.txt）。");
+        }
+
+        var kb = KnowledgeBase.Load(KbRoot(dataRoot));
+        var correctedPath = WriteCorrected(kb, runDir, ReadInputs(runDir));
+        Console.WriteLine($"知识库 v{kb.Version}；修正后结果：{correctedPath}");
+        return 0;
+    }
+
+    /// <summary>Runs the test's inputs again over the same stretch and writes corrected_kbv{N}_{time}.txt; the raw result is untouched.</summary>
+    private static string WriteCorrected(KnowledgeBase kb, string runDir, IReadOnlyList<string> inputs)
+    {
+        var meta = File.ReadAllLines(Path.Combine(runDir, "meta.txt"));
+        var sequence = meta.Any(l => l.Contains("--sequence", StringComparison.Ordinal));
+        var (text, _) = RunRecognition(kb, inputs, sequence, ParseEvery(meta), MetaOption(meta, "start"), MetaOption(meta, "end"),
+            $"行动轴识别结果（修正后结果，知识库 v{kb.Version}；原始结果见 raw_result.txt）");
+        var correctedPath = Path.Combine(runDir, $"corrected_kbv{kb.Version}_{DateTime.Now:yyyyMMdd-HHmmss}.txt");
+        File.WriteAllText(correctedPath, text, Utf8);
+        Console.WriteLine(text);
+        return correctedPath;
+    }
+
+    /// <summary>
+    /// For a recording made by the recorder: the video time of the file's time 0, read from the recording_info.txt next to
+    /// it ("文件时间 0 对应视频 01:09"); 0 for other videos.
+    /// </summary>
+    private static double RecordingOffset(string video)
+    {
+        var info = Path.Combine(Path.GetDirectoryName(video)!, BilibiliRecorder.InfoFileName);
+        if (!File.Exists(info))
+        {
+            return 0;
+        }
+
+        const string Marker = "文件时间 0 对应视频 ";
+        var line = File.ReadLines(info).FirstOrDefault(l => l.Contains(Marker, StringComparison.Ordinal));
+        return line is not null && TimeText.TryParse(line[(line.IndexOf(Marker, StringComparison.Ordinal) + Marker.Length)..].Trim(), out var seconds, out _)
+            ? seconds ?? 0
+            : 0;
+    }
+
+    private static double ParseEvery(IEnumerable<string> metaLines) =>
+        MetaOption(metaLines, "every") is { } text && double.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out var every)
+            ? every
+            : VideoRecognition.DefaultEvery;
+
+    /// <summary>A --name value from the command line recorded in meta.txt, or null.</summary>
+    private static string? MetaOption(IEnumerable<string> metaLines, string name)
     {
         foreach (var line in metaLines.Where(l => l.StartsWith("命令参数：", StringComparison.Ordinal)))
         {
             var parts = line["命令参数：".Length..].Split(' ');
-            var index = Array.IndexOf(parts, "--every");
-            if (index >= 0 && index + 1 < parts.Length && double.TryParse(parts[index + 1], NumberStyles.Float, CultureInfo.InvariantCulture, out var every))
+            var index = Array.IndexOf(parts, "--" + name);
+            if (index >= 0 && index + 1 < parts.Length)
             {
-                return every;
+                return parts[index + 1];
             }
         }
 
-        return 0.5;
+        return null;
     }
 
     private sealed record DetailRow(string Slot, Rect Rect, bool Empty, string Unit, string Candidates);
@@ -863,7 +1172,10 @@ internal static class Program
             }
         });
 
-        var request = new RecordingRequest(link, start ?? 0, end, outDir, RecorderPaths.DefaultBrowserDataFolder);
+        var request = new RecordingRequest(link, start ?? 0, end, outDir, RecorderPaths.DefaultBrowserDataFolder)
+        {
+            OutputFps = args.Double("fps", 15),
+        };
         var result = BilibiliRecorder.RecordOnNewThread(request, progress, cts.Token);
         Console.WriteLine(result.Message);
         if (!result.Ok)

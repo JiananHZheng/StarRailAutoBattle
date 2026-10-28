@@ -14,7 +14,20 @@ public sealed record SlotResult(
     /// <summary>Confident answer, or null when the tool is not sure.</summary>
     string? UnitId,
     double Score,
-    IReadOnlyList<Candidate> Candidates);
+    IReadOnlyList<Candidate> Candidates)
+{
+    /// <summary>
+    /// Feature of the detected cell itself (<see cref="FeatureRect"/>), used to group avatars the KB does not know.
+    /// Not the refined crop: for an unknown avatar the refinement follows whichever KB sample happens to score best,
+    /// so the same unit would be cropped differently from frame to frame.
+    /// </summary>
+    public AvatarFeature? Feature { get; init; }
+
+    public Rect FeatureRect { get; init; }
+
+    /// <summary>How well the cell's outline matched the action-axis frame (chamfer distance; lower is better, 0 when fixed).</summary>
+    public double FrameScore { get; init; }
+}
 
 public sealed record FrameResult(
     int Width,
@@ -80,12 +93,14 @@ public sealed class Recognizer
     {
         var settings = _kb.Settings;
         (Rect Rect, List<Candidate> Ranked, AvatarFeature Feature)? best = null;
+        (Rect Rect, AvatarFeature Feature)? detected = null;
 
         foreach (var rect in SearchRects(cell.Rect, settings, refine: cell.Refine && _index.Count > 0))
         {
             var clamped = Geometry.Clamp(rect, frame.Width, frame.Height);
             using var crop = new Mat(frame, clamped);
             var feature = CellLocator.Feature(crop, cell.Feature, cell.Ignore, settings);
+            detected ??= (clamped, feature);   // the first rect is the detected cell itself
             var ranked = Rank(feature);
             var top = ranked.Count > 0 ? ranked[0].Score : 0;
             if (best is null || top > (best.Value.Ranked.Count > 0 ? best.Value.Ranked[0].Score : 0))
@@ -127,7 +142,12 @@ public sealed class Recognizer
             isEmpty,
             !isEmpty && confident ? top1!.UnitId : null,
             top1?.Score ?? 0,
-            listed);
+            listed)
+        {
+            Feature = detected!.Value.Feature,
+            FeatureRect = detected.Value.Rect,
+            FrameScore = cell.FrameScore ?? 0,
+        };
     }
 
     /// <summary>Best score per unit, highest first.</summary>

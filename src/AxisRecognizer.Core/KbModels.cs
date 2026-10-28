@@ -20,6 +20,9 @@ public enum UnitKind
     /// The two count as one action; results fold it into the line above.
     /// </summary>
     Attachment,
+
+    /// <summary>Kind not given yet (units created from new avatars); the user adds it later as a note.</summary>
+    Unclassified,
 }
 
 public enum SlotKind
@@ -34,7 +37,11 @@ public enum SlotKind
 
 public sealed class UnitRecord
 {
-    public required string Id { get; init; }
+    /// <summary>Global id "U0001" (one per distinct avatar); "EMPTY" for the built-in empty slot.</summary>
+    public required string Id { get; set; }
+
+    /// <summary>Earlier ids of this unit (e.g. CH-爻光, M0003); they still resolve to it.</summary>
+    public List<string> Aliases { get; init; } = [];
 
     /// <summary>May be corrected later (e.g. monster → monster summon); the id stays the same.</summary>
     public required UnitKind Kind { get; set; }
@@ -55,6 +62,12 @@ public sealed class UnitRecord
     /// numbers it as "main-insert" instead of a new main-axis action.
     /// </summary>
     public bool ActsAsInsert { get; set; }
+
+    /// <summary>
+    /// 临时: created by the tool from a run's new avatars without the user's check. It takes part in recognition (so
+    /// the same unit keeps one id across runs) and is shown as "（临时）" until the user confirms it.
+    /// </summary>
+    public bool Provisional { get; set; }
 
     public DateTimeOffset CreatedAt { get; init; } = DateTimeOffset.Now;
     public List<string> History { get; init; } = [];
@@ -90,8 +103,11 @@ public sealed class WebLinkRecord
 public sealed class ScreenshotRecord
 {
     public required string Id { get; init; }
-    public required string File { get; init; }
-    public required string Sha256 { get; init; }
+
+    /// <summary>PNG for screenshots; JPEG for frames taken from videos (already lossy, and about a sixth of the size).</summary>
+    public required string File { get; set; }
+
+    public required string Sha256 { get; set; }
     public required int Width { get; init; }
     public required int Height { get; init; }
     public required SourceInfo Source { get; init; }
@@ -191,6 +207,12 @@ public sealed class RecognitionSettings
 
     /// <summary>Two samples of the same unit scoring above this are duplicates; the new one is not stored.</summary>
     public double DuplicateScore { get; set; } = 0.985;
+
+    /// <summary>
+    /// Within one run, an unknown avatar joins a group of new avatars at this similarity (temporary ids 新01…).
+    /// Near misses down to 0.07 below it are reported as 疑似.
+    /// </summary>
+    public double GroupJoinScore { get; set; } = 0.72;
 }
 
 public sealed class KbMeta

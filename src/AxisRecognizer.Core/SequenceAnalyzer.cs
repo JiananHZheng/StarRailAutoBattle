@@ -125,7 +125,10 @@ public sealed class SequenceAnalyzer
             }
 
             usable++;
-            if (candidate is not null && candidate.SameAs(state))
+
+            // Stability is judged on the current cell alone (interim, until the event-based analyzer): one flickering
+            // main-axis cell must not hide a turn. The main axis recorded is the one seen when the turn became stable.
+            if (candidate is not null && candidate.Current == state.Current)
             {
                 run++;
             }
@@ -135,9 +138,9 @@ public sealed class SequenceAnalyzer
                 run = 1;
             }
 
-            if (run == StableFrames && (stable.Count == 0 || !stable[^1].SameAs(candidate)))
+            if (run == StableFrames && (stable.Count == 0 || stable[^1].Current != state.Current))
             {
-                stable.Add(candidate);
+                stable.Add(state);
             }
         }
 
@@ -351,7 +354,7 @@ public sealed class SequenceAnalyzer
     {
         var sb = new StringBuilder();
         sb.AppendLine($"## {sourceName}");
-        sb.AppendLine($"{samplingNote}；可用帧 {analysis.FramesUsable}/{analysis.FramesTotal}；稳定判定：连续 {StableFrames} 帧相同");
+        sb.AppendLine($"{samplingNote}；可用帧 {analysis.FramesUsable}/{analysis.FramesTotal}；稳定判定：当前格连续 {StableFrames} 帧相同");
         sb.AppendLine(analysis.BattleStart is { } start
             ? $"战斗开始：{FormatTime(start)}（行动轴在此前至少 {BattleStartAbsentFrames} 个取样帧中不存在）"
             : "战斗开始：未检测到（取样范围内画面一开始就有行动轴，或始终没有行动轴）");
