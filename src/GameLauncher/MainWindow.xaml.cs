@@ -54,8 +54,15 @@ public partial class MainWindow : Window
         GameExeBox.Text = settings.GameExePath;
         ModeIdentify.IsChecked = settings.Mode == LaunchMode.IdentifyRunning;
         ModeStart.IsChecked = settings.Mode != LaunchMode.IdentifyRunning;
-        Closing += (_, _) =>
+        // First, so the user can still cancel closing over an unsaved sequence before anything else runs.
+        InitSequencePage();
+        Closing += (_, e) =>
         {
+            if (e.Cancel)
+            {
+                return;
+            }
+
             SaveSettings();
             CancelVideoRun();
         };
