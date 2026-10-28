@@ -392,9 +392,10 @@ public sealed class CueReader : IDisposable
         double cx = centroids.At<double>(core, 0), cy = centroids.At<double>(core, 1);
         double axis = 0, diagonal = 0;
         var area = 0;
-        for (var y = 0; y < crop.Height; y++)
+        int width = crop.Width, height = crop.Height;
+        for (var y = 0; y < height; y++)
         {
-            for (var x = 0; x < crop.Width; x++)
+            for (var x = 0; x < width; x++)
             {
                 if (labels.At<int>(y, x) != core)
                 {
@@ -416,7 +417,7 @@ public sealed class CueReader : IDisposable
             }
         }
 
-        return (area / (double)(crop.Width * crop.Height), diagonal > 0 ? axis / diagonal : 9);
+        return (area / (double)(width * height), diagonal > 0 ? axis / diagonal : 9);
     }
 
     /// <summary>
