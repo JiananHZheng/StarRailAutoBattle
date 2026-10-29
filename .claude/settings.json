@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -Command \"git status --porcelain | Select-String '^\\?\\?'; dotnet test --nologo -v q\"",
+            "timeout": 300,
+            "statusMessage": "Listing untracked files and running tests"
+          }
+        ]
+      }
+    ]
+  }
+}
