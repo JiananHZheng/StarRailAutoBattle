@@ -18,3 +18,12 @@ Append new rules here whenever the user confirms one.
 - Target defaults to the boss when the target ring cannot be detected.
 - Do not invent new syntax (e.g. arrow target syntax). Use only the sequence syntax the user defined.
 - When a rule is ambiguous, ask before implementing. Then record the answer in docs/sequence-rules.md.
+
+## Testing
+
+### Recognition & testing hygiene
+- Units use global unit IDs. Status variants of the same avatar must merge into ONE unit entry.
+- On-screen text (e.g. '这里') and the remaining action bar are never units.
+- After any recording/crop change, print and check the output resolution (expect 1920x1080 for 1080P) before reporting success.
+- 'Tests pass' is not enough. Also run on at least one real recording and report detected vs expected results.
+- Delete temporary test scripts, scratch outputs and old test files before committing. Run `git status` and list anything untracked.
