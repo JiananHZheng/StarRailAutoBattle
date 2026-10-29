@@ -1,0 +1,1280 @@
+[
+  {
+    "Id": "C000001",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000001.png",
+    "Sha256": "b446f0733613520e1b3319a01a096cff3e053e219bae23424d5e975aade19f1a",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@41.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:16:56.7512258+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 93,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000002",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000002.png",
+    "Sha256": "68f73e486a07c7dec1efd2f61aa221ec4039e2b1fc65c047c97e0dd2db67ea8e",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@61.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:17:00.2513487+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 93,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000003",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000003.png",
+    "Sha256": "752b0b6e3c9fa0f7d531b3570de708d5b06284b616b9c91ee051071774d8d654",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@84.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:17:04.5189363+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 93,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000004",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000004.png",
+    "Sha256": "2208e6249b5e2e0436120581a35dd7ea2ecc8e4e8e6746f8bc0ebdb5fddaf030",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@100.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:17:07.4055568+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 93,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000005",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000005.png",
+    "Sha256": "edee0c19cc8b1923a29927e71838656303d4a2989e4e0aef85fb7529a844f1fe",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@146.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:17:15.7857711+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 93,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000006",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000006.png",
+    "Sha256": "05dcf2ad5d0e0d4cbc21f13a55ff30dda30c3cc0a620e902f4e9ec6de9b1bcc0",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@166.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:17:19.4818416+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 93,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000007",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000007.png",
+    "Sha256": "5319996bc327189f6992b9024d3d66da0d60d034ef187b2c26fbf4e1d24d7cc0",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@34.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:17:23.8817852+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 94,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000008",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000008.png",
+    "Sha256": "2cc4524f53a111b2039e2005fb157b4d0344cb807cb7164cfb508ec1b143ef26",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@81.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:17:32.4292226+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 94,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000009",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000009.png",
+    "Sha256": "d45910f7602f72dedf648505d8b79989d047aa3b97d1e1a2a7e41f27d494e4af",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@155.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:17:44.964649+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 94,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000010",
+    "Cue": "marker",
+    "Label": "enemy-main",
+    "File": "cues\\marker\\enemy-main\\C000010.png",
+    "Sha256": "386199ee7ba1d55c071e223e0b4bfb1fd0dcde8b20f782d52c01b800e2c279a3",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@141.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:17:59.858063+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 95,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000011",
+    "Cue": "marker",
+    "Label": "enemy-main",
+    "File": "cues\\marker\\enemy-main\\C000011.png",
+    "Sha256": "6a580ede4f610b83220e86ded10d88faf1bf69bb07e32266d2f1d5d923e40d08",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@142.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:18:00.0342264+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 95,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000012",
+    "Cue": "marker",
+    "Label": "boss-mechanism",
+    "File": "cues\\marker\\boss-mechanism\\C000012.png",
+    "Sha256": "75c452a24c832438692fad9664dcdce53912c07c87d1b36c04e3084ee229e0e3",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@172.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:18:17.8703568+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 96,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000013",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000013.png",
+    "Sha256": "d5e6e2581ab9aa3a3352fc00070fb75a41ed3dfd8811782ae4b2727161f93b15",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@52.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:18:46.1772455+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 98,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000014",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000014.png",
+    "Sha256": "09ad5e550fc8bed22e37a9ac4403273fb9420adba2f460c871d76ea091f37aaa",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@70.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:18:49.4763654+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 98,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000015",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000015.png",
+    "Sha256": "c29e143e753b4acb2e35a639c432c5f4e7c3c86d214589cdbde329d955e1e38e",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@110.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:18:56.80256+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 98,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000016",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000016.png",
+    "Sha256": "3f5910d7365e257c71cfb945c88cf814e764517e40fe286da114a6e3c0d53005",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@55.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:07.0474779+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 99,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000017",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000017.png",
+    "Sha256": "d74bb290632cc5fade623f2321316e8b39e0b0e3699d9a949eadbea966a2bb41",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@56.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:07.3783912+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 99,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000018",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000018.png",
+    "Sha256": "ec97065b5f094f297d6e365a2facae4fcac90972e3c3904b1b44e1c65cf66b6d",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@76.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:10.8256779+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 99,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000019",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000019.png",
+    "Sha256": "42899b36ebd21424d5572b56ae7001d5e6a1c9a44d61f242b394bc7cd3c999b7",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@122.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:18.9174168+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 99,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000020",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000020.png",
+    "Sha256": "a11f5cdc42de990b91342e2bf9e024dd5f403a923085805748a8f4a0b94d77ec",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@124.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:19.340451+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 99,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000021",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000021.png",
+    "Sha256": "83997c97b9e0de62e6230659f462c2443cbf1d7812802b5fc54e88781cd67326",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@138.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:21.947134+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 99,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000022",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000022.png",
+    "Sha256": "f950706c8e7a1ce4e2c60c47d5362df2603a9dd403eaf1a43f755a4faa378015",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@162.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:26.0194695+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 99,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000023",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000023.png",
+    "Sha256": "316b858b6d8748ac2533394447ea28bb464a63026f9245e8104e6c695628ae08",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@42.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:31.0679664+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 100,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000024",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000024.png",
+    "Sha256": "83f6925a9719aba3f3f4ac11b618e79fa1e9ec46c1a733d1a83953ae83de3e1c",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@65.733",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:35.3794525+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 100,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000025",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000025.png",
+    "Sha256": "5b79a71508cad0e17cdc985df583a9950b3afd01342ada1241203a082625e8bf",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@95.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:40.6014311+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 100,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000026",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000026.png",
+    "Sha256": "5ec80f7e31727962051a21b1e298d4a58631536b483f0cafac56ac5f6e72159d",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@101.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:41.7312841+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 100,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000027",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000027.png",
+    "Sha256": "47f954a8f4b7fe47707d3b61c44a486b7bcc0af32f663a4660d5452426c8bbb4",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@102.267",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:42.0076557+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 100,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000028",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000028.png",
+    "Sha256": "f0807989eff62d9641dac9818291505a805ba88454c92f1ea7391d1b4243b785",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@144.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:49.4747126+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 100,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000029",
+    "Cue": "marker",
+    "Label": "ally-extra",
+    "File": "cues\\marker\\ally-extra\\C000029.png",
+    "Sha256": "3ce51d085abd3a04eadf84830905c8c553c1b03cde92835a9f0ab8198fce22f4",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@168.267",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:20:53.6826635+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 100,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取（浅色背景）",
+    "Excluded": null
+  },
+  {
+    "Id": "C000030",
+    "Cue": "marker",
+    "Label": "boss-mechanism",
+    "File": "cues\\marker\\boss-mechanism\\C000030.png",
+    "Sha256": "e8caea0e611c56e43be74bd92bf3b6b26307ddc2113a84a62f3836dfdeb5bf27",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@151.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:32.2801508+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 101,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000031",
+    "Cue": "marker",
+    "Label": "boss-mechanism",
+    "File": "cues\\marker\\boss-mechanism\\C000031.png",
+    "Sha256": "703e27a78fbdd0d13e79ef8ac27d2cfa7585e9565e382514b9041f9a4456cf5e",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@152.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:32.4476809+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 101,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000032",
+    "Cue": "marker",
+    "Label": "boss-mechanism",
+    "File": "cues\\marker\\boss-mechanism\\C000032.png",
+    "Sha256": "842300bb537a27ff061237cce5f4f4858feb2740171340d8d199991698055c8c",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@152.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:32.5923252+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 101,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000033",
+    "Cue": "marker",
+    "Label": "boss-mechanism",
+    "File": "cues\\marker\\boss-mechanism\\C000033.png",
+    "Sha256": "f2b7e1b832c91bacf008f3579b176a844da5a303054f0d92b4281c2bbc77439c",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@153.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:32.7331733+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 101,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000034",
+    "Cue": "marker",
+    "Label": "boss-mechanism",
+    "File": "cues\\marker\\boss-mechanism\\C000034.png",
+    "Sha256": "5f6890fc6bf5df72736e4e36b136f130cfec3f7bd808714fb78cc4babbc63424",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@153.267",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:32.8215832+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 101,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000035",
+    "Cue": "marker",
+    "Label": "enemy-main",
+    "File": "cues\\marker\\enemy-main\\C000035.png",
+    "Sha256": "6d6d8cbb53448bceadd4adf88efad636f107b3b898bb8381ba9788b41742fff5",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@112.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:44.0010665+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 102,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000036",
+    "Cue": "marker",
+    "Label": "enemy-main",
+    "File": "cues\\marker\\enemy-main\\C000036.png",
+    "Sha256": "9c3bae259a6a12772b2043689845677c152e2ff8e0be0eaa3cdc70a3d904e187",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@113.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:44.3097574+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 102,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000037",
+    "Cue": "marker",
+    "Label": "enemy-main",
+    "File": "cues\\marker\\enemy-main\\C000037.png",
+    "Sha256": "2679969a4e019e5ebcc592a07b91c3ac861417ce08070fa92262c388226f801d",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@116.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:44.7925377+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 102,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000038",
+    "Cue": "marker",
+    "Label": "enemy-main",
+    "File": "cues\\marker\\enemy-main\\C000038.png",
+    "Sha256": "e6b8988f8eb8ff01a488b7d5233ab2a34bddc9b5acf4f20ade1dc7708a54c9d3",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@154.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:51.3252951+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 102,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000039",
+    "Cue": "marker",
+    "Label": "enemy-main",
+    "File": "cues\\marker\\enemy-main\\C000039.png",
+    "Sha256": "cebf574c58cb5ebb5526ed7064a006741e31dc76656ee8025a327c2ca0be87a9",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@155.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:51.5379946+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 102,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000040",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000040.png",
+    "Sha256": "98f1f3f8b2aee9c97583a04e1bdac0d85fb1a0d469042a18fed1f72c5783b8b5",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@21.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:25:54.6006778+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 103,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000041",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000041.png",
+    "Sha256": "bc51cc8a216dc525f5aebe34de8322756a83daec444bee434f85e87ee20f8ed7",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@55.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:26:00.2986242+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 103,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000042",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000042.png",
+    "Sha256": "4b8757c5f23207a9f5fc7c4f3206c9d9521ff33d076bc34eff05c4b1cb1424a2",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@64.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:26:01.9215055+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 103,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000043",
+    "Cue": "marker",
+    "Label": "ally-main",
+    "File": "cues\\marker\\ally-main\\C000043.png",
+    "Sha256": "11bc4ed9b24439efc8084a4feb50d2a75d595441f873f1fd745e1cfc7fe4fa31",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@99.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:26:07.965149+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 103,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000044",
+    "Cue": "phase-text",
+    "Label": "ally",
+    "File": "cues\\phase-text\\ally\\C000044.png",
+    "Sha256": "b1db47e724c956c0fdcb47ecec7ac13f538adf0c4739f84a650bcf6a6847cfa1",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@11.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:29:51.484577+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 104,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000045",
+    "Cue": "phase-text",
+    "Label": "ally",
+    "File": "cues\\phase-text\\ally\\C000045.png",
+    "Sha256": "8f07ce397576038e2728e5117745bacb867b7ef507947508f4c79da1445887fe",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@13.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:29:51.9586353+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 104,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000046",
+    "Cue": "phase-text",
+    "Label": "ally",
+    "File": "cues\\phase-text\\ally\\C000046.png",
+    "Sha256": "62510ad3d0f2a46c4f9b7fd7a2daec92b9890e4c14dbc4891b7d01887d88a460",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@18.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:29:52.7910101+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 104,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000047",
+    "Cue": "phase-text",
+    "Label": "none",
+    "File": "cues\\phase-text\\none\\C000047.png",
+    "Sha256": "b246f0a3679fe38a720b5e339d71d1cd880db06e3e93499272489ac4848e457b",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@26.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:29:54.2067712+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 104,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000048",
+    "Cue": "phase-text",
+    "Label": "ally",
+    "File": "cues\\phase-text\\ally\\C000048.png",
+    "Sha256": "bf1711c6331348cdadfcd179509c271dd6d9d18f354ef79f3fb554ffcc9c5f9f",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@27.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:29:54.4204258+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 104,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000049",
+    "Cue": "phase-text",
+    "Label": "enemy",
+    "File": "cues\\phase-text\\enemy\\C000049.png",
+    "Sha256": "56dd411763428d5e4fcab25367bb1df2c45e26b853f18b31e862c0ed90a1e6ae",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@141.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:30:08.9001227+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 105,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000050",
+    "Cue": "phase-text",
+    "Label": "enemy",
+    "File": "cues\\phase-text\\enemy\\C000050.png",
+    "Sha256": "b963aff97d8e17d924bedf7916fccae2bd983b1e9dafcb4713d60d7512c1d8e5",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@141.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:30:09.0609018+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 105,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000051",
+    "Cue": "phase-text",
+    "Label": "enemy",
+    "File": "cues\\phase-text\\enemy\\C000051.png",
+    "Sha256": "d01f65b7f3d3da87bb1a1dbbb5a32c027fe6975a6f83b27845ff05ef6bf24be6",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@142.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:30:09.2244661+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 105,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000052",
+    "Cue": "phase-text",
+    "Label": "enemy",
+    "File": "cues\\phase-text\\enemy\\C000052.png",
+    "Sha256": "c6c47ebb30fbf4096a22dd67e128d13b333de733e57c0fecaf097ca3dc4caf04",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@142.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:30:09.3507647+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 105,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取",
+    "Excluded": null
+  },
+  {
+    "Id": "C000053",
+    "Cue": "phase-text",
+    "Label": "none",
+    "File": "cues\\phase-text\\none\\C000053.png",
+    "Sha256": "8287e1492242b3a59793e344bbe22978386c68a1c6bdf2d99e5f07174b60ad7d",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@16.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:30:12.1007287+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 106,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取；选招状态或 boss 机制条目，没有状态文字",
+    "Excluded": null
+  },
+  {
+    "Id": "C000054",
+    "Cue": "phase-text",
+    "Label": "none",
+    "File": "cues\\phase-text\\none\\C000054.png",
+    "Sha256": "a531aa252ba37d538120c9e332bf4d14a6fff33331fec777a240aa70be320ac9",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@16.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:30:12.2684933+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 106,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取；选招状态或 boss 机制条目，没有状态文字",
+    "Excluded": null
+  },
+  {
+    "Id": "C000055",
+    "Cue": "phase-text",
+    "Label": "none",
+    "File": "cues\\phase-text\\none\\C000055.png",
+    "Sha256": "96712f25309c0caaf0b332b6bd7b7fe164ce43fa313852b259f088efeb139c9a",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@23.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:30:13.5158738+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 106,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取；选招状态或 boss 机制条目，没有状态文字",
+    "Excluded": null
+  },
+  {
+    "Id": "C000056",
+    "Cue": "phase-text",
+    "Label": "none",
+    "File": "cues\\phase-text\\none\\C000056.png",
+    "Sha256": "2360f8d3cdf5a08de22232320c2cf68b8e2badd1fef4016d7c11a323921c92b4",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@30.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:30:14.6965851+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 106,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取；选招状态或 boss 机制条目，没有状态文字",
+    "Excluded": null
+  },
+  {
+    "Id": "C000057",
+    "Cue": "phase-text",
+    "Label": "none",
+    "File": "cues\\phase-text\\none\\C000057.png",
+    "Sha256": "078d34a4556fa5892b909408c3f61b97dff130ef33962c213ed898e7ea8cabda",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@172.267",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T20:30:39.4508474+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 106,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）逐帧核对选取；选招状态或 boss 机制条目，没有状态文字",
+    "Excluded": null
+  },
+  {
+    "Id": "C000058",
+    "Cue": "reticle",
+    "Label": "main",
+    "File": "cues\\reticle\\main\\C000058.png",
+    "Sha256": "0e5dbf9f061dd7b3a32e2c88bf4d3288d0986750e2314bebc42f820e6758828d",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@123.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T21:24:18.6837471+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 108,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）选取：月夜天马身上的主目标圈",
+    "Excluded": null
+  },
+  {
+    "Id": "C000059",
+    "Cue": "banner",
+    "Label": "battle-start",
+    "File": "cues\\banner\\battle-start\\C000059.png",
+    "Sha256": "c8bb37092cd7ae03e49969ad231447aa6010210fa4a7f618ae781de2ef31612c",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@9.600",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T21:55:58.0596546+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 109,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）选取：单波次战斗开始横幅的",
+    "Excluded": null
+  },
+  {
+    "Id": "C000060",
+    "Cue": "banner",
+    "Label": "battle-end",
+    "File": "cues\\banner\\battle-end\\C000060.png",
+    "Sha256": "197b3760882c800eee658fbf12f9f61592c26a0cc8c2f09dbd4d195cef97225e",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@11.467",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T21:58:07.1477283+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 110,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）9:51 选取：",
+    "Excluded": null
+  },
+  {
+    "Id": "C000061",
+    "Cue": "banner",
+    "Label": "challenge-success",
+    "File": "cues\\banner\\challenge-success\\C000061.png",
+    "Sha256": "681a402be7a6570d074c7a0142c34c18b5d84eee019f7a7ecd683a298cfcf7ba",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1EM8Q69EqZ recording.avi@19.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T21:58:09.5560448+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 111,
+    "Notes": "Claude 从开放视频 BV1EM8Q69EqZ（铁墓）9:59 选取：结算画面",
+    "Excluded": null
+  },
+  {
+    "Id": "C000062",
+    "Cue": "av-bar",
+    "Label": "2|194",
+    "File": "cues\\av-bar\\2_194\\C000062.png",
+    "Sha256": "53d0802614a2b540b4ee010f84a2f9f50a163fff93964ab06463296383b9250c",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@170.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T22:19:35.0242917+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 115,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）读出并标注",
+    "Excluded": null
+  },
+  {
+    "Id": "C000063",
+    "Cue": "av-bar",
+    "Label": "2|283",
+    "File": "cues\\av-bar\\2_283\\C000063.png",
+    "Sha256": "b542c8ee34d9def6ee538090163c6e7ece6207a34e6b1ca54d8efbbc89181e06",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@100.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T22:19:45.0233809+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 116,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）读出并标注",
+    "Excluded": null
+  },
+  {
+    "Id": "C000064",
+    "Cue": "av-bar",
+    "Label": "2|238",
+    "File": "cues\\av-bar\\2_238\\C000064.png",
+    "Sha256": "03f0698863c384aca2c13acf4fce798394def89a0a79b49ce9e59a963fd72475",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@140.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T22:19:58.9827268+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 117,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）读出并标注",
+    "Excluded": null
+  },
+  {
+    "Id": "C000065",
+    "Cue": "av-bar",
+    "Label": "2|196",
+    "File": "cues\\av-bar\\2_196\\C000065.png",
+    "Sha256": "31180b0badadf81777371f7bf8173eb0fd3e1b0f6d0aaa06d581c41535d6c0fd",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@160.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T22:20:14.7224403+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 118,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）读出并标注",
+    "Excluded": "自动定位找错了位置（160 秒画面里裁到的是暗色背景，不是轮次行动值条）"
+  },
+  {
+    "Id": "C000066",
+    "Cue": "av-bar",
+    "Label": "2|300",
+    "File": "cues\\av-bar\\2_300\\C000066.png",
+    "Sha256": "d439c21091051ec1fea6148115a629200653d4e723476ba39b4fbad3056e2424",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@10.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T22:22:37.7619436+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 120,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）读出并标注",
+    "Excluded": null
+  },
+  {
+    "Id": "C000067",
+    "Cue": "av-bar",
+    "Label": "2|240",
+    "File": "cues\\av-bar\\2_240\\C000067.png",
+    "Sha256": "713858154bf43d595f79d864cd146cc8e5945a392d55b3e5ca3ad66e3ebd99c3",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@118.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T22:22:49.5354374+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 121,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）读出并标注",
+    "Excluded": null
+  },
+  {
+    "Id": "C000068",
+    "Cue": "av-bar",
+    "Label": "2|159",
+    "File": "cues\\av-bar\\2_159\\C000068.png",
+    "Sha256": "efbf33df7f9e5ee0168fdfb2bb25f32a076ec68ae39987d57befa610a1a46cce",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@30.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T22:25:50.9408618+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 122,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）3:00 起读出并标注",
+    "Excluded": null
+  },
+  {
+    "Id": "C000069",
+    "Cue": "av-bar",
+    "Label": "2|152",
+    "File": "cues\\av-bar\\2_152\\C000069.png",
+    "Sha256": "fad1880f9764e29544feda872fd4651a97fd5d785ab27d5be239d08e548a347b",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@90.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T22:26:03.2431038+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 123,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）3:00 起读出并标注",
+    "Excluded": null
+  },
+  {
+    "Id": "C000070",
+    "Cue": "av-bar",
+    "Label": "2|125",
+    "File": "cues\\av-bar\\2_125\\C000070.png",
+    "Sha256": "e7ce557a865146f85ac7dca4b4d56bbb7b33f88f18ce97499931ef3d9240323a",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@120.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T22:26:17.957846+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 124,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）3:00 起读出并标注",
+    "Excluded": null
+  },
+  {
+    "Id": "C000071",
+    "Cue": "av-bar",
+    "Label": "2|107",
+    "File": "cues\\av-bar\\2_107\\C000071.png",
+    "Sha256": "a5bc3b48f1d01a2a9eafed400e13cbf787b43e8041f95f9ca36847b98eb105e4",
+    "Source": {
+      "Type": "user-video",
+      "Origin": "BV1vAgy6LE9G recording.avi@150.000",
+      "Url": null,
+      "License": "本地算法沙箱内研究使用",
+      "AccessedAt": "2026-10-28T22:26:38.8069798+00:00"
+    },
+    "LabelSource": "claude-assisted",
+    "AddedInKbVersion": 125,
+    "Notes": "Claude 从开放视频 BV1vAgy6LE9G（绘世）3:00 起读出并标注",
+    "Excluded": null
+  }
+]

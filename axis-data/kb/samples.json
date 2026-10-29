@@ -1,0 +1,6466 @@
+[
+  {
+    "Id": "A000001",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00001",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05426356589147287,
+      "Y": 0.048625792811839326,
+      "W": 0.12121212121212122,
+      "H": 0.06342494714587738
+    },
+    "File": "samples\\U0001\\A000001_S00001_current.png",
+    "Sha256": "283194ed0dd153118239b3a51f875cd6a5bdb7200675efb97571a1dd635de28b",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 22,
+    "Notes": null,
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000002",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00001",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.11909795630725863,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0002\\A000002_S00001_main2.png",
+    "Sha256": "d44820ec7f5a5b9a59aa90eef1a76ea9e8e1b43adf7922150f00b90bf5f16517",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 22,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000003",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00001",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.17477096546863988,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0003\\A000003_S00001_main3.png",
+    "Sha256": "87681f9088ad5d0d0c6555686df2c559eb1503a1fc2a00856e1e3ea47f6087e4",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 22,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000004",
+    "UnitId": "U0016",
+    "ScreenshotId": "S00001",
+    "Slot": "main4",
+    "Rect": {
+      "X": 0.06060606060606061,
+      "Y": 0.22832980972515857,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0016\\A000004_S00001_main4.png",
+    "Sha256": "885755e1cbf6185f7831faec0ff752a8305fa398c77aa06665f380ae26afa3ef",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 22,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000005",
+    "UnitId": "U0016",
+    "ScreenshotId": "S00001",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.06060606060606061,
+      "Y": 0.28400281888653983,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0016\\A000005_S00001_main5.png",
+    "Sha256": "ce4789c2aad80f1f34a34c508ff2854571529262fd037941ddfb94cf07ebb13a",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 22,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000006",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00001",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.33967582804792107,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0005\\A000006_S00001_main6.png",
+    "Sha256": "7371cb7a9d5a6fca189c80148b0b4ff640b289770041d9782ca0575e31fd09a5",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 22,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000007",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00001",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.3953488372093023,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0008\\A000007_S00001_main7.png",
+    "Sha256": "90daad7d0b2372b05eb016e02a95157e61b766eea0716083c525e9ab284e6cc7",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 22,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000008",
+    "UnitId": "U0017",
+    "ScreenshotId": "S00001",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.06060606060606061,
+      "Y": 0.4510218463706836,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0017\\A000008_S00001_main8.png",
+    "Sha256": "dd31c16de1dd1325c191760d3ccd91e6e7eb2589238d67831508a204eb54920f",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 22,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000009",
+    "UnitId": "U0014",
+    "ScreenshotId": "S00001",
+    "Slot": "main9",
+    "Rect": {
+      "X": 0.05496828752642706,
+      "Y": 0.5426356589147286,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0014\\A000009_S00001_main9.png",
+    "Sha256": "79a1be4afc575d7fb70429a9018bea42bf3836351796e2b3152d56664c4325d4",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 22,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000010",
+    "UnitId": "U0015",
+    "ScreenshotId": "S00001",
+    "Slot": "main10",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.6250880902043693,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0015\\A000010_S00001_main10.png",
+    "Sha256": "f9049009f505c9e6e25caf2d01662d33f70558f77cf0afccf62153e1c6c745a2",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 22,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000011",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00002",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05426356589147287,
+      "Y": 0.046511627906976744,
+      "W": 0.12121212121212122,
+      "H": 0.06342494714587738
+    },
+    "File": "samples\\U0009\\A000011_S00002_current.png",
+    "Sha256": "2d5aa9e60f304ef9f830f76a2b0ecea89d3fa1cbefdb8fa344f11cebe022f4a9",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 23,
+    "Notes": null,
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000012",
+    "UnitId": "U0010",
+    "ScreenshotId": "S00002",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05496828752642706,
+      "Y": 0.11909795630725863,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0010\\A000012_S00002_main2.png",
+    "Sha256": "bac211a66dcfa6b511238cc7fceb0c8ab88a28c76175d55b2003cb67f93a61be",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 23,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000013",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00002",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.05496828752642706,
+      "Y": 0.17477096546863988,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0005\\A000013_S00002_main3.png",
+    "Sha256": "42f9150b3ec0499407c289ee05b0f88781981336eadfd8d7a123c7767f073485",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 23,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000014",
+    "UnitId": "U0011",
+    "ScreenshotId": "S00002",
+    "Slot": "main4",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.22832980972515857,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0011\\A000014_S00002_main4.png",
+    "Sha256": "7ef9efd0b578ef946b0808a63e244940fb53af12626fbc1d43a9863b424a776d",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 23,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000015",
+    "UnitId": "U0016",
+    "ScreenshotId": "S00002",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.28400281888653983,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0016\\A000015_S00002_main5.png",
+    "Sha256": "e91915418fa66fb4050b09450bcfd7cd96bfdbc01b0d9b4732c285df8c7f0367",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 23,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000016",
+    "UnitId": "U0016",
+    "ScreenshotId": "S00002",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.33967582804792107,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0016\\A000016_S00002_main6.png",
+    "Sha256": "a523c25e49ec07a5a7c352a60f196a0d403320e9d24600c62ba4b39cd9d8707a",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 23,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000017",
+    "UnitId": "U0017",
+    "ScreenshotId": "S00002",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.3953488372093023,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0017\\A000017_S00002_main7.png",
+    "Sha256": "12d2ffb0d7c97d4fdcbc14fa91f34a69e63dfa482b74b068e2ab0d816742a00b",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 23,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000018",
+    "UnitId": "U0006",
+    "ScreenshotId": "S00002",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.5419309372797745,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0006\\A000018_S00002_main8.png",
+    "Sha256": "c6ccd4d49376a57b9792c4e8ff4948b31c7b6490c60a14773f612d70f6a6a03d",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 23,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000019",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00002",
+    "Slot": "main9",
+    "Rect": {
+      "X": 0.05567300916138125,
+      "Y": 0.5976039464411558,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0003\\A000019_S00002_main9.png",
+    "Sha256": "133f0fb87ef713f3a6016c6f1734f13f3c2338c5ae93c467020722ccd217901b",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 23,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000020",
+    "UnitId": "U0014",
+    "ScreenshotId": "S00002",
+    "Slot": "main10",
+    "Rect": {
+      "X": 0.05567300916138125,
+      "Y": 0.6793516560958421,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0014\\A000020_S00002_main10.png",
+    "Sha256": "1287daacc37e6875091d297620dd51a8803e43fd31b36a3b6187419808e6f73b",
+    "LabelSource": "claude-assisted",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 23,
+    "Notes": null,
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000021",
+    "UnitId": "U0014",
+    "ScreenshotId": "S00003",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.04580690627202255,
+      "W": 0.12121212121212122,
+      "H": 0.06342494714587738
+    },
+    "File": "samples\\U0014\\A000021_S00003_current.png",
+    "Sha256": "ded7cc25338359a45ff911feb6768181b1173d4f10553b66e31a61812ba06373",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 32,
+    "Notes": "测试 20261026-230521_图片盲测01 纠正",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000022",
+    "UnitId": "U0018",
+    "ScreenshotId": "S00003",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.11768851303735024,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0018\\A000022_S00003_main2.png",
+    "Sha256": "2b764be51d59c67fc710f662b66aa9247e1163ec187888aeaf790892f27d3436",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 32,
+    "Notes": "测试 20261026-230521_图片盲测01 纠正",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000023",
+    "UnitId": "U0019",
+    "ScreenshotId": "S00003",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.1733615221987315,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0019\\A000023_S00003_main3.png",
+    "Sha256": "b625d4a9661c5f3f5087eb3b9a333e7d2cf3aa6e913b682c71966803ad4302fc",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 32,
+    "Notes": "测试 20261026-230521_图片盲测01 纠正",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000024",
+    "UnitId": "U0020",
+    "ScreenshotId": "S00003",
+    "Slot": "main4",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.22832980972515857,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0020\\A000024_S00003_main4.png",
+    "Sha256": "36c5f2dc279d2cf8fe6351edc0f843a8b44765249c3456f9ffdda432b6ef6594",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 32,
+    "Notes": "测试 20261026-230521_图片盲测01 纠正",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000025",
+    "UnitId": "U0022",
+    "ScreenshotId": "S00003",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.05496828752642706,
+      "Y": 0.284707540521494,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0022\\A000025_S00003_main5.png",
+    "Sha256": "03d8a7d894945ab41ef245f440fbdec0914ecc78c7e4cc871fc855beb37be393",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 32,
+    "Notes": "测试 20261026-230521_图片盲测01 纠正",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000026",
+    "UnitId": "U0016",
+    "ScreenshotId": "S00003",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.052854122621564484,
+      "Y": 0.3953488372093023,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0016\\A000026_S00003_main7.png",
+    "Sha256": "571d78ade0df1cc2dd23fed4764fc67039fd4d368ac176af7e9f52049dc32a24",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 32,
+    "Notes": "测试 20261026-230521_图片盲测01 纠正",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000027",
+    "UnitId": "U0016",
+    "ScreenshotId": "S00003",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.4510218463706836,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0016\\A000027_S00003_main8.png",
+    "Sha256": "224c49bc33fc4f8e688bdc264771803217d9cd2cd8cd6384424dea46e57c7487",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 32,
+    "Notes": "测试 20261026-230521_图片盲测01 纠正",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000028",
+    "UnitId": "U0021",
+    "ScreenshotId": "S00003",
+    "Slot": "main9",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.5066948555320648,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0021\\A000028_S00003_main9.png",
+    "Sha256": "4c197f2b5d08ef0c39967005f381817b00d30763a8335bc1d3cbaaab8002f802",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 32,
+    "Notes": "测试 20261026-230521_图片盲测01 纠正",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000029",
+    "UnitId": "U0023",
+    "ScreenshotId": "S00003",
+    "Slot": "main10",
+    "Rect": {
+      "X": 0.053558844256518676,
+      "Y": 0.5898520084566596,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0023\\A000029_S00003_main10.png",
+    "Sha256": "40a5061ac8cb8027150a43a093e7c1fd7d314859502724a017a62c34054c9b38",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 32,
+    "Notes": "测试 20261026-230521_图片盲测01 纠正",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000030",
+    "UnitId": "U0024",
+    "ScreenshotId": "S00003",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05496828752642706,
+      "Y": 0.33756166314305847,
+      "W": 0.10429880197322058,
+      "H": 0.04580690627202255
+    },
+    "File": "samples\\U0024\\A000030_S00003_main6.png",
+    "Sha256": "e900d5452c459fba0e2689d2cf3537806b6c3a22545f264d9e1f41ae060c28c7",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 36,
+    "Notes": "测试 20261026-230521_图片盲测01 纠正",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000031",
+    "UnitId": "U0025",
+    "ScreenshotId": "S00004",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0025\\A000031_S00004_current.png",
+    "Sha256": "8c0ecc3850ba57f415386d0f9fa10e182087fee6d076bcac7e2b59cdedd0a520",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新01",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000032",
+    "UnitId": "U0025",
+    "ScreenshotId": "S00005",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0025\\A000032_S00005_current.png",
+    "Sha256": "c22be20a77105fb358b1a59c8c53e1eda3d353aa2ef1215a7f5a8f97e2349545",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新01",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000033",
+    "UnitId": "U0025",
+    "ScreenshotId": "S00006",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05185185185185185,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0025\\A000033_S00006_current.png",
+    "Sha256": "fd1c261ebe4e4420f031e6d22fcc72d91341bb0d4acc344125b82923ce8bc4e6",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新01",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000034",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00004",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05185185185185185,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000034_S00004_main2.png",
+    "Sha256": "2a8085d709063eccc75b65be28b16f693d7c1976c10fb0b4822d8fb1a7ee62f8",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新02",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000035",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00007",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000035_S00007_main2.png",
+    "Sha256": "344249bc2ae45b6f1558ff7c64af2b035410d690c87b5fec7d77aa16a4e93755",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新02",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000036",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00008",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000036_S00008_main2.png",
+    "Sha256": "8a2bdc5438676bc8ea485c0cbfb82913e9a930081a701e7ee7d0ada21bb50e3d",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新02",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000037",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00009",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0009\\A000037_S00009_current.png",
+    "Sha256": "82a5939f70074420421015c11768e701007a391ddff72054970ffe7f721dc5ad",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新08",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000038",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00010",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0009\\A000038_S00010_current.png",
+    "Sha256": "1aa40429d760b964af00a551030f7b74666d5a939530fd8982616a9bbc734c3a",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新08",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000039",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00011",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0009\\A000039_S00011_current.png",
+    "Sha256": "54c60f18a582b2f1f42e300d90f34ac7c98e0b7aa5a1238af8e38d1236aa1a97",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新08",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000040",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00012",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0009\\A000040_S00012_current.png",
+    "Sha256": "d1ec7651dc279039617bcafd41486f7d12959a28cc5183f2766f3b2c0869a630",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新09",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000041",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00013",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0009\\A000041_S00013_current.png",
+    "Sha256": "e3f46bbd9edc427110703444f3cad5c71418f694fe6e8cf7bc092374e07b894e",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新09",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000042",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00014",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0009\\A000042_S00014_current.png",
+    "Sha256": "33ef72e629ed0a2961c030291650837f1870f86343d21e37bd9bde0191dde572",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新09",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000043",
+    "UnitId": "U0026",
+    "ScreenshotId": "S00015",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.49907407407407406,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0026\\A000043_S00015_main7.png",
+    "Sha256": "8dcadcef9f8219a69db764c611d7074cec79b51c775706a26f577aa59d742d34",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新22",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000044",
+    "UnitId": "U0026",
+    "ScreenshotId": "S00016",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.4995366079703429,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0026\\A000044_S00016_main8.png",
+    "Sha256": "5070f6da97821a70f03dd5c14eb036a208c99d0a815f586fdd85d7c9d4af5f42",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新22",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000045",
+    "UnitId": "U0026",
+    "ScreenshotId": "S00017",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.4995366079703429,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0026\\A000045_S00017_main8.png",
+    "Sha256": "36bf7e00b5efab8c11d354c898686f645103a8686fb640d88c5b953e347e6278",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 40,
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新22",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000046",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00018",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0002\\A000046_S00018_current.png",
+    "Sha256": "325d3e42a21bb3528c07272c88a8e2eb3f3f90b1295762ccab6fdbd329932e58",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 43,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新14",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000047",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00019",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0002\\A000047_S00019_current.png",
+    "Sha256": "610ed7de3b85c739ebc0ddc37d2a41ad22dd76402a3bae4c0e0ef3d3221cd1b3",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 43,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新14",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000048",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00020",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05185185185185185,
+      "Y": 0.04814814814814815,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0002\\A000048_S00020_current.png",
+    "Sha256": "0ce53611979baf84192a15eed4b62bce0a5fd51b6169ce3de859a3ef02be67be",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 43,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新14",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000049",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00021",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05185185185185185,
+      "Y": 0.04814814814814815,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0003\\A000049_S00021_current.png",
+    "Sha256": "8bf1913198a2f53038d0c23ed13e319a751340df5c550f08323dacbd147710d7",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 43,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新08",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000050",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00022",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0003\\A000050_S00022_current.png",
+    "Sha256": "184090ca448c376fe5854685ec6ab96187cc08402f372f03743e0e0e291c1e27",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 43,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新08",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000051",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00023",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0003\\A000051_S00023_current.png",
+    "Sha256": "3e3373faa094f1e5d17efefdf562112c7222fd46ee2489bf25308b408b47daf4",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 43,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新08",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000052",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00024",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0005\\A000052_S00024_current.png",
+    "Sha256": "a28f60c0dcbfb94de9be3ff626be6a8ea5f50255e460afdeec9a87a9c03ff30b",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 52,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新11",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000053",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00025",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0005\\A000053_S00025_current.png",
+    "Sha256": "7aab3023b643dc991fbe17307d0f8b52ca04b6df03dd48d66e4e1911ea9dd55d",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 52,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新11",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000054",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00026",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05185185185185185,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0005\\A000054_S00026_current.png",
+    "Sha256": "1b0115ddb6b4ee8b19939bb72d55ca94c8cf68f4d4f0d6ec582dce346be78e4b",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 52,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新11",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000055",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00027",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.17314814814814813,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0005\\A000055_S00027_main3.png",
+    "Sha256": "f7149b25dc7d4774e6f6abe3fd87bebcbb16ae33843cfb677cadabad6ba14b23",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新01（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000056",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00028",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.17330861909175163,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0005\\A000056_S00028_main3.png",
+    "Sha256": "50c8f43b05ba97c7ed4764eccfe8e40e7fbcee32fda43e0d47ddd821f7916313",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新01（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000057",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00029",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.21481481481481482,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0005\\A000057_S00029_main3.png",
+    "Sha256": "c57b8968a29feb105d226d8fbff4ff9263f6407de65d4619f44ba6a5cf1d2d8a",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新01（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000058",
+    "UnitId": "U0028",
+    "ScreenshotId": "S00030",
+    "Slot": "main9",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.5083333333333333,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0028\\A000058_S00030_main9.png",
+    "Sha256": "eec623bd152babde0e9a75906100466f7441babec562b1ec10c6be0c2990822a",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新02（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000059",
+    "UnitId": "U0028",
+    "ScreenshotId": "S00031",
+    "Slot": "main10",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.5625579240037072,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0028\\A000059_S00031_main10.png",
+    "Sha256": "328b36d537f4cfe49cf5816782c9584f49e8a45b47bc7dc1898a5bd9891cb6de",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新02（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000060",
+    "UnitId": "U0028",
+    "ScreenshotId": "S00032",
+    "Slot": "main9",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.5333333333333333,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0028\\A000060_S00032_main9.png",
+    "Sha256": "80e0486cf8af3de133e079c78ebbd139d5c55934a37da59bc2a600efabb14618",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新02（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000061",
+    "UnitId": "U0029",
+    "ScreenshotId": "S00033",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.28425925925925927,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0029\\A000061_S00033_main5.png",
+    "Sha256": "310fe65c3df5ad2c34054a9f006c66dc9f7dc63a8e3eca9a493910d514c3a832",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新03（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000062",
+    "UnitId": "U0029",
+    "ScreenshotId": "S00034",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.2851851851851852,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0029\\A000062_S00034_main5.png",
+    "Sha256": "50300b812241a0a099eeb9180daf9fb9bb2bee809b120d57dd422a4f6cf2b041",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新03（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000063",
+    "UnitId": "U0029",
+    "ScreenshotId": "S00035",
+    "Slot": "main4",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.30954587581093607,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0029\\A000063_S00035_main4.png",
+    "Sha256": "1b8de9751f9d93ba3ff9e414c3827e0782330228a783b1c3835d8b80fd177b63",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新03（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000064",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00036",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.11666666666666667,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0001\\A000064_S00036_main2.png",
+    "Sha256": "1b1f9261eebdd6702363582ecc6ef0091b0d48b31bb6c374977178168412b674",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新04（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000065",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00037",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05282669138090825,
+      "Y": 0.11677479147358666,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0001\\A000065_S00037_main2.png",
+    "Sha256": "d175fbe60d7d9624a40059b12c6dd9fec6459e23939d4f39c73f956195af3615",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新04（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000066",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00038",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.1685185185185185,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0001\\A000066_S00038_main2.png",
+    "Sha256": "8fe7a1d96fb0cc46872f52dd1dab473457e85403b66feeecff50ca3acefaf76e",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新04（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000067",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00039",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.049074074074074076,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0008\\A000067_S00039_current.png",
+    "Sha256": "324f2127a48edb6da5d7916498db4dafad0837ab4a1179e085d1d6859e725495",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新05（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000068",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00040",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.049074074074074076,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0008\\A000068_S00040_current.png",
+    "Sha256": "5768ae143263015fc863ba659f7324871649813e4dee276a38dc343239171022",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新05（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000069",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00041",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.049074074074074076,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0008\\A000069_S00041_current.png",
+    "Sha256": "9e0f83a8b09d9d62869b488ebdf5628eed744ee0eb890d55a74beb5aa7e86a00",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新05（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000070",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00030",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.39537037037037037,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000070_S00030_main7.png",
+    "Sha256": "d90c093b9bb039f1677d7fa6b4dd789f45ceda6d99089bcc01756efe352b2f03",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新06（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000071",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00037",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.3957367933271548,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0002\\A000071_S00037_main7.png",
+    "Sha256": "ae8067375c7f77ccb68d6dda56066eccfec27f5807bf1ffad63569bb625bce08",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新06（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000072",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00042",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.43836886005560705,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0002\\A000072_S00042_main6.png",
+    "Sha256": "e8ca92c74a2c4836bc91e5d43582a2eb4844a7e2eaba423ec5d655a7ca9a5ae7",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新06（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000073",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00043",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.12777777777777777,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0003\\A000073_S00043_main2.png",
+    "Sha256": "6dfb8829e1159fc56efb3d65b59c0074297d9d90d90b251a1c826c51ff31b32c",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新07（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000074",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00044",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.3398148148148148,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0003\\A000074_S00044_main6.png",
+    "Sha256": "8d8cc4f99f17d1d91eeef8a2f497b6fef4f860d14a3367c5395bff32e380119e",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新07（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000075",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00045",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0003\\A000075_S00045_main2.png",
+    "Sha256": "00142d565252528195a2247f2572a4429fb5aa1c282c84ad84d60c7980b6b841",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新07（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000076",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00046",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000076_S00046_main2.png",
+    "Sha256": "a50e14c9e28c65498ed66fd8113a514c10fab1c17a1d4d819a2a30315ebf61f5",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新09（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000077",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00047",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000077_S00047_main2.png",
+    "Sha256": "e322b0e267d9201f7d6d162b0b9069f36347fd1c58d860db1e130bffa98af071",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新09（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000078",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00048",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000078_S00048_main2.png",
+    "Sha256": "3f8e4ff4042925edec07e833d2e724198c8ce605ac1158e5421b8f8e67d46cb1",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新09（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000079",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00049",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.46987951807228917,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0008\\A000079_S00049_main8.png",
+    "Sha256": "19f538d99cb69fff19d226771b47278e9e3d3aca1ec70e0c0792080e44e16bff",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新10（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000080",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00050",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.39759036144578314,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0008\\A000080_S00050_main7.png",
+    "Sha256": "99b7f3058924158d8f8bb0617416341679b36bab4f25bc208491b5dd878c0237",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新10（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000081",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00051",
+    "Slot": "main4",
+    "Rect": {
+      "X": 0.056533827618164965,
+      "Y": 0.3030583873957368,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0008\\A000081_S00051_main4.png",
+    "Sha256": "8b4a6ee1ca2b986d1acb8d6adf505a3af9e7e512c1828f62353981a2a1ee9f0b",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新10（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000082",
+    "UnitId": "U0036",
+    "ScreenshotId": "S00052",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0036\\A000082_S00052_current.png",
+    "Sha256": "ba180185789325d8455975149ab3d68fb9316c79af4f9110e146fd1a73b6a99a",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新12（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000083",
+    "UnitId": "U0036",
+    "ScreenshotId": "S00053",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.051899907321594066,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0036\\A000083_S00053_current.png",
+    "Sha256": "7bc641d50eb140fb3228a1b85ab985f486fd7953a727ce666cc65883bd4a9966",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新12（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000084",
+    "UnitId": "U0036",
+    "ScreenshotId": "S00054",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.051899907321594066,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0036\\A000084_S00054_current.png",
+    "Sha256": "0e5c2396e1fd75f47c881c3a688ff710f9ad9a280c20a4d92f284c863bab20ba",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新12（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000085",
+    "UnitId": "U0037",
+    "ScreenshotId": "S00055",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0037\\A000085_S00055_current.png",
+    "Sha256": "c87a6288fb07312af5b042e3d64e3981cedc6c2e19964fd5b6b0597c94f93256",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新13（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000086",
+    "UnitId": "U0037",
+    "ScreenshotId": "S00056",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0037\\A000086_S00056_current.png",
+    "Sha256": "14e56ee8a3c5af00f9124745fa8ead9ffe7d094a1e8d7ed19205ff861dd5074c",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新13（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000087",
+    "UnitId": "U0037",
+    "ScreenshotId": "S00057",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0037\\A000087_S00057_current.png",
+    "Sha256": "e3c4652e57fee1e2d6934af21b7e5dc170243d7338d0714f6e1dd4e4125a6d33",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新13（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000088",
+    "UnitId": "U0038",
+    "ScreenshotId": "S00058",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.28425925925925927,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0038\\A000088_S00058_main5.png",
+    "Sha256": "c7ac07ad36cbe72d9b1eb9e04e53bb41e3aeadded66744c9a9f6801bc93ace5d",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新15（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000089",
+    "UnitId": "U0038",
+    "ScreenshotId": "S00059",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.28425925925925927,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0038\\A000089_S00059_main5.png",
+    "Sha256": "0cbe264c8f0abbdbd79ff164edf79cc827b2a14797eb688122c0287927da71df",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新15（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000090",
+    "UnitId": "U0038",
+    "ScreenshotId": "S00060",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.28425925925925927,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0038\\A000090_S00060_main5.png",
+    "Sha256": "b45e12bd651fccd78d938f4a6f05f9f7d555ce830b173c46e8575efcfa975171",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新15（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000091",
+    "UnitId": "U0039",
+    "ScreenshotId": "S00059",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.17314814814814813,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0039\\A000091_S00059_main3.png",
+    "Sha256": "b735a07b50adad13562a931112a9272fb6b4d259f7cfd5f1ae47beb36320662f",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新16（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000092",
+    "UnitId": "U0039",
+    "ScreenshotId": "S00060",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.17314814814814813,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0039\\A000092_S00060_main3.png",
+    "Sha256": "af16b279ebe1a68aa18af12e6fc2f7e78a13ad34a1396f1615d798dfe38b1db8",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新16（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000093",
+    "UnitId": "U0039",
+    "ScreenshotId": "S00061",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.17314814814814813,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0039\\A000093_S00061_main3.png",
+    "Sha256": "062834af6df3d81459960fc901d07b8190e140f348c8ec9836ef8dcbd5f458b7",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 55,
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新16（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000094",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00004",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05185185185185185,
+      "Y": 0.4111111111111111,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0001\\A000094_S00004_main6.png",
+    "Sha256": "593bc6d2cc6c6c19e62202c72f3cb60ec357dff070b9d6fee96b291b0addaf66",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新01（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000095",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00062",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.4111111111111111,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0001\\A000095_S00062_main6.png",
+    "Sha256": "20237e4884ec0db69ca6b52caf2cd638335c04e1f1daa00266cc9e2f8a5288ef",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新01（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000096",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00063",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.41203703703703703,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0001\\A000096_S00063_main6.png",
+    "Sha256": "712015dc7a0670a55b8082306aa9fb209b1e354f16bf8f41ef67ce2bb405046a",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新01（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000097",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00004",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05185185185185185,
+      "Y": 0.4666666666666667,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0005\\A000097_S00004_main7.png",
+    "Sha256": "cce224800fe93fd8aa25c82cf11f889e726af98d01da758137acebad83f88505",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新02（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000098",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00007",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.4666666666666667,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0005\\A000098_S00007_main6.png",
+    "Sha256": "ea2f29d2a70126a3ed135652ae246208aa019a3f47fb4cb6940ff9cbcd235491",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新02（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000099",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00064",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.4675925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0005\\A000099_S00064_main7.png",
+    "Sha256": "c55aee0779257b8dc3114c89856d41f7d5b3287c5aa7d9d3b38d1fb21a17693f",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新02（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000100",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00005",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000100_S00005_main2.png",
+    "Sha256": "96857d423a13b1ccc1e523db50a455be115310ff7814c4d4c45d04b8198a5b53",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新03（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000101",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00065",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.11770157553290084,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0009\\A000101_S00065_main2.png",
+    "Sha256": "d47c5296511b4a1134ea68907e62089dac4c6f32b035bcee943a020afaf985cc",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新03（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000102",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00066",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.06759259259259259,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000102_S00066_main2.png",
+    "Sha256": "e27e50f368d20ef9ce222f2fc9fa895bd7116a87431bd8abd4c47ff9e17f743e",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新03（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000103",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00067",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.17314814814814813,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000103_S00067_main3.png",
+    "Sha256": "18dd7134dd62bf95533bc139e6b5fd24c97d3048d044a3d2771442865962fff3",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新04（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000104",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00068",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.46709916589434664,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0002\\A000104_S00068_main6.png",
+    "Sha256": "500578420aef6c1efecb2a7b7c809fcafbb80843d3e587404e4ba12891996ce3",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新04（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000105",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00069",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.5231481481481481,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000105_S00069_main8.png",
+    "Sha256": "4763341f072df053dab58156c49325cdedff22f6eeeb3f34a021535eb248eba3",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新04（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000106",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00070",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.5222222222222223,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0008\\A000106_S00070_main6.png",
+    "Sha256": "b104ac285c1081bb461549bc06e6560375204aeb14a7f4aaab1531b28fb27c6d",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新05（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000107",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00071",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.4675925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0008\\A000107_S00071_main7.png",
+    "Sha256": "f4d7f25fd7a68996c77c14ff1c11cab4f5ab8705956fa32c36a3e373456a1e7b",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新05（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000108",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00072",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.11666666666666667,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0008\\A000108_S00072_main2.png",
+    "Sha256": "1484a47f1480a7f3a10a55337c4cf66bf6bf2b7775f4b04a54dd53fc076befac",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新05（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000109",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00073",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0008\\A000109_S00073_current.png",
+    "Sha256": "018c00169dc2b99a56affd7b07aabfc1f1e63b5f06556baea72da89305b582bc",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新06（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000110",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00074",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0008\\A000110_S00074_current.png",
+    "Sha256": "f7871c939971715326f9d3ef80767e74b2f519bbdd58daf62dffab5b0cc513d5",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新06（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000111",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00075",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0008\\A000111_S00075_current.png",
+    "Sha256": "ff0d76723ab7c4514340c17d12e91f217f68d9941e1dd4def70a5b910afc38a0",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新06（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000112",
+    "UnitId": "U0044",
+    "ScreenshotId": "S00076",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.049074074074074076,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0044\\A000112_S00076_current.png",
+    "Sha256": "249244f028f2d464071cc2e60f570c96dd9e8194a4be84aa57669eea1c1f3ca6",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新07（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000113",
+    "UnitId": "U0044",
+    "ScreenshotId": "S00077",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0044\\A000113_S00077_current.png",
+    "Sha256": "edb96b9b91f595b24a151af724478a9c904fc7a607abeda95b5e828d408fbe94",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新07（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000114",
+    "UnitId": "U0044",
+    "ScreenshotId": "S00078",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.04814814814814815,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0044\\A000114_S00078_current.png",
+    "Sha256": "14cbe3eb20128d0203dbb9c76825fac507efc9372ba4f42683b9e7e379d0488d",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新07（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000115",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00079",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000115_S00079_main2.png",
+    "Sha256": "11284afc3a560237b81ba2db6946757f38c3544e0b09ca910f9a443657ef3e15",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新08（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000116",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00080",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000116_S00080_main2.png",
+    "Sha256": "3f295b5c6e26dcabe6c9524cb5a1fb89dde9b1bcb058b302d8d8cf6906e26c81",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新08（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000117",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00081",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000117_S00081_main2.png",
+    "Sha256": "7464ad6fd69a7c2129c538512099bf1f8e709452fe87993aa0d5bc3bf61ba3fc",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新08（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000118",
+    "UnitId": "U0045",
+    "ScreenshotId": "S00082",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0045\\A000118_S00082_current.png",
+    "Sha256": "855e59c25e66d2c043ad57a7cc94d15945a8efcc8d927bbf780c4e8030a520fe",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新09（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000119",
+    "UnitId": "U0045",
+    "ScreenshotId": "S00083",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05282669138090825,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0045\\A000119_S00083_current.png",
+    "Sha256": "fcc1bb82963431d1b50d22689a21417819fefff8e13dbf6a2670ce7caeda0421",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新09（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000120",
+    "UnitId": "U0045",
+    "ScreenshotId": "S00084",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05282669138090825,
+      "Y": 0.04448563484708063,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0045\\A000120_S00084_current.png",
+    "Sha256": "9fc13f968829ae0ea13a599210238ca82b9fda854d97daefa233627f602a9fd7",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新09（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000121",
+    "UnitId": "U0046",
+    "ScreenshotId": "S00085",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0046\\A000121_S00085_current.png",
+    "Sha256": "c4ff3f358d15d84df41260adcc7f316a42781c98fc8b93926015a80fb5099971",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新10（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000122",
+    "UnitId": "U0046",
+    "ScreenshotId": "S00086",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0046\\A000122_S00086_current.png",
+    "Sha256": "a89cb3a8094009b271341cf6df17efb1ee301b5f55570b3c312e0c2fd8a9287a",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新10（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000123",
+    "UnitId": "U0046",
+    "ScreenshotId": "S00015",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0046\\A000123_S00015_current.png",
+    "Sha256": "8e1cf2dae523e8bb91016b6926813b737be28d79e268ccce70f2a8eb40306a9b",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新10（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000124",
+    "UnitId": "U0047",
+    "ScreenshotId": "S00087",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05092592592592592,
+      "Y": 0.04814814814814815,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0047\\A000124_S00087_current.png",
+    "Sha256": "0a250d5384fd5fd325f3d2606da3e1481035c3478fabc34b0d13be9f37b49b52",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新11（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000125",
+    "UnitId": "U0047",
+    "ScreenshotId": "S00088",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.051899907321594066,
+      "Y": 0.04819277108433735,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0047\\A000125_S00088_current.png",
+    "Sha256": "77b3b7334e1f48419c816327b9b3ca9b0f5d2835e2e72845eaa110b16c20ec7e",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新11（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000126",
+    "UnitId": "U0047",
+    "ScreenshotId": "S00089",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0047\\A000126_S00089_current.png",
+    "Sha256": "4bf010c4fbe6b79a0904d06f8667df06c44125f4e36b1505281b4e206249cd0e",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新11（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000127",
+    "UnitId": "U0036",
+    "ScreenshotId": "S00090",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0036\\A000127_S00090_current.png",
+    "Sha256": "4ecf1ced6d59a7c73eabc9a3c8daf1eef899f111863f824ac4cba0ce5397f7eb",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新12（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000128",
+    "UnitId": "U0036",
+    "ScreenshotId": "S00091",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05185185185185185,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0036\\A000128_S00091_current.png",
+    "Sha256": "c1b5a7a0b302bda952415ac675c8f4f1aef55f79e529413d9cd3d3ab10675fc5",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新12（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000129",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00093",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05282669138090825,
+      "Y": 0.04819277108433735,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0003\\A000129_S00093_current.png",
+    "Sha256": "c5bd7dc5401dd633c18f5c248fb8ea5c1135c00178ce0b4d9861c22ce115cb09",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新13（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000130",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00094",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.04819277108433735,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0003\\A000130_S00094_current.png",
+    "Sha256": "dc259f80fa7b387665216d4ad6ad53bb7bcbbfd370bb5e2ec00f24896a1dbfff",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新13（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000131",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00095",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0003\\A000131_S00095_current.png",
+    "Sha256": "f901fc306f652011dfad32f027ced94bf517b31b49261b75f0be3ad226f28c07",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 56,
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新13（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000132",
+    "UnitId": "U0036",
+    "ScreenshotId": "S00096",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05185185185185185,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0036\\A000132_S00096_current.png",
+    "Sha256": "2d8bd6f279a52e3644936af794f98e583ad139f84a8f7363fb37f7d1a90f949e",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新01（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000133",
+    "UnitId": "U0036",
+    "ScreenshotId": "S00097",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.051899907321594066,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0036\\A000133_S00097_current.png",
+    "Sha256": "92efd247daab446f808ef67969fc9a40a20002a70e891df097f0a92bc208ab1f",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新01（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000134",
+    "UnitId": "U0036",
+    "ScreenshotId": "S00098",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0036\\A000134_S00098_current.png",
+    "Sha256": "391858714115b2296b473fe7a13172796fd361225956f3b663d15d8e13b212c7",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新01（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000135",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00099",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0001\\A000135_S00099_main2.png",
+    "Sha256": "f3e7b72b682faa2c73d04b24f1509a6fef3e70174ed9a9b7b358a5cada7414cf",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新02（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000136",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00100",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0001\\A000136_S00100_main2.png",
+    "Sha256": "2b9148ac6ba9e953455f7a5ee092f78720d2e6ccf8ae5afd41ac348b06639c90",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新02（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000137",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00101",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.3753475440222428,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0001\\A000137_S00101_main6.png",
+    "Sha256": "0bdfa94e31e214f15b764de59cd2c1d073e8439f5f4cc693ccf3164be0bd68d0",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新02（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000138",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00099",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.17314814814814813,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000138_S00099_main3.png",
+    "Sha256": "acf898c061c708883c5cef9e21083e602bff3eaa497953b3062fe6e3ed7d2343",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新03（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000139",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00102",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000139_S00102_main2.png",
+    "Sha256": "a6fb2dfa6058bf0c30acff3dea70dc1f21079908a91334b2a775c88cd2ac5dee",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新03（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000140",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00103",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.2833333333333333,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000140_S00103_main5.png",
+    "Sha256": "7d18f3c3488bc701445b082ef4a97fc11322ab9f7d0989d4276c690cd4d0dc70",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新03（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000141",
+    "UnitId": "U0050",
+    "ScreenshotId": "S00099",
+    "Slot": "main4",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.23148148148148148,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0050\\A000141_S00099_main4.png",
+    "Sha256": "824f0b09732a4921e42df50818e799ff56d6abbb6fa2d16e1a0b05a8b83636c6",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新04（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000142",
+    "UnitId": "U0050",
+    "ScreenshotId": "S00104",
+    "Slot": "main4",
+    "Rect": {
+      "X": 0.05282669138090825,
+      "Y": 0.22984244670991658,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0050\\A000142_S00104_main4.png",
+    "Sha256": "28eb89edf32e58b81afac879141131d13035c7ed0262f463ef54cf533e91c3a9",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新04（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000143",
+    "UnitId": "U0050",
+    "ScreenshotId": "S00105",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.17314814814814813,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0050\\A000143_S00105_main3.png",
+    "Sha256": "a107ee00fefa6d4b3f418044fbcf49fb5df6d0e1c9526bd53b59ad2cd805acf9",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新04（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000144",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00106",
+    "Slot": "main4",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.27340129749768305,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0003\\A000144_S00106_main4.png",
+    "Sha256": "acf7e5b287c4d4a15acbb576511e8bbb3289766c5ce6ed5c791bf503495b349a",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新05（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000145",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00107",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.43373493975903615,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0003\\A000145_S00107_main7.png",
+    "Sha256": "dd5cfc368652a2ac12c15912cce69c6ea0996532ea29ab17a3fc87b9456e351f",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新05（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000146",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00108",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.11666666666666667,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000146_S00108_main2.png",
+    "Sha256": "f4705185472c12b6cde874551b4da7b465bc018335cd363d6b3e9c8377c08908",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新06（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000147",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00109",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.057460611677479144,
+      "Y": 0.376274328081557,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0002\\A000147_S00109_main6.png",
+    "Sha256": "0645a55ac81b856475404e573d991c5b3bfbd33c0290d1f64c0724e222bc302f",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新06（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000148",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00110",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.375,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000148_S00110_main6.png",
+    "Sha256": "ce62153d8414e631743556056f35e5cf9c478806c4ba247eb95a99c7c340f8bc",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新06（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000149",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00111",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05282669138090825,
+      "Y": 0.04819277108433735,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0002\\A000149_S00111_current.png",
+    "Sha256": "7a66ee6f44dbbd1edae23c67cfd730823db39e41c3ef95996caf9afe65024e83",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新07（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000150",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00112",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0002\\A000150_S00112_current.png",
+    "Sha256": "dd4bfdf3854861bbfd1ddd331f8a2752854517ce1291156111725980d3147fb0",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新07（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000151",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00113",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0002\\A000151_S00113_current.png",
+    "Sha256": "bea2a00b6684cc9292cbc28993e9da7ce7dd948c2fa9d74ab6d5bb98da932209",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新07（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000152",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00114",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0008\\A000152_S00114_current.png",
+    "Sha256": "68a80c503719c345168c626ecc5e258d513965487e8b4248238c2d74dce061fd",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新08（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000153",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00115",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0008\\A000153_S00115_current.png",
+    "Sha256": "473587eaf8d59efc706952102345267d05fbdc2c7dfdedcdd659a112703ea21b",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新08（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000154",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00109",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0008\\A000154_S00109_current.png",
+    "Sha256": "ae3101e46ee69e3bbc3c07025c5faabef2d48941a0d08e8f2fe0bc42b4401946",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新08（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000155",
+    "UnitId": "U0046",
+    "ScreenshotId": "S00116",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.04537037037037037,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0046\\A000155_S00116_current.png",
+    "Sha256": "ff3888cf8d74a19007aa4e363c8980ee8f57c2c81468c290bb04d171956a568b",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新09（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000156",
+    "UnitId": "U0046",
+    "ScreenshotId": "S00117",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0046\\A000156_S00117_current.png",
+    "Sha256": "14c91052568fd8cb1bbd34db186d79c3483e88f45b3cf7947b9f6d2a71aef5b7",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新09（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000157",
+    "UnitId": "U0046",
+    "ScreenshotId": "S00118",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.04541241890639481,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0046\\A000157_S00118_current.png",
+    "Sha256": "a32cb96874a8d2ea371553e72e506e69ed1294409e4ab66f6209348acd366586",
+    "LabelSource": "tool",
+    "Status": "unconfirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新09（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000158",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00119",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0003\\A000158_S00119_current.png",
+    "Sha256": "0940d113a629cec88973cf40306ca7f81af7677df98eaf5e1e498e881ef38e63",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新10（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000159",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00120",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0003\\A000159_S00120_current.png",
+    "Sha256": "518d7655e60e83c9aa2b0a91e3db97f724ad7de6a22b569272593544af00ec61",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新10（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000160",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00121",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0003\\A000160_S00121_current.png",
+    "Sha256": "71fb4b154a8302d392d028ae6d3713f96a4c419268ffd1091922a0c1feba73cc",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新10（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000161",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00122",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.07043558850787766,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0005\\A000161_S00122_current.png",
+    "Sha256": "ad8c0d51a3068b7779446744188bb0ac299114a2ae1b847cf3bb6fb28d438131",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新11（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000162",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00123",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05838739573679333,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0005\\A000162_S00123_current.png",
+    "Sha256": "a955a9902f1562638084b7169be48dd800b434507b404925531ba1478f2576d9",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新11（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000163",
+    "UnitId": "U0005",
+    "ScreenshotId": "S00124",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.057460611677479144,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0005\\A000163_S00124_current.png",
+    "Sha256": "ce38709f06657d22cef98233a09bfb89d519ae4ee34902f79369fb57a40c5e8e",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新11（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000164",
+    "UnitId": "U0014",
+    "ScreenshotId": "S00125",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.1175925925925926,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0014\\A000164_S00125_main2.png",
+    "Sha256": "a406978cc14bd3b2d4ff3953f1264773658520bb7016e865e0952737de8d28fc",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新12（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000165",
+    "UnitId": "U0014",
+    "ScreenshotId": "S00126",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05282669138090825,
+      "Y": 0.1195551436515292,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0014\\A000165_S00126_main2.png",
+    "Sha256": "a49937ecd651c36ead337778777165bd7ec9be56f1a492d3cbdf61ea04def891",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新12（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000166",
+    "UnitId": "U0014",
+    "ScreenshotId": "S00127",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.11770157553290084,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0014\\A000166_S00127_main2.png",
+    "Sha256": "1fed06224d2f3d1b6c3b90e744b9ac3218aaa64f35345612e23a473ea1523883",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新12（临时）",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000167",
+    "UnitId": "U0023",
+    "ScreenshotId": "S00128",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0023\\A000167_S00128_current.png",
+    "Sha256": "23578e58b8a2040b8e4e1119e1d30f9a247cef0705157e37799be609ae103394",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新13（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000168",
+    "UnitId": "U0023",
+    "ScreenshotId": "S00129",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0023\\A000168_S00129_current.png",
+    "Sha256": "ddb06ba3baa21d92dbd432c5fa7e373bd8197375402a565c49ca8a29b37db7b0",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新13（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000169",
+    "UnitId": "U0023",
+    "ScreenshotId": "S00130",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0023\\A000169_S00130_current.png",
+    "Sha256": "4c055d91a0d91e7a6099ba70e8d42b83803e28eb4926378708c0463efd1e101a",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新13（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000170",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00131",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0009\\A000170_S00131_current.png",
+    "Sha256": "b05dbd272b60363b50fe40dc7c16313e70b5e95163d1daa16e7a32b9cac332bb",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新14（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000171",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00132",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0009\\A000171_S00132_current.png",
+    "Sha256": "2d69fb2eceb348c6e2828dbcbee1e7d9e6f25a59a72cd0f3aa34f7ba6d2cd983",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新14（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000172",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00133",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0003\\A000172_S00133_current.png",
+    "Sha256": "2dbfd579400d06a26e337ab4c561cb5f0c84022dce2b88d1f60b47a87d7aa9fd",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新15（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000173",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00134",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.04814814814814815,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0003\\A000173_S00134_current.png",
+    "Sha256": "646ea1fc412e6d5333d5757d9d77927b120f1f4b81b8bf47cc19cd4f89b8e230",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新15（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000174",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00135",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.04814814814814815,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0003\\A000174_S00135_current.png",
+    "Sha256": "762ece1e77e5b77bf6a81001cea8806c615403267558c8910dab42482d738a48",
+    "LabelSource": "tool",
+    "Status": "confirmed",
+    "AddedInKbVersion": 57,
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新15（临时）",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000175",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00136",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.051899907321594066,
+      "Y": 0.2845227062094532,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0058\\A000175_S00136_main5.png",
+    "Sha256": "57b53cb624d5b85653460ca7c3b56404fbac9670883ccf8100884ec85779d477",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新01",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000176",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00137",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.2845227062094532,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0058\\A000176_S00137_main5.png",
+    "Sha256": "492d32dbbee72e224d6549afee088070f596b8993669fe1e3930834e73133701",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新01",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000177",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00138",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.05560704355885079,
+      "Y": 0.2845227062094532,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0058\\A000177_S00138_main5.png",
+    "Sha256": "79a4164af6e163ef96f0825597d7b7a1d55e6c26385b24776e81e0edb39eca6d",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新01",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000178",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00139",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.051899907321594066,
+      "Y": 0.05375347544022243,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0058\\A000178_S00139_current.png",
+    "Sha256": "ef95abda89ae82bb28d830b5cc378920031d9d632f270510a1af06ef9b20261a",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新05",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000179",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00140",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.04819277108433735,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0058\\A000179_S00140_current.png",
+    "Sha256": "28b4b740b8e228a2546648be08e7578d1047ae72f3f4955327063d480e136f4d",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新05",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000180",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00141",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0058\\A000180_S00141_current.png",
+    "Sha256": "6a306e6232426646d2f2b5ce847a90ddcf15309d77313f641e2607cafd301dae",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新05",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000181",
+    "UnitId": "U0059",
+    "ScreenshotId": "S00136",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.37812789620018533,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0059\\A000181_S00136_main6.png",
+    "Sha256": "5c61eebabcc3e27d985d6c67fe5725540d885254b78cfbe9fa14d37f6577c854",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新02",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000182",
+    "UnitId": "U0059",
+    "ScreenshotId": "S00142",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.375,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0059\\A000182_S00142_main6.png",
+    "Sha256": "cb7efc111feb172de6d0702fcfd29105a706da1f1833ebb7a19a57162b2a7d89",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新02",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000183",
+    "UnitId": "U0059",
+    "ScreenshotId": "S00143",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.37592592592592594,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0059\\A000183_S00143_main6.png",
+    "Sha256": "27d9fce09c269736b66a476dc92d471433ebce283e75a3366c443ea46b24cb09",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新02",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000184",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00144",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.4305555555555556,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000184_S00144_main7.png",
+    "Sha256": "31b0ac204d72ef9b6b999c3f6d0d17c4f46a45e012170feca36bf1c105208492",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新03",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000185",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00145",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.4305555555555556,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000185_S00145_main7.png",
+    "Sha256": "84048a15c2365ea2878be5ac74d12879e3ef05d85935d4183de3d995470a288d",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新03",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000186",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00146",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.375,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0002\\A000186_S00146_main6.png",
+    "Sha256": "860520f45486ababec7fbdc05fb2b3883fc9f860b2d96e5d3a9f534e03aeec02",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新03",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000187",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00147",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.06302131603336422,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0008\\A000187_S00147_current.png",
+    "Sha256": "056493a9d52f72c3549baa79d25db012827f471253f81271181a89d4fceafff7",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新04",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000188",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00148",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0008\\A000188_S00148_current.png",
+    "Sha256": "ecfa9e9d92ee632370c0f88b934e7d7929c58fc8b890a39bd53069bdb0eb917e",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新04",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000189",
+    "UnitId": "U0008",
+    "ScreenshotId": "S00149",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.04537037037037037,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0008\\A000189_S00149_current.png",
+    "Sha256": "e5ec15b2dd083d1ad799ae2bc4ddc9276a51d08ec3c0e42ffaa76544565a24ac",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 81,
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新04",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000190",
+    "UnitId": "U0002",
+    "ScreenshotId": "S00150",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0002\\A000190_S00150_current.png",
+    "Sha256": "f5f285fd827cb8d566acbf45a8d14fd2079eb281d57b2584a2c96908e5386988",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 85,
+    "Notes": "测试 20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 纠正",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000191",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00151",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.04722222222222222,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0003\\A000191_S00151_current.png",
+    "Sha256": "be58d0200d2def06e8aa0bd09da525ff630e4ded3f3a7b1e283c2d33a99bf134",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 85,
+    "Notes": "测试 20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 纠正",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000192",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00152",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0001\\A000192_S00152_current.png",
+    "Sha256": "63a42c1d3ab372ae156c09bc1b84d3a571d4a60505ea0ae95d100bf8c9aa8ea0",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 85,
+    "Notes": "测试 20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 纠正",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000193",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00153",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0009\\A000193_S00153_current.png",
+    "Sha256": "2b812969816499c4d8c8a2020602fece860830d2834f01af959baf62e7d11f99",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 87,
+    "Notes": "测试 20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 纠正",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000194",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00154",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.3972222222222222,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0058\\A000194_S00154_main7.png",
+    "Sha256": "a7f7ad7de77e2deed73b5f67ce97db06ae64a0d1a950f494ebfc2da0e4752d3c",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新01",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000195",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00155",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.3972222222222222,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0058\\A000195_S00155_main7.png",
+    "Sha256": "30e309fa31d81e64548baf9599303be6d7e13e2b09df9ba0cfa77fa01fa6e2b7",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新01",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000196",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00156",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.3972222222222222,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0058\\A000196_S00156_main7.png",
+    "Sha256": "7d4934b445d7a513bf7750d8e25ccde95baa1c7010a7abec6a02f838f9e829c0",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新01",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000197",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00157",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.046296296296296294,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0058\\A000197_S00157_current.png",
+    "Sha256": "82da1186815f39ea9e95fc98aec5c468e5c6a848d652696a4b01690924e1cd78",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新08",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000198",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00158",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0058\\A000198_S00158_current.png",
+    "Sha256": "00ee8f7a6242b65eedb84f98da86d26a75025d4b28f9fe4c4cd9e33f8767180e",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新08",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000199",
+    "UnitId": "U0058",
+    "ScreenshotId": "S00159",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.04633920296570899,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0058\\A000199_S00159_current.png",
+    "Sha256": "0e586942dc5ecfd1464491ac828d75cdca736e8947b1a98d970239f9e291b03f",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新08",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000200",
+    "UnitId": "U0059",
+    "ScreenshotId": "S00160",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.4861111111111111,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0059\\A000200_S00160_main8.png",
+    "Sha256": "e4e38b153b9ec5589dd3d71f58ac81823c0243e7901d603044578ad97a65082c",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新02",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000201",
+    "UnitId": "U0059",
+    "ScreenshotId": "S00156",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.48703703703703705,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0059\\A000201_S00156_main8.png",
+    "Sha256": "a405a390c11c25a35c37527361fcddd2ad1b5b547dd09e1cd1da1936bd9eda48",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新02",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000202",
+    "UnitId": "U0059",
+    "ScreenshotId": "S00161",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.051899907321594066,
+      "Y": 0.48748841519925856,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0059\\A000202_S00161_main8.png",
+    "Sha256": "e9275212e0789e92efa240bc0f367f8b72f7e693fef41af68ae302b08ec6f706",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新02",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000203",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00162",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05462962962962963,
+      "Y": 0.04814814814814815,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0001\\A000203_S00162_current.png",
+    "Sha256": "b3c84653006827140551a8d350ef82a16523c6fcb5e45f0ceaec03fd2d0572a1",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新03",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000204",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00163",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.04814814814814815,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0001\\A000204_S00163_current.png",
+    "Sha256": "669a9d629b4ec64691a7272fbeb74a3d3a8c5b47936dadc3990146e4156e3122",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新03",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000205",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00164",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.05,
+      "W": 0.12129629629629629,
+      "H": 0.06296296296296296
+    },
+    "File": "samples\\U0001\\A000205_S00164_current.png",
+    "Sha256": "34845e0f4b030b93c8ae4b9d0f54ae72cb266fb47cbe455ba582b54f2d4d8b6a",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新03",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000206",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00165",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.05282669138090825,
+      "Y": 0.283595922150139,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0003\\A000206_S00165_main5.png",
+    "Sha256": "f24af3a6965266e8df63ebae003561c846473b40a4f21e1baaa89a578c5b2dc0",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新04",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000207",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00166",
+    "Slot": "main5",
+    "Rect": {
+      "X": 0.05282669138090825,
+      "Y": 0.283595922150139,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0003\\A000207_S00166_main5.png",
+    "Sha256": "70439251a9c209981448d3e80a3238ef03b4374c144c466860df7357120583ee",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新04",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000208",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00167",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.375,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0003\\A000208_S00167_main6.png",
+    "Sha256": "8bdc22518770df5fb127e875a91ad29f2a1f6861093898f9d76bf1829c1ddc74",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新04",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000209",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00168",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.04448563484708063,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0001\\A000209_S00168_current.png",
+    "Sha256": "2f30311522811377921d0245f7c33ee32bc623ca293d01d821857c658980b075",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新05",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000210",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00169",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.04448563484708063,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0001\\A000210_S00169_current.png",
+    "Sha256": "a1ff2baf117cff1b6ca54c97d421a8ae6fa8b53e8f30479776995671e11faf5c",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新05",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000211",
+    "UnitId": "U0001",
+    "ScreenshotId": "S00170",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.05468025949953661,
+      "Y": 0.04448563484708063,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0001\\A000211_S00170_current.png",
+    "Sha256": "6f0057583889ff8f235805c75147520de6b265ec552aebfeb6feb2aa0e6d97d8",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新05",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  },
+  {
+    "Id": "A000212",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00171",
+    "Slot": "main2",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.11770157553290084,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0009\\A000212_S00171_main2.png",
+    "Sha256": "1f577687fa6bf0bbe7f8798addb647698ad0b87a4e970d851ecb6a0c84398796",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新06",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000213",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00172",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.053703703703703705,
+      "Y": 0.20555555555555555,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0009\\A000213_S00172_main3.png",
+    "Sha256": "f61006c3bc417ae36493eb649357ba4c5bb618f80fe601212664a9c8f8bb9998",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新06",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000214",
+    "UnitId": "U0009",
+    "ScreenshotId": "S00173",
+    "Slot": "main3",
+    "Rect": {
+      "X": 0.05375347544022243,
+      "Y": 0.20945319740500462,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0009\\A000214_S00173_main3.png",
+    "Sha256": "eb8ba51a0e7054b66160d30a8ada92f6c42531e4dcd5f7c89a8c63e43f7128be",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新06",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000215",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00174",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.37592592592592594,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0003\\A000215_S00174_main6.png",
+    "Sha256": "69d3c4c063eb178280059d2ca754ee159afeeb95ba8e635e8202de48b16ed250",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新07",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000216",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00175",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.37592592592592594,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0003\\A000216_S00175_main6.png",
+    "Sha256": "fc8cfc527278d15cd75f533d4eea2dfb9e5cd2659c14430c25413de35d29e537",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新07",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000217",
+    "UnitId": "U0003",
+    "ScreenshotId": "S00176",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.37592592592592594,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0003\\A000217_S00176_main6.png",
+    "Sha256": "759ab510cdf7903c0a278d82397c850b868d3c12d909477c1bdac1d2eeb42706",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新07",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000218",
+    "UnitId": "U0026",
+    "ScreenshotId": "S00177",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.051899907321594066,
+      "Y": 0.4995366079703429,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0026\\A000218_S00177_main8.png",
+    "Sha256": "604f58509351aa14e2bc086107fcd1e35f8252a7538f67686777ef8fc13ca1b8",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新09",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000219",
+    "UnitId": "U0026",
+    "ScreenshotId": "S00178",
+    "Slot": "main8",
+    "Rect": {
+      "X": 0.05282669138090825,
+      "Y": 0.4995366079703429,
+      "W": 0.10472659870250231,
+      "H": 0.04541241890639481
+    },
+    "File": "samples\\U0026\\A000219_S00178_main8.png",
+    "Sha256": "cfe6b736bb68f2a4429c65084c103e49332182b65dc76e21f2e105d1e8586e32",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新09",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000220",
+    "UnitId": "U0060",
+    "ScreenshotId": "S00179",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.3398148148148148,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0060\\A000220_S00179_main6.png",
+    "Sha256": "7b8195b598e575c9b240f4959b9a366dc7e1dedd27a55efe77a440f7dc52ed1e",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新10",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000221",
+    "UnitId": "U0060",
+    "ScreenshotId": "S00180",
+    "Slot": "main6",
+    "Rect": {
+      "X": 0.05555555555555555,
+      "Y": 0.3388888888888889,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0060\\A000221_S00180_main6.png",
+    "Sha256": "c98ec852ec75b03a252d14f26e4369f93972cb824fd97bdf92b0915e598ba3a3",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新10",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000222",
+    "UnitId": "U0060",
+    "ScreenshotId": "S00181",
+    "Slot": "main7",
+    "Rect": {
+      "X": 0.05277777777777778,
+      "Y": 0.3972222222222222,
+      "W": 0.10462962962962963,
+      "H": 0.04537037037037037
+    },
+    "File": "samples\\U0060\\A000222_S00181_main7.png",
+    "Sha256": "586fd758af9814ecb183ec1cafb4987182f8be1ef8f3f73ffda007ca1703dc08",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 88,
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新10",
+    "Feature": {
+      "X": 0.16,
+      "Y": 0,
+      "W": 0.62,
+      "H": 1
+    },
+    "Ignore": [
+      {
+        "X": 0.66,
+        "Y": 0.6,
+        "W": 0.34,
+        "H": 0.4
+      }
+    ]
+  },
+  {
+    "Id": "A000223",
+    "UnitId": "U0061",
+    "ScreenshotId": "S00182",
+    "Slot": "current",
+    "Rect": {
+      "X": 0.051899907321594066,
+      "Y": 0.047265987025023166,
+      "W": 0.12140871177015755,
+      "H": 0.06302131603336422
+    },
+    "File": "samples\\U0061\\A000223_S00182_current.png",
+    "Sha256": "e33f3be732679ac635547f81b4a31693971e7f4c2f7a533143112b332aa9386b",
+    "LabelSource": "user",
+    "Status": "confirmed",
+    "AddedInKbVersion": 92,
+    "Notes": "测试 20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 纠正",
+    "Feature": {
+      "X": 0.12,
+      "Y": 0,
+      "W": 0.74,
+      "H": 1
+    },
+    "Ignore": []
+  }
+]

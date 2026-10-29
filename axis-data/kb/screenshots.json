@@ -1,0 +1,3866 @@
+[
+  {
+    "Id": "S00001",
+    "File": "screenshots\\S00001_d4e77359.png",
+    "Sha256": "d4e77359ae8230c048a6ef68f6f15c8c466d7213359ffc058a65b6b034816bbb",
+    "Width": 2520,
+    "Height": 1446,
+    "Source": {
+      "Type": "user-screenshot",
+      "Origin": "用户提供截图：B站视频画面（水印 云华Lyric，画面内玩家 UID 102075520）",
+      "Url": null,
+      "License": "用户提供；画面出自第三方 B 站视频，再使用许可未核实，仅限本地研究，待用户确认",
+      "AccessedAt": "2026-10-26T23:03:28.8934576+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 3,
+    "Truth": {
+      "current": "U0001",
+      "main2": "U0002",
+      "main3": "U0003",
+      "main4": "U0016",
+      "main5": "U0016",
+      "main6": "U0005",
+      "main7": "U0008",
+      "main8": "U0017",
+      "main9": "U0014",
+      "main10": "U0015"
+    },
+    "Notes": "游戏版本未知"
+  },
+  {
+    "Id": "S00002",
+    "File": "screenshots\\S00002_1ebe7a7d.png",
+    "Sha256": "1ebe7a7d0561fdcd1f10928f9d69b72691a94e3a7a9bfa5dedcc6c120e143613",
+    "Width": 2520,
+    "Height": 1452,
+    "Source": {
+      "Type": "user-screenshot",
+      "Origin": "用户提供截图：B站视频画面（无可见UP主水印，画面内玩家 UID 142222298）",
+      "Url": null,
+      "License": "用户提供；画面出自第三方 B 站视频，再使用许可未核实，仅限本地研究，待用户确认",
+      "AccessedAt": "2026-10-26T23:03:29.1601978+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 4,
+    "Truth": {
+      "current": "U0009",
+      "main2": "U0010",
+      "main3": "U0005",
+      "main4": "U0011",
+      "main5": "U0016",
+      "main6": "U0016",
+      "main7": "U0017",
+      "main8": "U0006",
+      "main9": "U0003",
+      "main10": "U0014"
+    },
+    "Notes": "游戏版本未知"
+  },
+  {
+    "Id": "S00003",
+    "File": "screenshots\\S00003_4da2d9d8.png",
+    "Sha256": "4da2d9d86394ed5a9ba453b82ba6e5b23492b164b9ad0ffcf8491a25550469fd",
+    "Width": 2520,
+    "Height": 1449,
+    "Source": {
+      "Type": "user-screenshot",
+      "Origin": "c36ea70aebd0e8093510db548cb5eff7.png",
+      "Url": null,
+      "License": "用户提供，本地知识库使用",
+      "AccessedAt": "2026-10-26T23:19:29.1565601+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 32,
+    "Truth": {
+      "current": "U0014",
+      "main2": "U0018",
+      "main3": "U0019",
+      "main4": "U0020",
+      "main5": "U0022",
+      "main7": "U0016",
+      "main8": "U0016",
+      "main9": "U0021",
+      "main10": "U0023",
+      "main6": "U0024"
+    },
+    "Notes": "来自测试 20261026-230521_图片盲测01"
+  },
+  {
+    "Id": "S00004",
+    "File": "screenshots\\S00004_2e3f783c.jpg",
+    "Sha256": "5f450878d8425db728942781bced12aaaca5b35ae5c56d432e3a1097c05fceaf",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@80.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:50.5515659+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "current": "U0025",
+      "main2": "U0009",
+      "main6": "U0001",
+      "main7": "U0005"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00005",
+    "File": "screenshots\\S00005_750eb3a0.jpg",
+    "Sha256": "4424ce54837208b0e7cab1b69776d09e0c612e42c2c2e3d9f11cb6dab9811d15",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@80.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:50.7534597+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "current": "U0025",
+      "main2": "U0009"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00006",
+    "File": "screenshots\\S00006_180f5ba8.jpg",
+    "Sha256": "20d86bf7c42976ffe60ae143bddf6640206ec91788fa599b8c8f578b81294896",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@80.800",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:50.9067333+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "current": "U0025"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00007",
+    "File": "screenshots\\S00007_c1a556d1.jpg",
+    "Sha256": "006ed661a82ad3e160c98b9c64cca71935e8f4b530c551d803762eefd2991fe4",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@80.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:51.1551506+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "main2": "U0009",
+      "main6": "U0005"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00008",
+    "File": "screenshots\\S00008_9d7fb6f3.jpg",
+    "Sha256": "f4d399691f4724f89cbabb6984f322e65bd27d105515bd03d92e48a091b19935",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@81.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:51.3052991+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "main2": "U0009"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00009",
+    "File": "screenshots\\S00009_87c64bd6.jpg",
+    "Sha256": "b808a5e6d98e10321700e86763efb8fa650c114e5f42dd4b187492e1cd091686",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@100.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:51.4338277+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "current": "U0009"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00010",
+    "File": "screenshots\\S00010_f4e55db2.jpg",
+    "Sha256": "be2a4ca75f96c21d3f9f7f629c16e93bc297cb030e208436fedd15508b1170fb",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@100.800",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:51.5647917+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "current": "U0009"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00011",
+    "File": "screenshots\\S00011_9af2f29e.jpg",
+    "Sha256": "eb55abde5002835c3b7e98e8b002975f4bc63a2362d05374720fc9214e41a7e0",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@100.933",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:51.6946419+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "current": "U0009"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00012",
+    "File": "screenshots\\S00012_24513304.jpg",
+    "Sha256": "aac04cd4435740753f9c8e995add8226354e7e998aae7b2ffe51012ce007bb80",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@84.067",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:51.8294423+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "current": "U0009"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00013",
+    "File": "screenshots\\S00013_5a910f77.jpg",
+    "Sha256": "906905b07bce1d994b228ae7665f176c74acd1963cd322d8b53975a009cd0dba",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@84.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:51.9422451+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "current": "U0009"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00014",
+    "File": "screenshots\\S00014_b010f3f8.jpg",
+    "Sha256": "196309b4f930ac2ce8f0d58badd2ce851b305c8dfd75db227e58dca00f71e833",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@84.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:52.0637339+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "current": "U0009"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00015",
+    "File": "screenshots\\S00015_cfd36173.jpg",
+    "Sha256": "c7d69dff3ea9ca4447e2f95a69f010beccedfca406c225053aecf9e410c22be5",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@114.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:52.1824119+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "main7": "U0026",
+      "current": "U0046"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00016",
+    "File": "screenshots\\S00016_09a8fad0.jpg",
+    "Sha256": "a06df4c80948f84fe38a9ab423aaf3faac7381211d83d4b268f1364369d691c0",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@114.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:52.3040902+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "main8": "U0026"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00017",
+    "File": "screenshots\\S00017_8a2e94fc.jpg",
+    "Sha256": "5136fcb400cef069d27d6411d24642fa3d4b8f9d26e3ebcbec444dac398eeb7b",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220@115.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T20:45:52.4211364+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 40,
+    "Truth": {
+      "main8": "U0026"
+    },
+    "Notes": "20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00018",
+    "File": "screenshots\\S00018_ee876258.jpg",
+    "Sha256": "842014022b9cd6fd110da9480eabb8f9b9b5bd70cfca5101626d75473955e6cc",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@148.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T21:50:49.9613623+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 43,
+    "Truth": {
+      "current": "U0002"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00019",
+    "File": "screenshots\\S00019_5fc83551.jpg",
+    "Sha256": "32ec6c54ccb00f3535491ca8c0b894c431a2d69b10df00029157010e7535382c",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@148.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T21:50:50.1604785+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 43,
+    "Truth": {
+      "current": "U0002"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00020",
+    "File": "screenshots\\S00020_f03e717b.jpg",
+    "Sha256": "7bffb0092ad74d15f952a7c5f7cea3daeb72efd310ca3ecb11ccd492bc0b95b1",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@148.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T21:50:50.3091486+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 43,
+    "Truth": {
+      "current": "U0002"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00021",
+    "File": "screenshots\\S00021_4f38a036.jpg",
+    "Sha256": "620b651ef6ac912ccd0d12283c0cf7d639d7a25284305a43c7bf26ddde9f3002",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@126.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T21:50:50.445354+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 43,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00022",
+    "File": "screenshots\\S00022_563874f3.jpg",
+    "Sha256": "15810b8a1ac3938227eab1ed66fd5ea38029323e4dc824c4fd0764ffe9e9c943",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@126.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T21:50:50.5696768+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 43,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00023",
+    "File": "screenshots\\S00023_4c947202.jpg",
+    "Sha256": "4d1d1e35a0d2ee59136c00d8f99cf73cc1d078c77de8dff8f2c0c880cc3f80e1",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@126.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T21:50:50.6886355+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 43,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00024",
+    "File": "screenshots\\S00024_06633b26.jpg",
+    "Sha256": "364987990bce20334a22ed825475b1d670aeebeaa9e3e7b84e79c1d06af6ed42",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@136.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:05:10.5901423+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 52,
+    "Truth": {
+      "current": "U0005"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00025",
+    "File": "screenshots\\S00025_cb6c540f.jpg",
+    "Sha256": "4a1764dd9a0467686b9dc137c9c2a7c614f40be719a153e0623dd94c47507caa",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@136.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:05:10.7988606+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 52,
+    "Truth": {
+      "current": "U0005"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00026",
+    "File": "screenshots\\S00026_314cbaaa.jpg",
+    "Sha256": "3af28f1fcf34620cff639621acaf488cf277f9e6230e8743652b42366fe91fb2",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@136.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:05:10.9719529+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 52,
+    "Truth": {
+      "current": "U0005"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00027",
+    "File": "screenshots\\S00027_9a01c247.jpg",
+    "Sha256": "7fb28ca1b3eb90f5f3744c18db08f0de529c3b2e3e4d758d6c517c98d7cb70b9",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@119.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:37.2534453+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main3": "U0005"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00028",
+    "File": "screenshots\\S00028_fc9e3d6f.jpg",
+    "Sha256": "0590c383aa78e53e4b614b7c23673aea52c067b256a7a3be2fc3c3716daf734b",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@120.133",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:37.3976733+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main3": "U0005"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00029",
+    "File": "screenshots\\S00029_a79ce1eb.jpg",
+    "Sha256": "b47a823c5a9946e79685b6328aa2adcd8a2f980c9bc19d4f8b6514408ee09234",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@127.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:37.5321927+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main3": "U0005"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00030",
+    "File": "screenshots\\S00030_c917d9d4.jpg",
+    "Sha256": "7e94b1d66ed5f5e5751acff4231bbe42f6470c6bcb195d338a6a1a9a96d453c5",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@119.133",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:37.8134898+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main9": "U0028",
+      "main7": "U0002"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00031",
+    "File": "screenshots\\S00031_44a6c53c.jpg",
+    "Sha256": "c1446d2b711d6ebf849c65c961d581bf5b94b97b0230457552a6911bbbd5c63b",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@121.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:37.9402074+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main10": "U0028"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00032",
+    "File": "screenshots\\S00032_f393d0f4.jpg",
+    "Sha256": "89ec1359a86b6539d2282cadfcb67a2b224bfa0f855305dbde8de383c4168138",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@126.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:38.0739608+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main9": "U0028"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00033",
+    "File": "screenshots\\S00033_ecebaace.jpg",
+    "Sha256": "97ace5ce99339b5cc051c5d03486c7983b82af5e6fb62fb532f887ac49544272",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@119.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:38.3671946+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main5": "U0029"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00034",
+    "File": "screenshots\\S00034_89972987.jpg",
+    "Sha256": "c39ba7ea1206565a6184e875306682d07107aa3642da46a62d8b8a2274499c2f",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@119.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:38.490616+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main5": "U0029"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00035",
+    "File": "screenshots\\S00035_f6de9f4a.jpg",
+    "Sha256": "939a2321573aaadbb5b7aeeafd289161f02fc8d9f21b95627cda4e8913160517",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@124.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:38.6165906+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main4": "U0029"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00036",
+    "File": "screenshots\\S00036_b8c6b0e4.jpg",
+    "Sha256": "acb1b84b9c8d2e13b9afbd74d603bae92bf44b60e3b8aec283a5e5495cb0ba43",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@119.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:38.9180981+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main2": "U0001"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00037",
+    "File": "screenshots\\S00037_09de5bb7.jpg",
+    "Sha256": "ed5b44b1692190b8a46e403b1e54cf5ccc2d30a3353bd4cd166d50a630a8bb12",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@119.533",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:39.0457681+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main2": "U0001",
+      "main7": "U0002"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00038",
+    "File": "screenshots\\S00038_f37f6cd6.jpg",
+    "Sha256": "21d7adbd0728f2c66c6c1f8afd3a2fba055101d85127a413924e2bd2dc8fa3f8",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@124.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:39.1753949+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main2": "U0001"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00039",
+    "File": "screenshots\\S00039_c7065b2b.jpg",
+    "Sha256": "58e05918f68c885e82d03fcaefa6615cc26283d8dcff4b867babfc5c838fdcf5",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@119.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:39.4513274+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00040",
+    "File": "screenshots\\S00040_0f94ddc7.jpg",
+    "Sha256": "7831e586a8164b6f18dc7162c58a61177e7c7207165ad249555bc08489883082",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@119.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:39.584006+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00041",
+    "File": "screenshots\\S00041_ad395262.jpg",
+    "Sha256": "db94abc2249e64f1105b745bf5f71382b1109ce85c291ce173437b7a5b3e92d2",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@120.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:39.7166144+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00042",
+    "File": "screenshots\\S00042_4fce0cd7.jpg",
+    "Sha256": "48e2a55af7e2a2603f040f6a3694a714f0bd23ed58460d42c1078c1273ea53d4",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@124.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:40.1302574+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main6": "U0002"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00043",
+    "File": "screenshots\\S00043_0d4c170b.jpg",
+    "Sha256": "e83a3db4b93d47e021397caddeccf4cdcfc44e26d4a48ffb477381b3d883d026",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@125.533",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:40.425244+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main2": "U0003"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00044",
+    "File": "screenshots\\S00044_7674852d.jpg",
+    "Sha256": "4d68cfa9f0e074e20266f14880208464fe41598c78d6d283bca9aae6f5d657f7",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@139.867",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:40.5530586+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main6": "U0003"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00045",
+    "File": "screenshots\\S00045_e4585a96.jpg",
+    "Sha256": "f26c0b4374d4a876f678d78d0f5a9c0c308e8664da92b75f0b3c566e3e727b30",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@148.800",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:40.6736449+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main2": "U0003"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00046",
+    "File": "screenshots\\S00046_6794477e.jpg",
+    "Sha256": "413ec67108ceb01911e83b61f2590f37ce5ae00958ba627a252b53206ec3212b",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@127.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:40.9649653+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main2": "U0009"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00047",
+    "File": "screenshots\\S00047_477ef383.jpg",
+    "Sha256": "042da9b18cedfcfb98d44b9af230676301d7770540c35277d2f35806f18cd9e1",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@127.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:41.0934155+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main2": "U0009"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00048",
+    "File": "screenshots\\S00048_2dda2b07.jpg",
+    "Sha256": "41e59c6f13765246d8abbc468fb434731abad3a9398460b31744b04f78be7ef0",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@127.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:41.2228072+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main2": "U0009"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00049",
+    "File": "screenshots\\S00049_1203e756.jpg",
+    "Sha256": "d2354bcb3689a94ac72bb163a4fb39ef109d1c61e2f2deb0b2ee992b9ecfa4c5",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@130.600",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:41.5095562+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main8": "U0008"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00050",
+    "File": "screenshots\\S00050_54402c7b.jpg",
+    "Sha256": "95bbb5f715e87cba5d771950927610d5d82703ec03bf91b709b6d9d9696b6df3",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@136.933",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:41.6257258+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main7": "U0008"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00051",
+    "File": "screenshots\\S00051_afb4c169.jpg",
+    "Sha256": "e65767bf6d14d57f560e2c0e38f83d59d8fb9b83b3fbaae28ef817be86c085fa",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@146.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:41.7675925+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main4": "U0008"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00052",
+    "File": "screenshots\\S00052_3116e97f.jpg",
+    "Sha256": "aa4e0e3ab8f026847b3eadf81c3dc94c72204318de3d5dfce47caa7dd2a0b3d1",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@139.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:42.071942+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "current": "U0036"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00053",
+    "File": "screenshots\\S00053_48cb2893.jpg",
+    "Sha256": "31680cb8ea2e457da593e4f2b999a7f54b3498cf6af8d4b56679d0816ca242d3",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@140.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:42.1991021+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "current": "U0036"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00054",
+    "File": "screenshots\\S00054_26412b60.jpg",
+    "Sha256": "ad4f742b3fe4745646a71649d5096a130389c4b264c697c1ebacafe351380a79",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@140.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:42.3071185+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "current": "U0036"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00055",
+    "File": "screenshots\\S00055_98cbb9e8.jpg",
+    "Sha256": "0c6b8166e8dcc6f9b54e0ee0e5a00843977308a52e3bdedecaac2c2699d6a9d8",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@141.133",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:42.6089626+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "current": "U0037"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00056",
+    "File": "screenshots\\S00056_a6971169.jpg",
+    "Sha256": "139864a97678230db342b31831bb1cfd7dabdca89db687a315a525a4792a6b50",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@141.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:42.732765+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "current": "U0037"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00057",
+    "File": "screenshots\\S00057_32b16ba8.jpg",
+    "Sha256": "cc54f574fdede507193fb0fd92eeddba03a0222556f204364d0ed7ed4f627114",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@141.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:42.8541506+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "current": "U0037"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00058",
+    "File": "screenshots\\S00058_d972aa02.jpg",
+    "Sha256": "378099f4cc4e5e36401e2bbe48c4ab7e4dab40e34719c4a6523f9fc3fb396f8f",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@169.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:43.1468916+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main5": "U0038"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00059",
+    "File": "screenshots\\S00059_52401b65.jpg",
+    "Sha256": "49b81db62d09e37f70391f2160ce325145d1b026d35284272953b8dc13611139",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@169.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:43.2788924+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main5": "U0038",
+      "main3": "U0039"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00060",
+    "File": "screenshots\\S00060_fa8ed5ee.jpg",
+    "Sha256": "507d9fa6aa4b1d8dd6dce7ceff739733644cd3949836f53e1da367cd5dab9104",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@169.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:43.4075275+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main5": "U0038",
+      "main3": "U0039"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00061",
+    "File": "screenshots\\S00061_bbe2c1c8.jpg",
+    "Sha256": "bbfef56c715f7c694d7fc0f8511ea7400eca675ddf81f1f51e343d66d46789a5",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259@169.800",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:43.835862+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 55,
+    "Truth": {
+      "main3": "U0039"
+    },
+    "Notes": "20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00062",
+    "File": "screenshots\\S00062_d2be6509.jpg",
+    "Sha256": "d5b19c76d55a8fefb95cc5a5158523b036fb3f432e072bf3f64af5728c83bf34",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@81.133",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:44.5974203+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main6": "U0001"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00063",
+    "File": "screenshots\\S00063_cc8d8637.jpg",
+    "Sha256": "72b45108ce967ed14332da6544b5a6e0be76166105e4c7860d1a6170c7236c4c",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@81.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:44.7612569+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main6": "U0001"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00064",
+    "File": "screenshots\\S00064_4d98bb2d.jpg",
+    "Sha256": "2c846e7891adab2d51fd2f37b322cc35e56e81acb988f9b4625fd10006bff44d",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@80.600",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:45.3679564+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main7": "U0005"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00065",
+    "File": "screenshots\\S00065_db6b1bb3.jpg",
+    "Sha256": "71ab0e3c83a81d3314edb61e3b18c6040593f1a0841a0a0f95c5cd210b9ee627",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@81.933",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:45.752749+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main2": "U0009"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00066",
+    "File": "screenshots\\S00066_fab04bed.jpg",
+    "Sha256": "37ba539c3428a901d7538b68d1ebb0e1520f45ebddb463a6ffd21cd742202a38",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@98.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:45.8772382+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main2": "U0009"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00067",
+    "File": "screenshots\\S00067_3b5d3359.jpg",
+    "Sha256": "1362cdc68f42cba71c9abd0b78fef2d9d9aa430a9dcf7da9dd4d0ab4bcd537f8",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@80.867",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:46.1825191+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main3": "U0002"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00068",
+    "File": "screenshots\\S00068_5cd009a9.jpg",
+    "Sha256": "063aa9b69d4defa41bb915e6b9ace54ed2dd34387b6e8da73db5c82c17d89a7f",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@86.867",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:46.3170872+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main6": "U0002"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00069",
+    "File": "screenshots\\S00069_6caabee7.jpg",
+    "Sha256": "851054fe1269f7f37257da4ed3375c397fbf571a80de7aad1a619dc64a026061",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@89.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:46.4608707+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main8": "U0002"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00070",
+    "File": "screenshots\\S00070_7bb8953a.jpg",
+    "Sha256": "699522b67543112b41f122b027972cd5264c13d55ff3a6ea4b37f34fb2920446",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@87.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:46.7804258+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main6": "U0008"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00071",
+    "File": "screenshots\\S00071_9690c903.jpg",
+    "Sha256": "49fd10b512b8e0112119aa22cda7d9667fa59c5c3b3be48d137c91bfbee2be28",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@88.600",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:46.919795+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main7": "U0008"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00072",
+    "File": "screenshots\\S00072_1ca96305.jpg",
+    "Sha256": "2d10547fc6168029257c9c5ee34bb7b993b93bb222bb8eb418d0872b46b13204",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@90.133",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:47.0549583+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main2": "U0008"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00073",
+    "File": "screenshots\\S00073_dd080a23.jpg",
+    "Sha256": "84e16d3ec88a24bb0c584b9d11ea86ff6e3761e20adb7fbd129f7b9a71eaba0a",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@92.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:47.3711128+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00074",
+    "File": "screenshots\\S00074_36cf60f5.jpg",
+    "Sha256": "74f2379eb5ed192aa06146d189ebdad3dc8c76cd99f10cb9940cbf53cd64d8e2",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@92.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:47.499358+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00075",
+    "File": "screenshots\\S00075_e1088a7e.jpg",
+    "Sha256": "ca1d7ee5b63d87ab7b2ce587a44ca3f2285cef134b55da37faa51ecaa745cd8b",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@92.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:47.6288715+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00076",
+    "File": "screenshots\\S00076_529e91a0.jpg",
+    "Sha256": "fb4cee65f6d0251f6dc77356906900f39205596810820bbe2beb8788a8275d1c",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@98.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:47.9605334+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0044"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00077",
+    "File": "screenshots\\S00077_3147daae.jpg",
+    "Sha256": "7886a0a603d517018140ecbaaa6ef62f0ffaeac1872133f1194a2aca113a21a4",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@98.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:48.089187+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0044"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00078",
+    "File": "screenshots\\S00078_e01324b1.jpg",
+    "Sha256": "069c3595e2757e6ec83e315152ea2e6f563650c64afb57e6b4721c021d78f889",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@98.600",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:48.2158545+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0044"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00079",
+    "File": "screenshots\\S00079_f13f4fc2.jpg",
+    "Sha256": "dca14b126c359f800759d8822c9d0922fbb6a60734042354e24e1a3b3462e718",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@98.933",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:48.5143838+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main2": "U0009"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00080",
+    "File": "screenshots\\S00080_cf758c71.jpg",
+    "Sha256": "5ee167c465396f09df4362d231e9bce7362d177010b67670fafbfac6622a0e49",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@99.067",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:48.6427272+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main2": "U0009"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00081",
+    "File": "screenshots\\S00081_b595f116.jpg",
+    "Sha256": "2d41d4a60b16531a542aa99d930e3c91bb391bcea7676e0dd0a9974f4350b4e3",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@99.133",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:48.7714099+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "main2": "U0009"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00082",
+    "File": "screenshots\\S00082_d6be6064.jpg",
+    "Sha256": "0131ed1620f7b0282118740b1f142b4e32c12745ed6463c86031e82e0d1a9cf4",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@110.600",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:49.0895944+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0045"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00083",
+    "File": "screenshots\\S00083_adaa1961.jpg",
+    "Sha256": "5ea63d1921b34bdcebf21b162aebe48e2d376e10fb2fccfd820c033af8bf6cbf",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@110.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:49.2076887+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0045"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00084",
+    "File": "screenshots\\S00084_86cb8e11.jpg",
+    "Sha256": "26e98202d2fe65c28f16c8da035d62821298a171ebe50e56c7a7dd0dfa5d1eef",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@110.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:49.3311509+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0045"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00085",
+    "File": "screenshots\\S00085_fe41cac1.jpg",
+    "Sha256": "af3c1c005238f53c118bec1a13469193d3c0cd7a9a97d6230a4fa46be23372f3",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@114.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:49.6319961+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0046"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00086",
+    "File": "screenshots\\S00086_8a9c423d.jpg",
+    "Sha256": "36002b330980bfad548646679a947501df52673480dec56a7d4b585db8f60b4b",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@114.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:49.7566684+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0046"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00087",
+    "File": "screenshots\\S00087_5f8aae50.jpg",
+    "Sha256": "a09d5cd990829583fb4aeeac5b00dfc5ff859ebad66ce2e7769450fb3f338aa3",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@119.800",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:50.1307078+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0047"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00088",
+    "File": "screenshots\\S00088_8d59b511.jpg",
+    "Sha256": "295d8a8f71c5a6784d0fb3069faa9d64e5fdf220d9e8058d511daac1729171cc",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@119.867",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:50.256056+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0047"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00089",
+    "File": "screenshots\\S00089_d9ca1933.jpg",
+    "Sha256": "dae1285a1576b2fcec6fcc49935cc4468015a536a32d0e76e12cc5d27c22c47a",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@119.933",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:50.3803073+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0047"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00090",
+    "File": "screenshots\\S00090_5c37b10c.jpg",
+    "Sha256": "f73c5321afec8854906e08fc739c4b811c82c923b757d9bf9179323783bd8f70",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@121.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:50.6965644+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0036"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00091",
+    "File": "screenshots\\S00091_9836d85e.jpg",
+    "Sha256": "96e01f25373bcea2e10aa9d85a4f18065f7671ff94badce276d51bca7e8aaca0",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@121.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:50.8274272+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0036"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00092",
+    "File": "screenshots\\S00092_8b5965c2.jpg",
+    "Sha256": "9f06199e0b34625cdf357832a46b67658e17ab1d29d89cfd8328982f49f282f6",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@121.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:50.9643154+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0036"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00093",
+    "File": "screenshots\\S00093_34d5ac0d.jpg",
+    "Sha256": "21f34d8d33cb4f34b2476d20ad54883e9eda8688b6d6cf503f0e0eb597e67065",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@123.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:51.2857396+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00094",
+    "File": "screenshots\\S00094_498a1689.jpg",
+    "Sha256": "15e41fdd4863d8ee039e1bce6924242eb1d88182f173b88e63632a1041b45da9",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@123.533",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:51.4093851+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00095",
+    "File": "screenshots\\S00095_1fcc3eae.jpg",
+    "Sha256": "c23c14de7d41929b7fac95fa77887d93481d420d02cabace2184e738b86f1dea",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220@123.600",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:51.5335101+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 56,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00096",
+    "File": "screenshots\\S00096_1455aaff.jpg",
+    "Sha256": "42fee4c8637d99b05776bd0af3e6300bccdb80c0b1c6038203ce7aeef5828d6c",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@120.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:52.201669+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0036"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00097",
+    "File": "screenshots\\S00097_f762c81c.jpg",
+    "Sha256": "bb57e3abe608a6489f22d3680f1c66d0e137c3e6bf5130fc79fde981b3a2e449",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@154.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:52.3798869+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0036"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00098",
+    "File": "screenshots\\S00098_db2c0acb.jpg",
+    "Sha256": "43ba063be3a475d2ccb9255bd5ae5c8731d4aced14b1a7d66626096511ca4625",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@155.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:52.5239382+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0036"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00099",
+    "File": "screenshots\\S00099_f99cefa3.jpg",
+    "Sha256": "e6b6a3413a88114a480b964738716a9d765db18c61a0738f53be128614a3c616",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@120.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:52.8597413+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main2": "U0001",
+      "main3": "U0002",
+      "main4": "U0050"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00100",
+    "File": "screenshots\\S00100_e00402e4.jpg",
+    "Sha256": "5011ad912db1ec01f019c96165557dda7c662b7bfd3569a1ed33bc91d40accfe",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@120.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:52.9915962+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main2": "U0001"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00101",
+    "File": "screenshots\\S00101_e308dd8f.jpg",
+    "Sha256": "3b5047d0e1dea1b55b90f209452eaee2106fb1a23f255f12e84c5492dfe45a83",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@124.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:53.1172861+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main6": "U0001"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00102",
+    "File": "screenshots\\S00102_fecea55b.jpg",
+    "Sha256": "d884bf0ab2e3c4e0985b1527f85efeeba78985006860a691bd60cf169dd5a6ea",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@122.600",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:53.5116655+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main2": "U0002"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00103",
+    "File": "screenshots\\S00103_a1950180.jpg",
+    "Sha256": "a4defe2fe0efd56fd4f0d6bfdf87e78458fe86fc7c5a8b29a2ea85b1d5d2a7b8",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@133.600",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:53.6467896+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main5": "U0002"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00104",
+    "File": "screenshots\\S00104_0e78f38c.jpg",
+    "Sha256": "416f755084ce9e9be59f8da670c8082757046fe899a5442ae7010b680a605602",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@120.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:54.0408595+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main4": "U0050"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00105",
+    "File": "screenshots\\S00105_df745b0f.jpg",
+    "Sha256": "3d62b42a8b84179a1420ed04d01e0e581a0a5024e6e6addf0cdd8d496c6fe07d",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@122.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:54.1642372+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main3": "U0050"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00106",
+    "File": "screenshots\\S00106_933cdb24.jpg",
+    "Sha256": "2da242314ce149e4b6995aac271d66d05ff3a1a8afdcb1de48e84e2d5791debb",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@121.067",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:54.4457167+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main4": "U0003"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00107",
+    "File": "screenshots\\S00107_17dc48ac.jpg",
+    "Sha256": "489c4e98ffa1e0a26a83eddb55603b9707082879d625c783f25aa8cbb425f58a",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@166.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:54.5641915+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main7": "U0003"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00108",
+    "File": "screenshots\\S00108_cc532400.jpg",
+    "Sha256": "20d963d16d4db14525584d013457950a284040ad690c82d43cbe34e6a65f2416",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@122.133",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:54.8780598+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main2": "U0002"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00109",
+    "File": "screenshots\\S00109_1ec3327a.jpg",
+    "Sha256": "953b5737446051b739bb0ce9709fa78b085f23306f37bb3e448ea4506ced0ce4",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@126.533",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:54.9974062+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main6": "U0002",
+      "current": "U0008"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00110",
+    "File": "screenshots\\S00110_d1dc8949.jpg",
+    "Sha256": "75eeaa698d86e0c7fdeb0496f9f4ecea02a0e4ddb9bfce2ad9ced93c58b35086",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@126.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:55.1143662+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main6": "U0002"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00111",
+    "File": "screenshots\\S00111_3f0b5be9.jpg",
+    "Sha256": "696ee440bd7332f76d0bc194159fd47dc25be56e1e9aee042b87b95a979d3e8a",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@123.933",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:55.4300168+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0002"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00112",
+    "File": "screenshots\\S00112_9e617f6a.jpg",
+    "Sha256": "799dc356ae6972dbf64571a57c1eeed73ec8a71c15845e79daa7682855fb049d",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@124.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:55.5477796+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0002"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00113",
+    "File": "screenshots\\S00113_2992bdf5.jpg",
+    "Sha256": "c6f7b4e61139fba25ec7e86cd285640b787536aaa67f8185d9bf716b6de4a882",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@124.067",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:55.6701379+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0002"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00114",
+    "File": "screenshots\\S00114_b828ddfb.jpg",
+    "Sha256": "a18f75e81ab7e4e4f5d6de35245f8fcba45d28f33af3e2c69e673ad39694bbbb",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@126.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:55.9825434+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00115",
+    "File": "screenshots\\S00115_b27db0a0.jpg",
+    "Sha256": "809ade2197b0dd7070c24cc4b5c450fce46e96a24e4143860959600e449d51d1",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@126.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:56.0994277+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00116",
+    "File": "screenshots\\S00116_d6571ade.jpg",
+    "Sha256": "d60266db5ee9a2aa35f460cefb16fcc57704a2e1a97cf55870f06a28ad6621e5",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@132.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:56.4830274+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0046"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00117",
+    "File": "screenshots\\S00117_e686690e.jpg",
+    "Sha256": "79d522e3b7c27b9d5821dc86eb2fc6c5229fbc9ccf6fbf0f80592c22f6cd598a",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@133.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:56.6131325+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0046"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00118",
+    "File": "screenshots\\S00118_9e70ef1d.jpg",
+    "Sha256": "5bc06436c2ff2acd7939a2a02ae9b8d82b84b4fe87177cdb00b9b3eb0f056399",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@134.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:56.7438063+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0046"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00119",
+    "File": "screenshots\\S00119_5725a3df.jpg",
+    "Sha256": "924f9b562e60b1d9258efecb4242023b7bbe10e30bf04d495a4815db5ad1492f",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@135.067",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:57.079205+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00120",
+    "File": "screenshots\\S00120_4ef65416.jpg",
+    "Sha256": "df2e024e80e32d6e44e314ea98dfb715c6e7ba7b0970f051981e9e8c68eed2fb",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@135.133",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:57.1945488+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00121",
+    "File": "screenshots\\S00121_97797686.jpg",
+    "Sha256": "503c695118070982bdf9a7fbfe84108e09843a88e183fd1c627ce338b63994dd",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@135.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:57.3078996+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00122",
+    "File": "screenshots\\S00122_328659ac.jpg",
+    "Sha256": "45947e85eb71faca54f9d5cf0706ed8f460089ae80239081076030e6e8a04a62",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@148.867",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:57.6619571+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0005"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00123",
+    "File": "screenshots\\S00123_dee550f3.jpg",
+    "Sha256": "ca4eb88a8bd7517f169629d5a64784d793326bfa409242bbbca09b982d30a49f",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@149.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:57.7889317+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0005"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00124",
+    "File": "screenshots\\S00124_20722901.jpg",
+    "Sha256": "42e3bb1395f88f87cf3828146f0b4bece42871803ab3e646638c3750ff6341fa",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@149.067",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:57.9161518+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0005"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00125",
+    "File": "screenshots\\S00125_c5e4a286.jpg",
+    "Sha256": "322b0381de2dfd264d912b6191cf742d506f195c4e7ffae0d509a211365acf20",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@149.933",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:58.2647958+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main2": "U0014"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00126",
+    "File": "screenshots\\S00126_b895e8a7.jpg",
+    "Sha256": "4f15843a2e2d44cfc8fd9929beb872adcee623060ae1c8693af86f8291d2eba7",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@151.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:58.3958632+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main2": "U0014"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00127",
+    "File": "screenshots\\S00127_4f1e5e59.jpg",
+    "Sha256": "dd54f7def072a4b20e6b474c7204422d9dfeeb54ec1cdd3caf0bd31fe972c42d",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@159.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:58.5130713+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "main2": "U0014"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00128",
+    "File": "screenshots\\S00128_13512f9d.jpg",
+    "Sha256": "1102309704535d7032af1340a0a0ffcce29173fb3cae09f252ad7e579b107198",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@164.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:58.8082274+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0023"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00129",
+    "File": "screenshots\\S00129_1788fabc.jpg",
+    "Sha256": "d37f383c4b397451965f83c23e853640d4c314d4c153ab6c1f4048b5d0d735fb",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@164.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:58.9358311+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0023"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00130",
+    "File": "screenshots\\S00130_94c0250c.jpg",
+    "Sha256": "9262ba82c320fa3482e08bc0f1e104ad9771a6bd34543e9cb09609a497721c4c",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@165.067",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:59.0658336+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0023"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00131",
+    "File": "screenshots\\S00131_082c73ef.jpg",
+    "Sha256": "e8f106f4281356070ce4eb38a5753b11d28433ca721c0bcf3544273cbc05e8f9",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@166.133",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:59.3566958+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0009"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00132",
+    "File": "screenshots\\S00132_23dfd49f.jpg",
+    "Sha256": "a9e437944264cd4f1a8e1f8b6734f4a3d3c1a8a58692e589f66a48f1ed7defa4",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@168.067",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:59.4766388+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0009"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00133",
+    "File": "screenshots\\S00133_0fdad816.jpg",
+    "Sha256": "049c0ff05df6d90653a31d2f0bef0789adcdd0b45f26606b477d915cfda31fc7",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@171.933",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:59.823362+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00134",
+    "File": "screenshots\\S00134_b38516d5.jpg",
+    "Sha256": "c6b335db6d8c371f5b12a9806c27026c270ff2d936b8e207fa0b68b8f1d2c29e",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@172.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:10:59.9636387+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00135",
+    "File": "screenshots\\S00135_ea09ec4e.jpg",
+    "Sha256": "8d08b0b5a5a6c4a57ae26cc6f59ac3c7aa3f69724d247bc70533c693abcd602c",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300@172.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T22:11:00.0775855+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 57,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 新单位示例帧；已由 PNG 转存为 JPEG（质量 95）"
+  },
+  {
+    "Id": "S00136",
+    "File": "screenshots\\S00136_d18dc9bd.jpg",
+    "Sha256": "d18dc9bdd90487e48bd0a3f70fc447fe75a7700740cb0d2feb2821c280b9acf4",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@10.067",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:05.6613409+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "main5": "U0058",
+      "main6": "U0059"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00137",
+    "File": "screenshots\\S00137_aac68c56.jpg",
+    "Sha256": "aac68c562c51ca56638e99e3fb7e71a27e7d1efca5be1efc17fba2877e9526a5",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@10.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:05.787272+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "main5": "U0058"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00138",
+    "File": "screenshots\\S00138_1da5e03e.jpg",
+    "Sha256": "1da5e03e131a651dc3b8fc4877a386fb74a921513ae1e77c441e39f2d8d21136",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@10.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:05.8639719+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "main5": "U0058"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00139",
+    "File": "screenshots\\S00139_14f931b6.jpg",
+    "Sha256": "14f931b6c52a546d4c81e752d6f2b633a62ca6c436a668ce14a1e94f9ac01b40",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@41.600",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:05.9370799+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "current": "U0058"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00140",
+    "File": "screenshots\\S00140_004221ac.jpg",
+    "Sha256": "004221ac52ffe81d7db9f45fc986a180ca23527a0d9414477185bd89cad8d5cf",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@41.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:06.0071285+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "current": "U0058"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00141",
+    "File": "screenshots\\S00141_67d8ee8e.jpg",
+    "Sha256": "67d8ee8edb80d31c3750e93e6910befff2e87461392e5d8fdc3e36b2567e5bf4",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@41.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:06.0793955+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "current": "U0058"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00142",
+    "File": "screenshots\\S00142_0a5d8fd9.jpg",
+    "Sha256": "0a5d8fd9dd7a6b607768e678a89a2cda41ee8205579a3725b9280ec1014e285d",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@10.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:06.2145065+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "main6": "U0059"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00143",
+    "File": "screenshots\\S00143_bab8b68f.jpg",
+    "Sha256": "bab8b68f6d86d2e2d4ace24ef5f100c33bb5dc51496188c15315971a112d4aae",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@14.867",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:06.2848107+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "main6": "U0059"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00144",
+    "File": "screenshots\\S00144_e5a1b1fa.jpg",
+    "Sha256": "e5a1b1faf61af6516257c7533240b6d08bf1827343c241c07d975cb86e660a9f",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@19.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:06.3343112+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "main7": "U0002"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00145",
+    "File": "screenshots\\S00145_e51ff0f8.jpg",
+    "Sha256": "e51ff0f8cac211708860be45ff07191efdcfa1b08e8b3e72cd016bff77b47076",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@21.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:06.388849+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "main7": "U0002"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00146",
+    "File": "screenshots\\S00146_cb550311.jpg",
+    "Sha256": "cb550311ced7968868420a92dc050aa22b07536d766cf34ed3209349e685d9e9",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@23.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:06.4404813+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "main6": "U0002"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00147",
+    "File": "screenshots\\S00147_26f20bd3.jpg",
+    "Sha256": "26f20bd317ff640e0121d75acf64f4a69f701914a747644d0630685365585611",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@30.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:06.4953992+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00148",
+    "File": "screenshots\\S00148_eb075dde.jpg",
+    "Sha256": "eb075dde2b694d872acdb29605572bcc83419b311eb73f6cf5c709727ada9781",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@30.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:06.5482984+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00149",
+    "File": "screenshots\\S00149_8a1f0b8a.jpg",
+    "Sha256": "8a1f0b8a520ecf63a0751bac9587e7a5afeeb256f4d7a27a4873974f3497316d",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109@30.533",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:25:06.6009074+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 81,
+    "Truth": {
+      "current": "U0008"
+    },
+    "Notes": "20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109 新单位示例帧"
+  },
+  {
+    "Id": "S00150",
+    "File": "screenshots\\S00150_7f83c559.jpg",
+    "Sha256": "7f83c55936a02b538f0cf6220226f5fedecb32fc780f61ec43c1b38aaf0b4edb",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "recording.avi@16.200",
+      "Url": null,
+      "License": "用户提供，本地知识库使用",
+      "AccessedAt": "2026-10-27T23:25:25.4433308+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 85,
+    "Truth": {
+      "current": "U0002"
+    },
+    "Notes": "来自测试 20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109"
+  },
+  {
+    "Id": "S00151",
+    "File": "screenshots\\S00151_088ecbe5.jpg",
+    "Sha256": "088ecbe59b1673bb7853c610ed82541d4863f61004ef3eac7207d5292e51eb40",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "recording.avi@34.200",
+      "Url": null,
+      "License": "用户提供，本地知识库使用",
+      "AccessedAt": "2026-10-27T23:25:28.846089+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 85,
+    "Truth": {
+      "current": "U0003"
+    },
+    "Notes": "来自测试 20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109"
+  },
+  {
+    "Id": "S00152",
+    "File": "screenshots\\S00152_5df6eac5.jpg",
+    "Sha256": "5df6eac5e2c288e40a706d55778cdd37a29ed304e0cd8e764dc391a8cc9d15f5",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "recording.avi@66.300",
+      "Url": null,
+      "License": "用户提供，本地知识库使用",
+      "AccessedAt": "2026-10-27T23:25:35.0135546+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 85,
+    "Truth": {
+      "current": "U0001"
+    },
+    "Notes": "来自测试 20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109"
+  },
+  {
+    "Id": "S00153",
+    "File": "screenshots\\S00153_c0886881.jpg",
+    "Sha256": "c0886881f3781218f8d1bd9e74f214752afed8a5bb4507510b75be9d5d824fa4",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "recording.avi@13.000",
+      "Url": null,
+      "License": "用户提供，本地知识库使用",
+      "AccessedAt": "2026-10-27T23:28:57.5239273+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 87,
+    "Truth": {
+      "current": "U0009"
+    },
+    "Notes": "来自测试 20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109"
+  },
+  {
+    "Id": "S00154",
+    "File": "screenshots\\S00154_de7e3a21.jpg",
+    "Sha256": "de7e3a2167436ab90ad012942a59da470c66a45bbf0882cb792aa15934948a2b",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@69.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:25.7286211+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main7": "U0058"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00155",
+    "File": "screenshots\\S00155_2a2f9841.jpg",
+    "Sha256": "2a2f98410845c855176eb6d186dd5225b82fb3e11de70f5235192c27ae539347",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@69.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:25.8544489+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main7": "U0058"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00156",
+    "File": "screenshots\\S00156_3e01babc.jpg",
+    "Sha256": "3e01babcbbc9762bd07f393c272af4eac43050d74ced8b6509dd4673eb030db2",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@69.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:25.9316203+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main7": "U0058",
+      "main8": "U0059"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00157",
+    "File": "screenshots\\S00157_b294d41a.jpg",
+    "Sha256": "b294d41a84e1fcbfb250ddb3bee62c37ee60674bbfcbca6eed1982f2a3da81a1",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@101.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.008664+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "current": "U0058"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00158",
+    "File": "screenshots\\S00158_f81e03f9.jpg",
+    "Sha256": "f81e03f9d95d65a7e797612b358d7a64e4609a486ca3f2d716ad568f11e98db2",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@101.267",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.0838434+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "current": "U0058"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00159",
+    "File": "screenshots\\S00159_0e604113.jpg",
+    "Sha256": "0e604113bd4a8074fe5e2fee3809a856c3602a06c1f36dfc9ba305251dc0e87d",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@101.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.1615564+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "current": "U0058"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00160",
+    "File": "screenshots\\S00160_48a3c27d.jpg",
+    "Sha256": "48a3c27da8c0c09347afacab2026bfd2c2c0a19b908cc10389c4f5a4b2494931",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@69.067",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.2416731+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main8": "U0059"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00161",
+    "File": "screenshots\\S00161_5cc3f2a3.jpg",
+    "Sha256": "5cc3f2a3b2c47af7b030162f592f35d2fbd516d76ff6367c84402f4928eff8b2",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@69.800",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.334079+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main8": "U0059"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00162",
+    "File": "screenshots\\S00162_3a53daae.jpg",
+    "Sha256": "3a53daaec22e0cc4b84eb1dec7e851db7998c61a2a9ba17137db89c59d46b621",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@71.333",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.3833714+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "current": "U0001"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00163",
+    "File": "screenshots\\S00163_f706638f.jpg",
+    "Sha256": "f706638f8a0236c0c0fd743e65a68de17ff9ddfed510aba65d50a171d811bdf0",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@71.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.4347789+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "current": "U0001"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00164",
+    "File": "screenshots\\S00164_0bb27430.jpg",
+    "Sha256": "0bb274303a20b79cd4915a25c5686224da209caaad42cf2bcdd7b31727a8d876",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@71.800",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.4868046+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "current": "U0001"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00165",
+    "File": "screenshots\\S00165_acacf952.jpg",
+    "Sha256": "acacf952fde7b7ccc3dd5a5cbd3c68735b9f91791582cfd857c51ae133bb06d3",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@76.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.5394265+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main5": "U0003"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00166",
+    "File": "screenshots\\S00166_d19bfc67.jpg",
+    "Sha256": "d19bfc676c646be447fc298ba9814b347b44354f6f3abd3e4c9161443f6b8da1",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@81.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.5936249+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main5": "U0003"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00167",
+    "File": "screenshots\\S00167_5077c7e0.jpg",
+    "Sha256": "5077c7e0dc6f5c5b86256ed23b09d5ffebfa6e8072323b67eff847ebabae2fc5",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@90.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.6501325+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main6": "U0003"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00168",
+    "File": "screenshots\\S00168_0505ba95.jpg",
+    "Sha256": "0505ba955335deddd734000681baecd9e28a1d28a82a32f9790c039ba15b37eb",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@76.533",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.7085565+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "current": "U0001"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00169",
+    "File": "screenshots\\S00169_9a83b725.jpg",
+    "Sha256": "9a83b725a617cc781e2e37a9782741e142c6786a3ba75a6e388bfd49f28cbae7",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@76.667",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.7608576+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "current": "U0001"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00170",
+    "File": "screenshots\\S00170_55c13edb.jpg",
+    "Sha256": "55c13edb9f8a6b7cc367d0540ae85a47e71c0e4119b2a19dc66d6b1f10cd6ad9",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@76.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.8155227+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "current": "U0001"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00171",
+    "File": "screenshots\\S00171_90110a81.jpg",
+    "Sha256": "90110a81533496d6f277a52bc1cf6780d2d062eab8fbdaf2e4f0b7b371867689",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@78.800",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.8714672+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main2": "U0009"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00172",
+    "File": "screenshots\\S00172_938e190c.jpg",
+    "Sha256": "938e190ca9b4f0af58350d233c9eb2befefe3045876b06585d6b3c8a89ba85e4",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@87.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.9233586+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main3": "U0009"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00173",
+    "File": "screenshots\\S00173_98cdd088.jpg",
+    "Sha256": "98cdd0882be26b8e44a0a5e9399fd7a235c9ffd239259aed2c39434df3f15586",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@91.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:26.9794405+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main3": "U0009"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00174",
+    "File": "screenshots\\S00174_78261b8d.jpg",
+    "Sha256": "78261b8df30baab229a0ae3286f138cd2fd5d69b5d0f8899f3014ea391d42973",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@87.467",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:27.0334772+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main6": "U0003"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00175",
+    "File": "screenshots\\S00175_693e2541.jpg",
+    "Sha256": "693e2541ebf1ec73285698970f72af455d4804eaf1a7511084c064e8cbd6a027",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@89.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:27.0884692+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main6": "U0003"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00176",
+    "File": "screenshots\\S00176_d285ad96.jpg",
+    "Sha256": "d285ad965848b36cfb813480d34d2236f4d5a3abc599a08bba90d016258effba",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@92.000",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:27.1449823+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main6": "U0003"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00177",
+    "File": "screenshots\\S00177_b9f1fba3.jpg",
+    "Sha256": "b9f1fba309c5d50f540b0ce9a9e96dc884bcd10c5e0844806a4493077613e107",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@116.533",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:27.2021939+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main8": "U0026"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00178",
+    "File": "screenshots\\S00178_cee71115.jpg",
+    "Sha256": "cee711156c962bc4d8216c50a7816f3ffdc0fc430c6e35b3653aecf8f0bcaa67",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@116.800",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:27.2490612+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main8": "U0026"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00179",
+    "File": "screenshots\\S00179_6dccf9cd.jpg",
+    "Sha256": "6dccf9cd6b14069e39ff03a7bd8dccf596edfe701a98255d7dbce11d7c71967b",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@121.400",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:27.3018241+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main6": "U0060"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00180",
+    "File": "screenshots\\S00180_ea9f37b1.jpg",
+    "Sha256": "ea9f37b1bd6b54ec0a43fc278077b6cbf21a65a0f06fa946ae4f47cdf2f43dd6",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@122.200",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:27.3470179+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main6": "U0060"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00181",
+    "File": "screenshots\\S00181_45453c2f.jpg",
+    "Sha256": "45453c2f9562409aec0804109d0e1ba06907f71c47faed777955d885e94c9e97",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209@123.733",
+      "Url": null,
+      "License": null,
+      "AccessedAt": "2026-10-27T23:51:27.3915522+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 88,
+    "Truth": {
+      "main7": "U0060"
+    },
+    "Notes": "20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209 新单位示例帧"
+  },
+  {
+    "Id": "S00182",
+    "File": "screenshots\\S00182_cd33e182.jpg",
+    "Sha256": "cd33e182542e72ddbc08205154fa7fd260b61e9250558f3810fe7af8ea0cc874",
+    "Width": 1920,
+    "Height": 1080,
+    "Source": {
+      "Type": "user-video",
+      "Origin": "recording.avi@24.000",
+      "Url": null,
+      "License": "用户提供，本地知识库使用",
+      "AccessedAt": "2026-10-27T23:59:52.0234737+00:00"
+    },
+    "GameVersion": null,
+    "Split": "train",
+    "AddedInKbVersion": 92,
+    "Truth": {
+      "current": "U0061"
+    },
+    "Notes": "来自测试 20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209"
+  }
+]

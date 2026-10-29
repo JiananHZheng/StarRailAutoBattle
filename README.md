@@ -43,6 +43,26 @@ powershell -ExecutionPolicy Bypass -File scripts\publish.ps1
 
 `bin/`、`obj/`、`dist/` 等构建产物已在 `.gitignore` 中忽略。
 
+### 队友测试（拿到仓库后）
+
+仓库里带着识别用的知识库（`axis-data/kb` 的索引、头像样本、线索样本，约 4 MB）；录像、下载的视频和视频整帧截图不在仓库里（docs/sequence-rules.md 的 R7、R53）。样本视频要自己下载：
+
+1. 运行启动器，在“视频”页点“登录 B 站…”登录一次（不登录只有 360P，R3）。
+2. 下载三个样本视频（各 0:00–3:00，路径要和 `samples/*/sample.json` 里写的一致）：
+
+```powershell
+dotnet build src/AxisTool -c Release
+$axis = "src/AxisTool/bin/Release/net10.0-windows/axis.exe"
+& $axis record https://www.bilibili.com/video/BV1EM8Q69EqZ/ --start 0:00 --end 3:00 --method download --out axis-data/recordings/20261029-dl_BV1EM8Q69EqZ_0000-0300
+& $axis record https://www.bilibili.com/video/BV1vAgy6LE9G/ --start 0:00 --end 3:00 --method download --out axis-data/recordings/20261029-dl_BV1vAgy6LE9G_0000-0300
+& $axis record https://www.bilibili.com/video/BV1pCaX6iEsU/ --start 0:00 --end 3:00 --method download --out axis-data/recordings/20261029-dl_BV1pCaX6iEsU_0000-0300
+```
+
+3. 每段下载完看 `recording_info.txt`，必须是 1920×1080（R5）。
+4. 跑样本检查：`pwsh scripts/check-samples.ps1`（样本有用户确认的 `expected.txt` 才会比对）；单独生成序列：`& $axis sequence <视频> --team 昔涟,长夜月,风堇,记忆主`。
+
+不要下载或打开 BV18nVd6VEiB：它是盲测视频（R6）。
+
 ## 使用：视频页
 
 1. **B 站视频链接**：可直接粘贴 B 站 App 复制的分享文字（`【标题】 https://…`）、`www.bilibili.com/video/BV…` 链接、`b23.tv` 短链接或单独的 BV 号。分享参数会被去掉。目前只支持 B 站。

@@ -1,0 +1,1169 @@
+[
+  {
+    "Id": "EMPTY",
+    "Aliases": [],
+    "Kind": "Empty",
+    "Name": "空格",
+    "NameStatus": "confirmed",
+    "NameSource": "内置",
+    "Notes": "行动轴空位；样本用于区分“没有头像”。",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T22:30:47.7264647+00:00",
+    "History": []
+  },
+  {
+    "Id": "U0001",
+    "Aliases": [
+      "CH-待定01"
+    ],
+    "Kind": "Character",
+    "Name": "昔涟",
+    "NameStatus": "confirmed",
+    "NameSource": "用户确认 Claude 建议（2026-10-27）",
+    "Notes": "昔涟本人；U0030、U0040（主轴样子）已并入",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:01.7794556+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0001（原编号 CH-待定01 保留为别名）",
+      "2026-10-27 23:01 并入 U0030（样本 6 个）",
+      "2026-10-27 23:01 并入 U0040（样本 3 个）",
+      "2026-10-27 23:01 名称 （无） → 昔涟（confirmed，来源 用户确认 Claude 建议（2026-10-27））",
+      "2026-10-27 23:01 类型 角色 → 角色（编号不变）",
+      "2026-10-27 23:01 备注 → 昔涟本人；U0030、U0040（主轴样子）已并入"
+    ]
+  },
+  {
+    "Id": "U0002",
+    "Aliases": [
+      "CH-待定02"
+    ],
+    "Kind": "Character",
+    "Name": "记忆主",
+    "NameStatus": "confirmed",
+    "NameSource": "用户（2026-10-27）",
+    "Notes": "开拓者（记忆命途）",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:01.947393+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0002（原编号 CH-待定02 保留为别名）",
+      "2026-10-27 21:50 名称 （无） → 记忆主（confirmed，来源 用户（2026-10-27））",
+      "2026-10-27 21:50 备注 → 开拓者（记忆命途）",
+      "2026-10-27 23:01 并入 U0032（样本 9 个）",
+      "2026-10-27 23:01 并入 U0049（样本 3 个）",
+      "2026-10-27 23:01 并入 U0052（样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0003",
+    "Aliases": [
+      "CH-待定03"
+    ],
+    "Kind": "Character",
+    "Name": "长夜月",
+    "NameStatus": "confirmed",
+    "NameSource": "用户（2026-10-27）",
+    "Notes": "用户确认：U0007（旧 CH-待定07）也是长夜月，已合并",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:02.1100373+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0003（原编号 CH-待定03 保留为别名）",
+      "2026-10-27 21:50 并入 U0007（样本 1 个）",
+      "2026-10-27 21:50 名称 （无） → 长夜月（confirmed，来源 用户（2026-10-27））",
+      "2026-10-27 21:50 备注 → 用户确认：U0007（旧 CH-待定07）也是长夜月，已合并",
+      "2026-10-27 23:01 并入 U0048（样本 6 个）",
+      "2026-10-27 23:01 并入 U0057（样本 3 个）",
+      "2026-10-27 23:01 并入 U0033（样本 3 个）",
+      "2026-10-27 23:51 并入 U0051（样本 2 个）"
+    ]
+  },
+  {
+    "Id": "U0004",
+    "Aliases": [
+      "CH-待定04"
+    ],
+    "Kind": "Character",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "粉发、发髻、绿瞳；S00001",
+    "MergedInto": "U0005",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:02.2843239+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0004（原编号 CH-待定04 保留为别名）",
+      "2026-10-27 23:01 合并到 U0005（移动样本 1 个）"
+    ]
+  },
+  {
+    "Id": "U0005",
+    "Aliases": [
+      "CH-待定05"
+    ],
+    "Kind": "Character",
+    "Name": "风堇",
+    "NameStatus": "confirmed",
+    "NameSource": "用户（2026-10-27）",
+    "Notes": "粉发、眨眼、红帽；S00002；可能与 CH-待定04 为同一角色，待确认",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:02.4485128+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0005（原编号 CH-待定05 保留为别名）",
+      "2026-10-27 22:05 名称 （无） → 风堇（confirmed，来源 用户（2026-10-27））",
+      "2026-10-27 23:01 并入 U0004（样本 1 个）",
+      "2026-10-27 23:01 并入 U0027（样本 6 个）",
+      "2026-10-27 23:01 并入 U0053（样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0006",
+    "Aliases": [
+      "CH-待定06"
+    ],
+    "Kind": "Character",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "淡紫发、紫花饰；S00002",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:02.6092541+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0006（原编号 CH-待定06 保留为别名）"
+    ]
+  },
+  {
+    "Id": "U0007",
+    "Aliases": [
+      "CH-待定07"
+    ],
+    "Kind": "Character",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "白发；S00002",
+    "MergedInto": "U0003",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:02.7725713+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0007（原编号 CH-待定07 保留为别名）",
+      "2026-10-27 21:50 合并到 U0003（移动样本 1 个）"
+    ]
+  },
+  {
+    "Id": "U0008",
+    "Aliases": [
+      "CS001"
+    ],
+    "Kind": "CharacterSummon",
+    "Name": "迷迷",
+    "NameStatus": "confirmed",
+    "NameSource": "用户（2026-10-27）",
+    "Notes": "记忆主的忆灵",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:02.9455085+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色召唤物）",
+      "2026-10-27 19:17 改用全局编号 U0008（原编号 CS001 保留为别名）",
+      "2026-10-27 21:50 名称 （无） → 迷迷（confirmed，来源 用户（2026-10-27））",
+      "2026-10-27 21:50 类型 角色召唤物 → 角色召唤物（编号不变）",
+      "2026-10-27 21:50 备注 → 记忆主的忆灵",
+      "2026-10-27 23:01 并入 U0031（样本 3 个）",
+      "2026-10-27 23:01 并入 U0035（样本 3 个）",
+      "2026-10-27 23:01 并入 U0042（样本 3 个）",
+      "2026-10-27 23:01 并入 U0043（样本 6 个）"
+    ]
+  },
+  {
+    "Id": "U0009",
+    "Aliases": [
+      "CS002"
+    ],
+    "Kind": "CharacterSummon",
+    "Name": "长夜月忆灵",
+    "NameStatus": "confirmed",
+    "NameSource": "用户（2026-10-27）",
+    "Notes": "长夜月的忆灵；旧编号 CS002（红色玫瑰）；开局时有特殊形态",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:03.1137615+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色召唤物）",
+      "2026-10-27 19:17 改用全局编号 U0009（原编号 CS002 保留为别名）",
+      "2026-10-27 20:45 名称 （无） → 长夜月忆灵（confirmed，来源 用户（2026-10-27））",
+      "2026-10-27 21:50 备注 → 长夜月的忆灵；旧编号 CS002（红色玫瑰）",
+      "2026-10-27 23:01 并入 U0034（样本 6 个）",
+      "2026-10-27 23:01 并入 U0041（样本 3 个）",
+      "2026-10-27 23:01 并入 U0056（样本 2 个）",
+      "2026-10-27 23:25 备注 → 长夜月的忆灵；旧编号 CS002（红色玫瑰）；开局时有特殊形态"
+    ]
+  },
+  {
+    "Id": "U0010",
+    "Aliases": [
+      "CS003"
+    ],
+    "Kind": "CharacterSummon",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "音符/均衡器图标（我方标记）；可能为角色召唤物或特殊行动条目，类型待确认",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:03.2894412+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色召唤物）",
+      "2026-10-27 19:17 改用全局编号 U0010（原编号 CS003 保留为别名）"
+    ]
+  },
+  {
+    "Id": "U0011",
+    "Aliases": [
+      "CS004"
+    ],
+    "Kind": "CharacterSummon",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "白色玩偶、红冠（我方标记）；角色或召唤物待确认",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:03.4570769+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（角色召唤物）",
+      "2026-10-27 19:17 改用全局编号 U0011（原编号 CS004 保留为别名）"
+    ]
+  },
+  {
+    "Id": "U0012",
+    "Aliases": [
+      "M0001"
+    ],
+    "Kind": "Monster",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "绿叶橙发头像（敌方标记）；S00001 中出现两次，同图标同编号",
+    "MergedInto": "U0016",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:03.6217747+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（怪物）",
+      "2026-10-27 19:17 改用全局编号 U0012（原编号 M0001 保留为别名）",
+      "2026-10-27 21:55 合并到 U0016（移动样本 2 个）"
+    ]
+  },
+  {
+    "Id": "U0013",
+    "Aliases": [
+      "M0002"
+    ],
+    "Kind": "Monster",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "橙红花状头像，带菱形徽记（敌方标记）",
+    "MergedInto": "U0017",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:03.7905878+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（怪物）",
+      "2026-10-27 19:17 改用全局编号 U0013（原编号 M0002 保留为别名）",
+      "2026-10-27 21:55 合并到 U0017（移动样本 1 个）"
+    ]
+  },
+  {
+    "Id": "U0014",
+    "Aliases": [
+      "M0003"
+    ],
+    "Kind": "Monster",
+    "Name": "亚婆离特殊技能",
+    "NameStatus": "confirmed",
+    "NameSource": "用户确认：图片盲测01 第 1 格的铃铛与建库图等待格中的铃铛为同一单位",
+    "Notes": "红色铃铛图标；首领亚婆离的特殊技能行动条目",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:03.9570413+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（怪物）",
+      "2026-10-26 23:19 名称 （无） → 亚婆离特殊技能（confirmed，来源 用户（图片盲测01 第 1 格）；与 M0003 的对应依据为图标相同（Claude 视觉判断，待用户确认））",
+      "2026-10-26 23:27 名称 亚婆离特殊技能 → 亚婆离特殊技能（confirmed，来源 用户确认：图片盲测01 第 1 格的铃铛与建库图等待格中的铃铛为同一单位）",
+      "2026-10-26 23:27 备注 → 红色铃铛图标；首领亚婆离的特殊技能行动条目",
+      "2026-10-27 19:17 改用全局编号 U0014（原编号 M0003 保留为别名）",
+      "2026-10-27 23:01 并入 U0054（样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0015",
+    "Aliases": [
+      "M0004"
+    ],
+    "Kind": "Marker",
+    "Name": "特殊提醒",
+    "NameStatus": "confirmed",
+    "NameSource": "用户",
+    "Notes": "紫色球体（S00001 最下方）；用户确认为特殊提醒条目，与 MK001 不是同一个，不记录",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:04.1274415+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（怪物）",
+      "2026-10-26 23:27 名称 （无） → 特殊提醒（confirmed，来源 用户）",
+      "2026-10-26 23:27 类型 怪物 → 非单位提醒条目（编号不变）",
+      "2026-10-26 23:27 备注 → 紫色球体（S00001 最下方）；用户确认为特殊提醒条目，与 MK001 不是同一个，不记录",
+      "2026-10-27 19:17 改用全局编号 U0015（原编号 M0004 保留为别名）"
+    ]
+  },
+  {
+    "Id": "U0016",
+    "Aliases": [
+      "M0005"
+    ],
+    "Kind": "MonsterSummon",
+    "Name": "亚婆离召唤物",
+    "NameStatus": "confirmed",
+    "NameSource": "用户（图片盲测01 第 7、8 格）",
+    "Notes": "灰发、面具头像（敌方标记）；S00002 中出现两次",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:04.2958763+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（怪物）",
+      "2026-10-26 23:19 名称 （无） → 亚婆离召唤物（confirmed，来源 用户（图片盲测01 第 7、8 格））",
+      "2026-10-26 23:19 类型 怪物 → 怪物召唤物（编号不变）",
+      "2026-10-27 19:17 改用全局编号 U0016（原编号 M0005 保留为别名）",
+      "2026-10-27 21:55 并入 U0012（样本 2 个）"
+    ]
+  },
+  {
+    "Id": "U0017",
+    "Aliases": [
+      "M0006"
+    ],
+    "Kind": "Monster",
+    "Name": "堕神之血·亚婆离",
+    "NameStatus": "candidate",
+    "NameSource": "S00002 画面上方首领血条名称；头像与血条头像相似，未核实",
+    "Notes": "首领头像，带菱形徽记",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:05:04.4702514+00:00",
+    "History": [
+      "2026-10-26 23:05 创建（怪物）",
+      "2026-10-27 19:17 改用全局编号 U0017（原编号 M0006 保留为别名）",
+      "2026-10-27 21:55 并入 U0013（样本 1 个）"
+    ]
+  },
+  {
+    "Id": "U0018",
+    "Aliases": [
+      "CH-爻光"
+    ],
+    "Kind": "Character",
+    "Name": "爻光",
+    "NameStatus": "confirmed",
+    "NameSource": "用户",
+    "Notes": "来源：图片盲测01 用户答案",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:19:27.7391044+00:00",
+    "History": [
+      "2026-10-26 23:19 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0018（原编号 CH-爻光 保留为别名）"
+    ]
+  },
+  {
+    "Id": "U0019",
+    "Aliases": [
+      "CH-欢愉主角"
+    ],
+    "Kind": "Character",
+    "Name": "欢愉主角",
+    "NameStatus": "confirmed",
+    "NameSource": "用户",
+    "Notes": "开拓者（欢愉命途）；来源：图片盲测01 用户答案",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:19:27.908813+00:00",
+    "History": [
+      "2026-10-26 23:19 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0019（原编号 CH-欢愉主角 保留为别名）"
+    ]
+  },
+  {
+    "Id": "U0020",
+    "Aliases": [
+      "CH-真珠"
+    ],
+    "Kind": "Character",
+    "Name": "真珠",
+    "NameStatus": "confirmed",
+    "NameSource": "用户",
+    "Notes": "来源：图片盲测01 用户答案",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:19:28.0781676+00:00",
+    "History": [
+      "2026-10-26 23:19 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0020（原编号 CH-真珠 保留为别名）"
+    ]
+  },
+  {
+    "Id": "U0021",
+    "Aliases": [
+      "CH-绯英"
+    ],
+    "Kind": "Character",
+    "Name": "绯英",
+    "NameStatus": "confirmed",
+    "NameSource": "用户",
+    "Notes": "来源：图片盲测01 用户答案",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:19:28.2471515+00:00",
+    "History": [
+      "2026-10-26 23:19 创建（角色）",
+      "2026-10-27 19:17 改用全局编号 U0021（原编号 CH-绯英 保留为别名）"
+    ]
+  },
+  {
+    "Id": "U0022",
+    "Aliases": [
+      "CS005"
+    ],
+    "Kind": "CharacterSummon",
+    "Name": "阿哈时刻",
+    "NameStatus": "confirmed",
+    "NameSource": "用户",
+    "Notes": "欢愉命途特殊行动条目（非实体召唤物），暂归入角色召唤物类；用户说明：阿哈时刻是插入回合",
+    "MergedInto": null,
+    "ActsAsInsert": true,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:19:28.4212622+00:00",
+    "History": [
+      "2026-10-26 23:19 创建（角色召唤物）",
+      "2026-10-26 23:35 备注 → 欢愉命途特殊行动条目（非实体召唤物），暂归入角色召唤物类；用户说明：阿哈时刻是插入回合",
+      "2026-10-26 23:35 行动视为插入回合（无论在哪一格）",
+      "2026-10-27 19:17 改用全局编号 U0022（原编号 CS005 保留为别名）"
+    ]
+  },
+  {
+    "Id": "U0023",
+    "Aliases": [
+      "MK001"
+    ],
+    "Kind": "Marker",
+    "Name": "特殊时刻提醒",
+    "NameStatus": "confirmed",
+    "NameSource": "用户",
+    "Notes": "用户说明：行动值 999 的条目一般视为特殊时刻提醒，不记录",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:19:28.590921+00:00",
+    "History": [
+      "2026-10-26 23:19 创建（非单位提醒条目）",
+      "2026-10-27 19:17 改用全局编号 U0023（原编号 MK001 保留为别名）",
+      "2026-10-27 23:01 并入 U0055（样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0024",
+    "Aliases": [
+      "AT001"
+    ],
+    "Kind": "Attachment",
+    "Name": "阿哈时刻附加行动",
+    "NameStatus": "confirmed",
+    "NameSource": "用户",
+    "Notes": "四人头像格；用户说明：阿哈时刻的附加行动，与阿哈时刻算作整体",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-26T23:27:10.6536988+00:00",
+    "History": [
+      "2026-10-26 23:27 创建（附属格（并入上一条目））",
+      "2026-10-27 19:17 改用全局编号 U0024（原编号 AT001 保留为别名）"
+    ]
+  },
+  {
+    "Id": "U0025",
+    "Aliases": [],
+    "Kind": "CharacterSummon",
+    "Name": "忆灵昔涟",
+    "NameStatus": "confirmed",
+    "NameSource": "用户（20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220）",
+    "Notes": "昔涟的忆灵",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T20:45:50.5469667+00:00",
+    "History": [
+      "2026-10-27 20:45 创建（未分类）",
+      "2026-10-27 21:50 类型 未分类 → 角色召唤物（编号不变）",
+      "2026-10-27 21:50 备注 → 昔涟的忆灵"
+    ]
+  },
+  {
+    "Id": "U0026",
+    "Aliases": [],
+    "Kind": "Marker",
+    "Name": "剩余行动条",
+    "NameStatus": "confirmed",
+    "NameSource": "用户（20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220）",
+    "Notes": "由 20261027-194539_昔涟盲测03_BV1vAgy6LE9G_0120-0220 的 新22 转正；非单位条目，识别后不列入结果",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T20:45:52.182387+00:00",
+    "History": [
+      "2026-10-27 20:45 创建（非单位提醒条目）"
+    ]
+  },
+  {
+    "Id": "U0027",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新01，未经用户核对",
+    "MergedInto": "U0005",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:37.2499508+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0005（移动样本 6 个）"
+    ]
+  },
+  {
+    "Id": "U0028",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新02，未经用户核对",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": true,
+    "CreatedAt": "2026-10-27T22:10:37.8134405+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）"
+    ]
+  },
+  {
+    "Id": "U0029",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新03，未经用户核对",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": true,
+    "CreatedAt": "2026-10-27T22:10:38.3671541+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）"
+    ]
+  },
+  {
+    "Id": "U0030",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新04，未经用户核对",
+    "MergedInto": "U0001",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:38.9180283+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0001（移动样本 6 个）"
+    ]
+  },
+  {
+    "Id": "U0031",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新05，未经用户核对",
+    "MergedInto": "U0008",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:39.4512818+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0008（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0032",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新06，未经用户核对",
+    "MergedInto": "U0002",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:40.0079647+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0002（移动样本 9 个）"
+    ]
+  },
+  {
+    "Id": "U0033",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新07，未经用户核对；疑似 U0003 长夜月（工具判断，未核对）",
+    "MergedInto": "U0003",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:40.42521+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0003（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0034",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新09，未经用户核对",
+    "MergedInto": "U0009",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:40.9649209+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0009（移动样本 6 个）"
+    ]
+  },
+  {
+    "Id": "U0035",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新10，未经用户核对",
+    "MergedInto": "U0008",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:41.5095127+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0008（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0036",
+    "Aliases": [],
+    "Kind": "CharacterSummon",
+    "Name": "小伊卡",
+    "NameStatus": "confirmed",
+    "NameSource": "用户确认 Claude 建议（2026-10-27）；网上资料：风堇的忆灵名为小伊卡（天马小伊卡）",
+    "Notes": "风堇的忆灵",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:42.0719076+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 名称 （无） → 小伊卡（confirmed，来源 用户确认 Claude 建议（2026-10-27）；网上资料：风堇的忆灵名为小伊卡（天马小伊卡））",
+      "2026-10-27 23:01 类型 未分类 → 角色召唤物（编号不变）",
+      "2026-10-27 23:01 备注 → 风堇的忆灵",
+      "2026-10-27 23:01 用户核对，取消临时标记"
+    ]
+  },
+  {
+    "Id": "U0037",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新13，未经用户核对",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": true,
+    "CreatedAt": "2026-10-27T22:10:42.6089234+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）"
+    ]
+  },
+  {
+    "Id": "U0038",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新15，未经用户核对",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": true,
+    "CreatedAt": "2026-10-27T22:10:43.1468591+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）"
+    ]
+  },
+  {
+    "Id": "U0039",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212747_昔涟盲测05_BV1EM8Q69EqZ_0159-0259 的 新16，未经用户核对",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": true,
+    "CreatedAt": "2026-10-27T22:10:43.7146623+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）"
+    ]
+  },
+  {
+    "Id": "U0040",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 的 新01，未经用户核对",
+    "MergedInto": "U0001",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:44.4883496+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0001（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0041",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 的 新03，未经用户核对",
+    "MergedInto": "U0009",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:45.6918104+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0009（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0042",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 的 新05，未经用户核对",
+    "MergedInto": "U0008",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:46.7803926+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0008（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0043",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 的 新06，未经用户核对",
+    "MergedInto": "U0008",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:47.3710873+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0008（移动样本 6 个）"
+    ]
+  },
+  {
+    "Id": "U0044",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 的 新07，未经用户核对；疑似 U0003 长夜月（工具判断，未核对）",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": true,
+    "CreatedAt": "2026-10-27T22:10:47.9604979+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）"
+    ]
+  },
+  {
+    "Id": "U0045",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 的 新09，未经用户核对",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": true,
+    "CreatedAt": "2026-10-27T22:10:49.0895542+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）"
+    ]
+  },
+  {
+    "Id": "U0046",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 的 新10，未经用户核对",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": true,
+    "CreatedAt": "2026-10-27T22:10:49.6319553+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）"
+    ]
+  },
+  {
+    "Id": "U0047",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 的 新11，未经用户核对；疑似 U0005 风堇（工具判断，未核对）",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": true,
+    "CreatedAt": "2026-10-27T22:10:50.1306781+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）"
+    ]
+  },
+  {
+    "Id": "U0048",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212848_昔涟复测05_BV1vAgy6LE9G_0120-0220 的 新13，未经用户核对",
+    "MergedInto": "U0003",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:51.2857058+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0003（移动样本 6 个）"
+    ]
+  },
+  {
+    "Id": "U0049",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 的 新03，未经用户核对",
+    "MergedInto": "U0002",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:53.4478632+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0002（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0050",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 的 新04，未经用户核对",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": true,
+    "CreatedAt": "2026-10-27T22:10:53.9785425+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）"
+    ]
+  },
+  {
+    "Id": "U0051",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 的 新05，未经用户核对；疑似 U0003 长夜月（工具判断，未核对）",
+    "MergedInto": "U0003",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:54.4456645+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:51 用户核对，取消临时标记",
+      "2026-10-27 23:51 合并到 U0003（移动样本 2 个）"
+    ]
+  },
+  {
+    "Id": "U0052",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 的 新07，未经用户核对；疑似 U0002 记忆主（工具判断，未核对）",
+    "MergedInto": "U0002",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:55.429978+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0002（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0053",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 的 新11，未经用户核对",
+    "MergedInto": "U0005",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:57.6618932+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0005（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0054",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 的 新12，未经用户核对",
+    "MergedInto": "U0014",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:58.2647283+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0014（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0055",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 的 新13，未经用户核对",
+    "MergedInto": "U0023",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:58.8081867+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0023（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0056",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 的 新14，未经用户核对",
+    "MergedInto": "U0009",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:59.3566682+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0009（移动样本 2 个）"
+    ]
+  },
+  {
+    "Id": "U0057",
+    "Aliases": [],
+    "Kind": "Unclassified",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "临时：来自 20261027-212941_昔涟盲测05_BV1pCaX6iEsU_0200-0300 的 新15，未经用户核对",
+    "MergedInto": "U0003",
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T22:10:59.8233255+00:00",
+    "History": [
+      "2026-10-27 22:10 创建（未分类）",
+      "2026-10-27 23:01 用户核对，取消临时标记",
+      "2026-10-27 23:01 合并到 U0003（移动样本 3 个）"
+    ]
+  },
+  {
+    "Id": "U0058",
+    "Aliases": [],
+    "Kind": "Monster",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": "用户（20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109）",
+    "Notes": "碎星王虫视频中的新怪物（用户确认）；王虫盲测01 的新01（主轴）与新05（当前格）",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T23:25:05.6581666+00:00",
+    "History": [
+      "2026-10-27 23:25 创建（未分类）",
+      "2026-10-27 23:25 类型 未分类 → 怪物（编号不变）",
+      "2026-10-27 23:25 备注 → 碎星王虫视频中的新怪物（用户确认）；王虫盲测01 的新01（主轴）与新05（当前格）"
+    ]
+  },
+  {
+    "Id": "U0059",
+    "Aliases": [],
+    "Kind": "Monster",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": "用户（20261027-230755_王虫盲测01_BV18nVd6VEiB_0009-0109）",
+    "Notes": "碎星王虫视频中的另一个怪物（用户确认）；王虫盲测01 的新02",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T23:25:06.15194+00:00",
+    "History": [
+      "2026-10-27 23:25 创建（未分类）",
+      "2026-10-27 23:25 类型 未分类 → 怪物（编号不变）",
+      "2026-10-27 23:25 备注 → 碎星王虫视频中的另一个怪物（用户确认）；王虫盲测01 的新02"
+    ]
+  },
+  {
+    "Id": "U0060",
+    "Aliases": [],
+    "Kind": "Monster",
+    "Name": "boss特殊技能",
+    "NameStatus": "confirmed",
+    "NameSource": "用户（20261027-234017_王虫盲测02_BV18nVd6VEiB_0109-0209）",
+    "Notes": "碎星王虫视频中的首领特殊技能条目（用户确认，王虫盲测02 的新10）",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T23:51:27.3016926+00:00",
+    "History": [
+      "2026-10-27 23:51 创建（未分类）",
+      "2026-10-27 23:51 类型 未分类 → 怪物（编号不变）",
+      "2026-10-27 23:51 备注 → 碎星王虫视频中的首领特殊技能条目（用户确认，王虫盲测02 的新10）"
+    ]
+  },
+  {
+    "Id": "U0061",
+    "Aliases": [],
+    "Kind": "Monster",
+    "Name": null,
+    "NameStatus": "none",
+    "NameSource": null,
+    "Notes": "碎星王虫视频中的新怪物（红发、兔耳）；王虫盲测02 第 8 号行动为其额外回合（用户确认是新怪，Claude 看图选帧）",
+    "MergedInto": null,
+    "ActsAsInsert": false,
+    "Provisional": false,
+    "CreatedAt": "2026-10-27T23:59:40.818866+00:00",
+    "History": [
+      "2026-10-27 23:59 创建（怪物）"
+    ]
+  }
+]

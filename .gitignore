@@ -14,8 +14,13 @@ TestResults/
 # Local test shortcuts (point at paths on one person's computer)
 *.lnk
 
-# Action-axis knowledge base, test runs and inbox: local game screenshots/recordings (up to ~2 GB)
-axis-data/
+# Action-axis data: recordings, downloaded videos, test runs and inbox stay local (several GB, R7).
+# The knowledge base's index, avatar samples and cue samples are tracked so teammates can test (R53);
+# its full video frames (kb/screenshots) are not.
+axis-data/*
+!axis-data/kb/
+axis-data/kb/screenshots/
+axis-data/kb/**/*.tmp
 
 # Sample check: the analyzer's latest output (scripts/check-samples.ps1)
 samples/*/actual.txt

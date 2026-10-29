@@ -1,0 +1,46 @@
+{
+  "Version": 125,
+  "CreatedAt": "2026-10-26T22:30:47.7224591+00:00",
+  "Game": "崩坏：星穹铁道",
+  "Scope": "3.0 版本至今的行动轴单位头像",
+  "Settings": {
+    "FeatureSize": 40,
+    "Inset": 0.1,
+    "WeightGray": 0.2,
+    "WeightEdge": 0.8,
+    "WeightHist": 0,
+    "AcceptScore": 0.55,
+    "AcceptMargin": 0.05,
+    "CandidateScore": 0.45,
+    "RefineOffset": 0.06,
+    "RefineScale": 0.06,
+    "EmptyStdFallback": 8,
+    "EmptyBelowScore": 0,
+    "DuplicateScore": 0.985,
+    "GroupJoinScore": 0.55
+  },
+  "Cues": {
+    "FeatureSize": 24,
+    "Inset": 0,
+    "WeightGray": 0.3,
+    "WeightEdge": 0.3,
+    "WeightHist": 0.4,
+    "AcceptScore": 0.6,
+    "AcceptMargin": 0.04,
+    "MarkerSize": 3.4,
+    "PhaseText": {
+      "X": 1.53,
+      "Y": 0.895,
+      "W": 0.24,
+      "H": 0.055
+    },
+    "PhaseSide": {
+      "X": 0.247,
+      "Y": 0.164,
+      "W": 0.252,
+      "H": 0.727
+    },
+    "ReticleSide": 0.11,
+    "ReticleScore": 0.5
+  }
+}
