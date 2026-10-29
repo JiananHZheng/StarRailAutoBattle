@@ -16,3 +16,8 @@ TestResults/
 
 # Action-axis knowledge base, test runs and inbox: local game screenshots/recordings (up to ~2 GB)
 axis-data/
+
+# Sample check: the analyzer's latest output (scripts/check-samples.ps1)
+samples/*/actual.txt
+# Analyzer drafts waiting for the user's check; the checked copy is saved as expected.txt
+samples/*/draft.txt
