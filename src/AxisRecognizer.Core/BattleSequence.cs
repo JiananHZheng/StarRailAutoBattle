@@ -52,14 +52,9 @@ public static class BattleSequence
                 }
 
                 var unit = current is { IsEmpty: false, UnitId: { } id } && !kb.IsNonAction(id) ? kb.ResolveUnit(id).Id : null;
-                var cardUnits = (cues.InsertCards ?? []).Select(card =>
-                {
-                    using var crop = new Mat(frame, card);
-                    return recognizer.NamePortrait(crop) is { } u ? kb.ResolveUnit(u).Id : null;
-                }).ToList();
+                // R45: insert cards are not read for ultimates; R29: the team bar's buttons are.
                 analyzer.Feed(new FrameObservation(time + timeOffset, result.AxisFound, unit, cues)
                 {
-                    InsertUnits = cardUnits,
                     UltButtons = CueReader.ReadUltButtons(frame, result.Content),
                 });
                 progress?.Report(last > start ? Math.Clamp((time - start) / (last - start), 0, 1) : 0);

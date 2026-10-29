@@ -9,15 +9,10 @@ public enum BattleEventKind
     BattleEnd,
 }
 
-/// <summary>
-/// What one frame showed: the current cell's unit (null when unknown), the units on the ultimates' insert cards
-/// (null where a card's portrait is not recognized; empty when there are no cards) and the other screen cues.
-/// </summary>
+/// <summary>What one frame showed: the current cell's unit (null when unknown) and the other screen cues.</summary>
 public sealed record FrameObservation(double Time, bool AxisFound, string? CurrentUnit, ScreenCueFrame Cues)
 {
-    public IReadOnlyList<string?> InsertUnits { get; init; } = [];
-
-    /// <summary>The team bar's ultimate buttons seen in this frame (missing slots were not found).</summary>
+    /// <summary>The team bar's ultimate buttons seen in this frame (missing slots were not found; R29).</summary>
     public IReadOnlyList<UltButton> UltButtons { get; init; } = [];
 }
 
@@ -43,11 +38,8 @@ public sealed class BattleEvent
     /// <summary>Settable: an ultimate seen first as an insert card gets its unit when it enters the current cell.</summary>
     public string? UnitId { get; set; }
 
-    /// <summary>Team slot (1–4) whose ultimate button went out with this action, when that pairing was unambiguous.</summary>
+    /// <summary>Team slot (1–4) whose ultimate button went out with this action (R29).</summary>
     public int? TeamSlot { get; set; }
-
-    /// <summary>The action was seen as an insert card (an ultimate's start).</summary>
-    public bool FromCard { get; init; }
     public SkillKind? Skill { get; set; }
     public int? Round { get; set; }
     public int? ActionValue { get; set; }
@@ -101,12 +93,6 @@ public sealed class EventAnalyzer
     /// </summary>
     public double PhaseDotSeconds { get; init; } = 2.0;
 
-    /// <summary>
-    /// An ultimate whose card appeared this long before a star turn of the same (or an unknown) unit is that turn: the
-    /// card shows when the ultimate is pressed, the star when it enters the current cell (铁墓 0:35.2 card, 0:36 star).
-    /// </summary>
-    public double CardMatchSeconds { get; init; } = 6;
-
     private readonly List<BattleEvent> _events = [];
     private readonly List<string> _problems = [];
 
@@ -133,19 +119,15 @@ public sealed class EventAnalyzer
     private bool _dotHeld;
     private int _dotStable;
 
-    // Ultimates' insert cards: the held count, and card ultimates not yet seen in the current cell.
-    private int _cardCandidate;
-    private int _cardRun;
-    private int _cardStable;
-    private readonly List<BattleEvent> _pendingCards = [];
-
-    // Team-bar ultimate buttons: per slot, the held state and when it was last seen ready; presses still to pair.
+    // Team-bar ultimate buttons (R29): per slot, the held state and when it first left a held ready stretch; press
+    // ultimates not yet seen in the current cell (R52).
     private readonly Dictionary<int, (string State, double Since)> _slotRun = [];
     private readonly Dictionary<int, bool> _slotReady = [];
     private readonly Dictionary<int, double> _slotLastReady = [];
-    private readonly List<(int Slot, double Time)> _presses = [];
+    private readonly List<BattleEvent> _pressUltimates = [];
 
-    public IReadOnlyList<BattleEvent> Events => _events;
+    /// <summary>All events in time order (ultimates confirmed after their press are numbered back in time, R51).</summary>
+    public IReadOnlyList<BattleEvent> Events => _events.OrderBy(e => e.Time).ToList();
 
     /// <summary>Why each turn started and how it was decided (developer view, for checking the rules on real videos).</summary>
     public List<string> Trace { get; } = [];
@@ -251,7 +233,7 @@ public sealed class EventAnalyzer
 
         if (frame.AxisFound)
         {
-            emitted.AddRange(TrackCards(frame));
+            // R45: insert cards are not used; ultimates come from the team bar only (R29).
             TrackUltButtons(frame);
         }
 
@@ -322,128 +304,93 @@ public sealed class EventAnalyzer
                 _slotReady[button.Slot] = false;
                 var pressed = _slotLastReady.GetValueOrDefault(button.Slot, frame.Time);
                 _slotLastReady.Remove(button.Slot);
-                _presses.Add((button.Slot, pressed));
                 Trace.Add($"{pressed:0.00} 队伍第 {button.Slot} 位的终结技按钮熄灭（{frame.Time:0.00} 确认），终结技释放");
-                NameCard(button.Slot, pressed);
+                OnPress(button.Slot, pressed);
             }
         }
-
-        PairPresses(frame.Time);
     }
 
     /// <summary>
-    /// A confirmed press next to exactly one insert card (and no other press as close) is that card's ultimate: the
-    /// card shows the moment the key is pressed. Naming it now keeps a later star turn of another unit from being
-    /// taken for it.
+    /// A confirmed press of a slot's ultimate (R29). A star turn of that unit that already began after the press is this
+    /// ultimate entering the current cell (R52; the press is confirmed only after its hold, so the star can come first).
+    /// Otherwise it is a new extra action under the main action running at the press (R51, R11), possibly numbered back
+    /// in time when the press is confirmed after the next main action started.
     /// </summary>
-    private void NameCard(int slot, double pressed)
+    private void OnPress(int slot, double pressed)
     {
-        var cards = _events.Where(e => e.FromCard && e.TeamSlot is null && Math.Abs(e.Time - pressed) <= 1.5).ToList();
-        if (cards.Count != 1 || _presses.Count(p => Math.Abs(p.Time - pressed) <= 1.5) != 1)
+        if (!_inBattle)
         {
             return;
         }
 
-        var card = cards[0];
         var slotUnit = slot <= Team.Count ? Team[slot - 1] : null;
-        if (card.UnitId is { } known && slotUnit is not null && known != slotUnit)
+        var stars = _events.Where(e => e.StepKind == AxisRecognizer.StepKind.Extra && e.Skill is null && e.TeamSlot is null
+            && e.Time >= pressed - 0.5 && e.Time <= pressed + PressMatchSeconds && (slotUnit is null || e.UnitId == slotUnit)).ToList();
+        if (stars.Count == 1)
         {
+            var star = stars[0];
+            (star.Skill, star.TeamSlot) = (SkillKind.Ultimate, slot);
+            star.Notes.Add("队伍栏终结技按钮熄灭");
+            Trace.Add($"{pressed:0.00} 第 {slot} 位的终结技 = 已认定的四角星回合 {star.Index} {star.UnitId}");
             return;
         }
 
-        _presses.RemoveAll(p => p.Slot == slot && p.Time == pressed);
-        card.TeamSlot = slot;
-        if (card.UnitId is null && slotUnit is not null)
+        var (segment, main) = MainAt(pressed);
+        var e = new BattleEvent
         {
-            card.UnitId = slotUnit;
-            card.Notes.Add($"单位按队伍第 {slot} 位");
-        }
-
-        Trace.Add($"{pressed:0.00} 第 {slot} 位的终结技 = 插入卡 {card.Index} {card.UnitId ?? "单位看不清"}");
+            Kind = BattleEventKind.Action, Time = pressed, Segment = segment, StepKind = AxisRecognizer.StepKind.Extra,
+            Main = main, UnitId = slotUnit, Skill = SkillKind.Ultimate, TeamSlot = slot,
+        };
+        e.Notes.Add("队伍栏终结技按钮熄灭");
+        _events.Add(e);
+        _pressUltimates.Add(e);
+        RenumberExtras(segment, main);
+        Trace.Add($"{pressed:0.00} 第 {slot} 位的终结技，记为 {e.Index} {e.UnitId ?? "单位看不清"}（挂在熄灭时进行的主轴行动下）");
     }
 
-    /// <summary>
-    /// Pairs each ultimate press with the one extra action that started around it, once its window has passed. Only
-    /// unambiguous pairs count (when two ultimates go off together, which card is whose can't be told from the times).
-    /// A paired extra action is an ultimate; a pair with a known unit teaches which unit sits in that slot.
-    /// </summary>
-    private void PairPresses(double now)
+    /// <summary>The segment and main action running at a time (0 before the segment's first main action).</summary>
+    private (int Segment, int Main) MainAt(double time)
     {
-        foreach (var press in _presses.Where(p => now > p.Time + PressMatchSeconds).ToList())
+        var (segment, main) = (1, 0);
+        foreach (var e in _events.Where(e => e.Time <= time).OrderBy(e => e.Time))
         {
-            _presses.Remove(press);
-            bool InWindow(BattleEvent e, double pressTime) => e.Time >= pressTime - 1 && e.Time <= pressTime + PressMatchSeconds;
-            var slotUnit = press.Slot <= Team.Count ? Team[press.Slot - 1] : null;
-            // With the team known, an extra action of another unit can't be this slot's ultimate.
-            var candidates = _events.Where(e => e.StepKind == AxisRecognizer.StepKind.Extra && e.TeamSlot is null && InWindow(e, press.Time)
-                && (slotUnit is null || e.UnitId is null || e.UnitId == slotUnit)).ToList();
-            // One candidate already known to be this slot's unit beats unnamed ones (铁墓 2:38.5: 长夜月's star turn, and
-            // a card whose unit was decided a moment after the window closed).
-            if (slotUnit is not null && candidates.Count(c => c.UnitId == slotUnit) == 1)
+            if (e.Kind == BattleEventKind.Action && e.StepKind == AxisRecognizer.StepKind.Main)
             {
-                candidates = candidates.Where(c => c.UnitId == slotUnit).ToList();
+                (segment, main) = (e.Segment, e.Main);
             }
-
-            var rivals = _presses.Any(other => candidates.Any(c => InWindow(c, other.Time)
-                && (other.Slot > Team.Count || Team[other.Slot - 1] is not { } otherUnit || c.UnitId is null || c.UnitId == otherUnit)));
-            if (candidates.Count != 1 || rivals)
+            else if (e.Kind is BattleEventKind.WaveChange or BattleEventKind.PhaseChange)
             {
-                Trace.Add($"{press.Time:0.00} 第 {press.Slot} 位的终结技对不上唯一的额外行动（候选 {candidates.Count} 个：{string.Join("、", candidates.Select(c => $"{c.Index} {c.UnitId}"))}{(rivals ? "，有别的按钮同时熄灭" : "")}），不配对");
-                continue;
+                (segment, main) = (e.Segment + 1, 0);
             }
-
-            var e = candidates[0];
-            e.TeamSlot = press.Slot;
-            if (e.Skill is null)
+            else if (e.Kind == BattleEventKind.BattleStart)
             {
-                e.Skill = SkillKind.Ultimate;
-                e.Notes.Add("队伍栏终结技按钮熄灭");
+                (segment, main) = (1, 0);
             }
-
-            if (e.UnitId is null && slotUnit is not null)
-            {
-                e.UnitId = slotUnit;
-                e.Notes.Add($"单位按队伍第 {press.Slot} 位");
-            }
-
-            Trace.Add($"{press.Time:0.00} 第 {press.Slot} 位的终结技 = {e.Index} {e.UnitId ?? "单位看不清"}");
         }
+
+        return (segment, main);
     }
 
-    /// <summary>Each card that appears (held for StableFrames) is an extra action under the current main action.</summary>
-    private IEnumerable<BattleEvent> TrackCards(FrameObservation frame)
+    /// <summary>Numbers the extra actions under one main action by time: n-1, n-2… (R11).</summary>
+    private void RenumberExtras(int segment, int main)
     {
-        var count = frame.InsertUnits.Count;
-        _cardRun = count == _cardCandidate ? _cardRun + 1 : 1;
-        _cardCandidate = count;
-        if (_cardRun != StableFrames)
+        var extras = _events.Where(e => e.Kind == BattleEventKind.Action && e.StepKind == AxisRecognizer.StepKind.Extra
+            && e.Segment == segment && e.Main == main).OrderBy(e => e.Time).ToList();
+        for (var i = 0; i < extras.Count; i++)
         {
-            yield break;
+            extras[i].Extra = i + 1;
         }
 
-        for (var i = _cardStable; i < count && _inBattle; i++)
+        if (segment == _segment && main == _main)
         {
-            _extra++;
-            var e = new BattleEvent
-            {
-                Kind = BattleEventKind.Action, Time = frame.Time, Segment = _segment, StepKind = AxisRecognizer.StepKind.Extra,
-                Main = _main, Extra = _extra, UnitId = frame.InsertUnits[i], Skill = SkillKind.Ultimate, FromCard = true,
-            };
-            e.Notes.Add("终结技启动（插入卡）");
-            _events.Add(e);
-            _pendingCards.Add(e);
-            Trace.Add($"{frame.Time:0.00} 插入卡 {i + 1}，认定 {e.Index} {e.UnitId ?? "单位看不清"}");
-            yield return e;
+            _extra = extras.Count;
         }
-
-        _cardStable = count;
     }
 
     /// <summary>Ends the last turn (end of video or capture).</summary>
     public void Finish()
     {
         EndTurn();
-        PairPresses(double.PositiveInfinity);
         if (!_sawBattleStart && _events.Count > 0 && !_problems.Any(p => p.Contains("未检测到", StringComparison.Ordinal)))
         {
             _problems.Add("未检测到战斗开始（录像可能从战斗中途开始）");
@@ -580,21 +527,21 @@ public sealed class EventAnalyzer
         }
 
         BattleEvent e;
-        _pendingCards.RemoveAll(p => turn.Start - p.Time > CardMatchSeconds);
-        if (marker == "ally-extra" && _pendingCards.FirstOrDefault(p => p.UnitId is null || p.UnitId == unit) is { } card)
+        _pressUltimates.RemoveAll(p => turn.Start - p.Time > PressMatchSeconds);
+        if (marker == "ally-extra" && _pressUltimates.FirstOrDefault(p => p.UnitId is null || p.UnitId == unit) is { } pressed)
         {
-            // The ultimate whose card was seen is now in the current cell: same action.
-            _pendingCards.Remove(card);
-            card.UnitId ??= unit;
-            card.Notes.Add("进入当前格等待释放");
-            turn.Event = card;
-            Fill(turn, card);
-            Trace.Add($"{turn.Start:0.00} 四角星回合是 {card.Index} 的插入卡终结技，单位 {card.UnitId}");
+            // R52: the ultimate released from the team bar is now in the current cell waiting for release: same action.
+            _pressUltimates.Remove(pressed);
+            pressed.UnitId ??= unit;
+            pressed.Notes.Add("进入当前格等待释放");
+            turn.Event = pressed;
+            Fill(turn, pressed);
+            Trace.Add($"{turn.Start:0.00} 四角星回合是 {pressed.Index} 的终结技（队伍栏熄灭），单位 {pressed.UnitId}");
             return null;
         }
 
-        // A star turn without a card is an extra action of another kind (not every extra action is an ultimate:
-        // ultimates are started by their key, which shows the card), so its skill stays unknown.
+        // R14: a star turn with no team-bar press is an extra action of another kind, so its skill stays unknown. A
+        // press confirmed later can still make it an ultimate (R52, OnPress).
         if (marker == "ally-extra")
         {
             _extra++;
@@ -661,7 +608,7 @@ public sealed class EventAnalyzer
         var change = Emit(BattleEventKind.PhaseChange, time);
         _segment++;
         (_main, _extra) = (0, 0);
-        _pendingCards.Clear();
+        _pressUltimates.Clear();
         foreach (var e in moved)
         {
             if (e.StepKind == AxisRecognizer.StepKind.Main)
@@ -684,7 +631,7 @@ public sealed class EventAnalyzer
     private BattleEvent NewSegment(BattleEventKind kind, double time)
     {
         EndTurn();
-        _pendingCards.Clear();
+        _pressUltimates.Clear();
         var e = Emit(kind, time);
         _segment++;
         (_main, _extra) = (0, 0);
