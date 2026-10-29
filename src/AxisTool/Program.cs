@@ -124,8 +124,9 @@ internal static class Program
               axis test rerun <测试目录>                            用当前知识库重跑同一段，另存为修正后结果（原始结果不变）
 
             视频
-              axis record <B站链接> [--start 1:14] [--end 2:30] [--fps 15] [--out 目录]
-                                    （开发用：在屏幕外的录制窗口里播放并按每秒 15 帧录下这一段，保存为 recording.avi + recording_info.txt；
+              axis record <B站链接> [--start 1:14] [--end 2:30] [--method auto|download|capture] [--fps 15] [--out 目录]
+                                    （开发用：在屏幕外的录制窗口里打开视频页，先只下载这一段的画面流（recording.mp4，从起点前最近的关键帧开始，
+                                      最高 1080P、30 帧），不行再播放并按每秒 --fps 帧录屏（recording.avi）；另存 recording_info.txt；
                                       使用启动器里登录过的录制器浏览器；
                                       默认保存到 <数据目录>/recordings/）
               axis video probe <视频>
@@ -1521,9 +1522,17 @@ internal static class Program
             }
         });
 
+        var method = args.Get("method") switch
+        {
+            null or "auto" => RecordingMethod.Auto,
+            "download" => RecordingMethod.Download,
+            "capture" => RecordingMethod.Capture,
+            var other => throw new UsageException($"--method 只能是 auto、download 或 capture（收到 {other}）。"),
+        };
         var request = new RecordingRequest(link, start ?? 0, end, outDir, RecorderPaths.DefaultBrowserDataFolder)
         {
             OutputFps = args.Double("fps", 15),
+            Method = method,
         };
         var result = BilibiliRecorder.RecordOnNewThread(request, progress, cts.Token);
         Console.WriteLine(result.Message);

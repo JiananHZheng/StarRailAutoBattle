@@ -47,7 +47,7 @@ public partial class MainWindow
 
     private void ShowAccount(bool signedIn)
     {
-        BiliAccountText.Text = signedIn ? "B 站登录：已登录（录制可用 1080P）" : "B 站登录：未登录（录制只有 360P）";
+        BiliAccountText.Text = signedIn ? "B 站登录：已登录（可用 1080P）" : "B 站登录：未登录（下载最高 480P，录屏只有 360P）";
         BiliLoginButton.Visibility = signedIn ? Visibility.Collapsed : Visibility.Visible;
         BiliLogoutButton.Visibility = signedIn ? Visibility.Visible : Visibility.Collapsed;
     }
@@ -60,7 +60,7 @@ public partial class MainWindow
 
     private async void BiliLogoutButton_Click(object sender, RoutedEventArgs e)
     {
-        var answer = MessageBox.Show(this, "退出后，录制会回到未登录的 360P。确定退出本程序里的 B 站登录吗？（不影响 Edge 浏览器里的登录）",
+        var answer = MessageBox.Show(this, "退出后，视频会回到未登录的 480P 以下。确定退出本程序里的 B 站登录吗？（不影响 Edge 浏览器里的登录）",
             "退出 B 站登录", MessageBoxButton.OKCancel, MessageBoxImage.Question);
         if (answer != MessageBoxResult.OK)
         {
@@ -186,6 +186,7 @@ public partial class MainWindow
             string sourceLabel;
             double recognizeStart;
             double? recognizeEnd;
+            var fileStart = 0.0;
             if (link is not null)
             {
                 SetVideoStatus(StatusKind.Busy, "正在录制…", "正在后台打开 B 站页面（不会显示窗口）。", progress: -1);
@@ -207,9 +208,12 @@ public partial class MainWindow
                 ShowAccount(recording.SignedIn);
                 info.AppendLine($"录制结果：{recording.Message}{(recording.SignedIn ? "（已登录）" : "（未登录）")}详见 {BilibiliRecorder.InfoFileName}");
                 videoPath = recording.VideoPath!;
-                // The recording's timeline starts at the requested start, so the whole file is recognized.
-                (recognizeStart, recognizeEnd) = (0, null);
-                sourceLabel = $"B 站 {recording.VideoId}，视频 {TimeText.Format(recording.RecordedStart)}–{TimeText.Format(recording.RecordedEnd)}（录制文件 {BilibiliRecorder.VideoFileName}，文件时间 0 = 视频 {TimeText.Format(recording.RecordedStart)}）";
+                fileStart = recording.FileStart;
+                // A capture starts at the requested start; a download starts on the key frame at or before it, so the
+                // requested span is cut out of the file's timeline.
+                recognizeStart = Math.Max(0, (start ?? 0) - fileStart);
+                recognizeEnd = end is { } we ? we - fileStart : null;
+                sourceLabel = $"B 站 {recording.VideoId}，视频 {TimeText.Format(Math.Max(recording.RecordedStart, start ?? 0))}–{TimeText.Format(end is { } se ? Math.Min(se, recording.RecordedEnd) : recording.RecordedEnd)}（{(recording.Downloaded ? "下载" : "录制")}文件 {IOPath.GetFileName(videoPath)}，文件时间 0 = 视频 {TimeText.Format(fileStart)}）";
             }
             else
             {
@@ -227,7 +231,7 @@ public partial class MainWindow
             var progress = new Progress<double>(f => VideoProgress.Value = f * 100);
             var result = await Task.Run(
                 () => VideoRecognition.Run(kb, new Recognizer(kb), videoPath, SampleInterval, recognizeStart, recognizeEnd, sourceLabel, progress, token, runDir,
-                    timeOffset: link is not null ? start ?? 0 : 0),
+                    timeOffset: fileStart),
                 token);
             var header = ResultText.Header(kb, "行动轴识别结果（工具首次生成，原始结果只读；修改请用“编辑结果”打开副本）", "视频");
             VideoRunFiles.WriteResult(runDir, result with { Text = header + Environment.NewLine + result.Text });
@@ -269,13 +273,15 @@ public partial class MainWindow
         var (text, value) = p.Stage switch
         {
             RecordingStage.Opening => ("正在打开 B 站页面…", -1.0),
-            RecordingStage.Preparing => ("正在关闭弹幕、选择可用的最高清晰度…", -1.0),
+            RecordingStage.Preparing => ("正在查找可用的最高清晰度…", -1.0),
+            RecordingStage.Downloading => ($"下载中 {TimeText.Format(p.MediaTime)} / {TimeText.Format(p.End)}（只下载所选时间段的画面）",
+                p.End > p.Start ? Math.Clamp((p.MediaTime - p.Start) / (p.End - p.Start), 0, 1) * 100 : -1.0),
             RecordingStage.Seeking => ($"正在跳转到起点 {TimeText.Format(p.Start)}…", -1.0),
             RecordingStage.Recording => ($"录制中 {TimeText.Format(p.MediaTime)} / {TimeText.Format(p.End)}（后台放慢播放以截满每秒 15 帧）",
                 p.End > p.Start ? Math.Clamp((p.MediaTime - p.Start) / (p.End - p.Start), 0, 1) * 100 : -1.0),
             _ => ("正在保存录制文件…", -1.0),
         };
-        SetVideoStatus(StatusKind.Busy, "正在录制…", text, value);
+        SetVideoStatus(StatusKind.Busy, p.Stage == RecordingStage.Downloading ? "正在下载…" : "正在录制…", text, value);
     }
 
     private void EditResultButton_Click(object sender, RoutedEventArgs e)

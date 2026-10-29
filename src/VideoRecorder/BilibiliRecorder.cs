@@ -12,14 +12,17 @@ using Cv = OpenCvSharp;
 namespace VideoRecorder;
 
 /// <summary>
-/// Records part of a Bilibili video by playing it in the recorder's own WebView2 window (not logged in, muted,
-/// danmaku off) and capturing that window's picture. Writes recording.avi (Motion-JPEG, constant frame rate,
-/// file time 0 = requested start) and recording_info.txt. Stops and explains instead of working around a login
-/// requirement, a verification, protected (black) video or a changed page.
+/// Gets part of a Bilibili video in the recorder's own WebView2 window (muted, danmaku off). First it downloads just
+/// the needed fragments of the picture stream the player was given, from inside the page (recording.mp4, file time 0 =
+/// the key frame at or before the requested start); when that does not work it plays the video and captures the
+/// window's picture (recording.avi, Motion-JPEG, file time 0 = requested start). Both write recording_info.txt. Stops
+/// and explains instead of working around a login requirement, a verification, protected (DRM or black) video or a
+/// changed page.
 /// </summary>
-public static class BilibiliRecorder
+public static partial class BilibiliRecorder
 {
     public const string VideoFileName = "recording.avi";
+    public const string DownloadFileName = "recording.mp4";
     public const string InfoFileName = "recording_info.txt";
 
     private static readonly TimeSpan NavigationTimeout = TimeSpan.FromSeconds(45);
@@ -191,7 +194,7 @@ public static class BilibiliRecorder
 
     private sealed record MetaInfo(string? Title, string? Uploader, string? Notice, string? Url);
 
-    private sealed class Session(
+    private sealed partial class Session(
         RecordingRequest request, RecorderWindow window, IProgress<RecordingProgress>? progress, CancellationToken token, string runtime)
     {
         private readonly DateTimeOffset _accessTime = DateTimeOffset.Now;
@@ -220,8 +223,24 @@ public static class BilibiliRecorder
             var probe = await WaitForPlayerAsync();
 
             progress?.Report(new RecordingProgress(RecordingStage.Preparing, 0, request.Start, request.End ?? probe.Duration));
-            await EvalStringAsync("__srab.prepare()");
             var account = await AccountAsync();
+            string? downloadProblem = null;
+            if (request.Method != RecordingMethod.Capture)
+            {
+                var download = await TryDownloadAsync(finalUri, videoId, account, probe.Duration);
+                if (download.Result is { } downloaded)
+                {
+                    return downloaded;
+                }
+
+                downloadProblem = download.Problem;
+                if (request.Method == RecordingMethod.Download)
+                {
+                    throw new StopException(RecordingFailure.DownloadFailed, $"下载没有成功：{downloadProblem}。");
+                }
+            }
+
+            await EvalStringAsync("__srab.prepare()");
             var quality = await SelectQualityAsync(account);
             var status = await WaitForStableQualityAsync();
             var duration = status.Duration > 0 ? status.Duration : probe.Duration;
@@ -252,19 +271,8 @@ public static class BilibiliRecorder
             File.Move(capture.TempPath, videoPath, overwrite: false);
             var (size, hash) = await Task.Run(() => (new FileInfo(videoPath).Length, Sha256(videoPath)), token);
 
-            var info = new StringBuilder();
-            info.AppendLine("# 录制说明（由录制工具自动生成）");
-            info.AppendLine($"链接：{request.Link.Url.AbsoluteUri}（已去掉分享参数）");
-            info.AppendLine($"最终页面：{finalUri.GetLeftPart(UriPartial.Path)}");
-            info.AppendLine($"视频编号：{videoId}");
-            info.AppendLine($"标题：{Clean(meta.Title)}");
-            info.AppendLine($"UP 主：{Clean(meta.Uploader)}");
-            info.AppendLine($"页面声明：{(string.IsNullOrWhiteSpace(meta.Notice) ? "（页面上未找到转载声明）" : meta.Notice)}");
-            info.AppendLine($"访问时间：{_accessTime:yyyy-MM-dd HH:mm:ss zzz}");
-            info.AppendLine("使用范围：仅在本地算法沙箱内研究使用，不转载、不上传");
-            info.AppendLine(account.Login
-                ? $"登录状态：已登录（用户在启动器里登录录制器自己的浏览器；大会员：{(account.Vip ? "是" : "否")}；不读取 Edge 浏览器的登录信息）"
-                : "登录状态：未登录（录制器使用自己的浏览器数据，不读取 Edge 浏览器的登录信息）");
+            var info = InfoHeader(finalUri, videoId, meta, account);
+            info.AppendLine("方式：录屏（播放并截取录制窗口的画面）" + (downloadProblem is null ? string.Empty : $"；先尝试了下载，没有成功：{downloadProblem}"));
             info.AppendLine("弹幕：已关闭并隐藏；声音：静音");
             info.AppendLine($"视频清晰度：{capture.SourceWidth}×{capture.SourceHeight}（播放器当前选项：{Clean(activeQuality)}；可选项：{(quality.Options is { Length: > 0 } offered ? string.Join(" / ", offered) : "（未读取到清晰度菜单）")}）");
             info.AppendLine($"录制画面：{capture.Width}×{capture.Height}" + (capture.Shrunk ? "（窗口放不下原始清晰度，画面比原始清晰度小）" : string.Empty));
@@ -299,8 +307,28 @@ public static class BilibiliRecorder
                 Height = capture.Height,
                 RecordedStart = capture.FirstTime,
                 RecordedEnd = capture.LastTime,
+                FileStart = request.Start,
                 SignedIn = account.Login,
             };
+        }
+
+        /// <summary>The lines every recording_info.txt starts with: where the video came from and on what terms.</summary>
+        private StringBuilder InfoHeader(Uri finalUri, string videoId, MetaInfo meta, AccountInfo account)
+        {
+            var info = new StringBuilder();
+            info.AppendLine("# 录制说明（由录制工具自动生成）");
+            info.AppendLine($"链接：{request.Link.Url.AbsoluteUri}（已去掉分享参数）");
+            info.AppendLine($"最终页面：{finalUri.GetLeftPart(UriPartial.Path)}");
+            info.AppendLine($"视频编号：{videoId}");
+            info.AppendLine($"标题：{Clean(meta.Title)}");
+            info.AppendLine($"UP 主：{Clean(meta.Uploader)}");
+            info.AppendLine($"页面声明：{(string.IsNullOrWhiteSpace(meta.Notice) ? "（页面上未找到转载声明）" : meta.Notice)}");
+            info.AppendLine($"访问时间：{_accessTime:yyyy-MM-dd HH:mm:ss zzz}");
+            info.AppendLine("使用范围：仅在本地算法沙箱内研究使用，不转载、不上传");
+            info.AppendLine(account.Login
+                ? $"登录状态：已登录（用户在启动器里登录录制器自己的浏览器；大会员：{(account.Vip ? "是" : "否")}；不读取 Edge 浏览器的登录信息）"
+                : "登录状态：未登录（录制器使用自己的浏览器数据，不读取 Edge 浏览器的登录信息）");
+            return info;
         }
 
         /// <summary>Whether the recorder's own profile is logged in (and has 大会员), as the page itself reports it.</summary>

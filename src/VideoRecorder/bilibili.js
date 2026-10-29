@@ -1,6 +1,7 @@
-// Injected into the recorder's own WebView2 page (never the user's browser). It only reads the player state,
-// hides overlays (danmaku, controls, login prompts) and clicks the player's own buttons. It never logs in,
-// fills a form, solves a verification or reads cookies (logging in is done by the user in the login window).
+// Injected into the recorder's own WebView2 page (never the user's browser). It reads the player state, hides
+// overlays (danmaku, controls, login prompts), clicks the player's own buttons, and can fetch parts of the video stream
+// the player itself was given. It never logs in, fills a form, solves a verification, reads cookies or decrypts
+// anything (logging in is done by the user in the login window; the page's own requests carry that session).
 (() => {
   if (window.__srab) return;
 
@@ -127,6 +128,89 @@
 
     accountResult() {
       return window.__srabAccount || '';
+    },
+
+    // The DASH video streams offered to the player: the page's own play info, or else the same list from Bilibili's
+    // play-URL API asked by the page (with this profile's session). The recorder polls streamsResult().
+    streamsStart() {
+      window.__srabStreams = '';
+      const done = (d, source) => {
+        const dash = d && d.dash;
+        const list = (dash && dash.video) || [];
+        const range = (v, a, b) => { const s = v.SegmentBase || v.segment_base || {}; return s[a] || s[b] || ''; };
+        window.__srabStreams = JSON.stringify({
+          source,
+          drm: !!(d && (d.is_drm || d.drm_type)) || list.some(v => v.widevine_pssh || v.drm_type),
+          duration: d && d.timelength ? d.timelength / 1000 : 0,
+          accept: (d && d.accept_description) || [],
+          videos: list.map(v => ({
+            id: v.id || 0,
+            codecs: v.codecs || '',
+            width: v.width || 0,
+            height: v.height || 0,
+            fps: Number(v.frameRate || v.frame_rate) || 0,
+            bandwidth: v.bandwidth || 0,
+            urls: [v.baseUrl || v.base_url, ...(v.backupUrl || v.backup_url || [])].filter(Boolean),
+            init: range(v, 'Initialization', 'initialization'),
+            index: range(v, 'indexRange', 'index_range'),
+          })),
+        });
+      };
+      const p = window.__playinfo__;
+      if (p && p.data && p.data.dash) { done(p.data, 'playinfo'); return 'ok'; }
+      const s = window.__INITIAL_STATE__ || {};
+      const bvid = s.bvid || (s.videoData && s.videoData.bvid);
+      const cid = s.cid || (s.videoData && s.videoData.cid);
+      if (!bvid || !cid) { done(null, 'none'); return 'ok'; }
+      fetch(`https://api.bilibili.com/x/player/playurl?bvid=${encodeURIComponent(bvid)}&cid=${encodeURIComponent(cid)}&qn=80&fnval=4048&fourk=1`,
+        { credentials: 'include' })
+        .then(r => r.json())
+        .then(j => done(j && j.code === 0 ? j.data : null, 'api'))
+        .catch(() => done(null, 'api-error'));
+      return 'ok';
+    },
+
+    streamsResult() {
+      return window.__srabStreams || '';
+    },
+
+    // Fetches bytes from..to (inclusive) of a stream, trying each address in turn, as base64. Only a partial (206)
+    // answer that starts at `from` and is as long as its Content-Range says is accepted; it may end before `to` (some
+    // mirrors cut long answers), and the recorder asks again for the rest. The recorder polls fetchResult().
+    fetchStart(urls, from, to) {
+      window.__srabFetch = '';
+      const put = o => { window.__srabFetch = JSON.stringify(o); };
+      (async () => {
+        let last = '';
+        for (const u of urls) {
+          try {
+            const r = await fetch(u, { headers: { Range: `bytes=${from}-${to}` } });
+            if (r.status !== 206) { last = 'HTTP ' + r.status; continue; }
+            const m = /^bytes (\d+)-(\d+)\//.exec(r.headers.get('content-range') || '');
+            if (!m || Number(m[1]) !== from || Number(m[2]) > to) { last = '返回的字节范围不对'; continue; }
+            const blob = await r.blob();
+            if (blob.size !== Number(m[2]) - from + 1) { last = '数据不完整'; continue; }
+            const data = await new Promise((ok, fail) => {
+              const f = new FileReader();
+              f.onload = () => ok(String(f.result).split(',')[1] || '');
+              f.onerror = () => fail(f.error);
+              f.readAsDataURL(blob);
+            });
+            put({ ok: true, size: blob.size, data });
+            return;
+          } catch (e) {
+            last = String((e && e.message) || e);
+          }
+        }
+        put({ ok: false, size: 0, error: last });
+      })();
+      return 'ok';
+    },
+
+    fetchResult() {
+      const r = window.__srabFetch || '';
+      if (r) window.__srabFetch = '';
+      return r;
     },
 
     // Highest quality this account may watch: 登录即享 items need a login, 大会员 items need 大会员.
