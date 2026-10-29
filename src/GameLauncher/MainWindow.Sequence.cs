@@ -3,6 +3,8 @@ using System.IO;
 using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 using AxisRecognizer;
@@ -173,6 +175,62 @@ public partial class MainWindow
         UpdateSequenceDirty();
         _sequenceCheckTimer.Stop();
         _sequenceCheckTimer.Start();
+    }
+
+    // R47: typed text gets a space after the index; doubled spaces and unused symbols are not added.
+    private void SequenceEditor_PreviewTextInput(object sender, TextCompositionEventArgs e)
+    {
+        if (e.TextComposition is FrameworkTextComposition ime)
+        {
+            // An IME commit is already in the text when this is raised, so fix it up afterwards.
+            var offset = ime.ResultOffset;
+            var committed = e.Text;
+            Dispatcher.BeginInvoke(DispatcherPriority.Input, () => FixImeCommit(offset, committed));
+            return;
+        }
+
+        var text = SequenceTyping.Filter(SequenceEditor.Text, SequenceEditor.SelectionStart, SequenceEditor.SelectionLength, e.Text);
+        if (text == e.Text)
+        {
+            return;
+        }
+
+        e.Handled = true;
+        if (text.Length > 0)
+        {
+            var start = SequenceEditor.SelectionStart;
+            SequenceEditor.SelectedText = text;
+            SequenceEditor.Select(start + text.Length, 0);
+        }
+    }
+
+    private void FixImeCommit(int offset, string committed)
+    {
+        var current = SequenceEditor.Text;
+        if (offset < 0 || offset + committed.Length > current.Length
+            || string.CompareOrdinal(current, offset, committed, 0, committed.Length) != 0)
+        {
+            return;
+        }
+
+        var without = current.Remove(offset, committed.Length);
+        var text = SequenceTyping.Filter(without, offset, 0, committed);
+        if (text != committed)
+        {
+            SequenceEditor.Select(offset, committed.Length);
+            SequenceEditor.SelectedText = text;
+            SequenceEditor.Select(offset + text.Length, 0);
+        }
+    }
+
+    // The space key does not raise PreviewTextInput in a TextBox.
+    private void SequenceEditor_PreviewKeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.Key == Key.Space && Keyboard.Modifiers is ModifierKeys.None or ModifierKeys.Shift
+            && SequenceTyping.Filter(SequenceEditor.Text, SequenceEditor.SelectionStart, SequenceEditor.SelectionLength, " ").Length == 0)
+        {
+            e.Handled = true;
+        }
     }
 
     private void SequenceNameBox_TextChanged(object sender, TextChangedEventArgs e)
