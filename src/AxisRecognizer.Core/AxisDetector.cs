@@ -121,6 +121,41 @@ public static class AxisDetector
         return cells;
     }
 
+    /// <summary>
+    /// Only the current cell, plus the first main cell under it as a check that this is the axis (an outline alone can
+    /// match by chance during animations). Much cheaper than <see cref="Detect"/>: the event reader needs nothing else.
+    /// </summary>
+    public static List<DetectedCell> DetectCurrent(Mat frame, Rect content, AxisColumn axis)
+    {
+        var h = content.Height;
+        var scale = h / ReferenceHeight;
+        var main = axis.MainCell.ToPixels(content);
+        var current = axis.CurrentCell.ToPixels(content);
+        var left = (int)Math.Round(axis.MaxShiftLeft * h);
+        var right = (int)Math.Round(axis.MaxShiftRight * h);
+        var roiLeft = Math.Max(0, Math.Min(main.X, current.X) - left - 4);
+        var roiRight = Math.Min(frame.Width, Math.Max(main.Right, current.Right) + right + 4);
+        var roiTop = Math.Max(0, current.Y - current.Height / 3);
+        var roiBottom = Math.Min(frame.Height, current.Bottom + current.Height / 4 + (int)(main.Height * 1.9));
+        var roi = new Rect(roiLeft, roiTop, roiRight - roiLeft, roiBottom - roiTop);
+        using var distance = DistanceMap(frame, roi);
+
+        var currentBest = BestMatch(distance, roi, FrameTemplate(current.Width, current.Height, axis.NotchRadius * h, axis.CornerRadius * h),
+            current.Width, current.Height, current.X - left - 3, current.X + right + 3, current.Y - current.Height / 4, current.Y + current.Height / 4);
+        var found = currentBest.Score / scale <= axis.MaxFrameScore;
+        var currentRect = found ? new Rect(currentBest.X, currentBest.Y, current.Width, current.Height) : current;
+        var cells = new List<DetectedCell> { new(SlotKind.Current, 1, currentRect, currentBest.Score / scale) };
+
+        var mainBest = BestMatch(distance, roi, FrameTemplate(main.Width, main.Height, axis.NotchRadius * h, axis.CornerRadius * h),
+            main.Width, main.Height, main.X - left, main.X + right, currentRect.Bottom + 1, currentRect.Bottom + (int)(main.Height * 0.9));
+        if (mainBest.Score / scale <= axis.MaxFrameScore)
+        {
+            cells.Add(new DetectedCell(SlotKind.Main, 2, new Rect(mainBest.X, mainBest.Y, main.Width, main.Height), mainBest.Score / scale));
+        }
+
+        return cells;
+    }
+
     /// <summary>Per-row best frame scores, for calibration and diagnostics.</summary>
     public static List<(int Y, int X, double Score)> ScoreRows(Mat frame, Rect content, AxisColumn axis)
     {
@@ -141,7 +176,7 @@ public static class AxisDetector
         return rows;
     }
 
-    private static Mat DistanceMap(Mat frame, Rect roi)
+    internal static Mat DistanceMap(Mat frame, Rect roi)
     {
         using var region = new Mat(frame, roi);
         using var gray = new Mat();
@@ -202,7 +237,7 @@ public static class AxisDetector
         return points;
     }
 
-    private static (int X, int Y, double Score) BestMatch(Mat distance, Rect roi, List<Point> template, int w, int h, int xMin, int xMax, int yMin, int yMax)
+    internal static (int X, int Y, double Score) BestMatch(Mat distance, Rect roi, List<Point> template, int w, int h, int xMin, int xMax, int yMin, int yMax)
     {
         var best = (X: xMin, Y: yMin, Score: double.MaxValue);
         for (var y = yMin; y <= yMax; y++)

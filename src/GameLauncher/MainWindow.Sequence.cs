@@ -126,6 +126,28 @@ public partial class MainWindow
         CheckSequence();
     }
 
+    /// <summary>Puts a sequence generated from a video into the editor as a new, unsaved sequence.</summary>
+    private void OpenSequenceDraft(string text, string suggestedName)
+    {
+        SequenceTab.IsSelected = true;
+        if (!ConfirmDiscardSequence("填入新生成的序列"))
+        {
+            SequenceSaveText.Text = "生成的序列没有填入（当前序列有未保存的修改）。草稿已保存在识别结果文件夹的 sequence_draft.txt。";
+            return;
+        }
+
+        _sequenceLoadedName = null;
+        _sequenceSavedText = string.Empty;
+        _sequencePickerBusy = true;
+        SequencePicker.SelectedItem = NewSequenceItem;
+        _sequencePickerBusy = false;
+        SequenceNameBox.Text = SequenceFiles.NameError(suggestedName) is null ? suggestedName : string.Empty;
+        SequenceEditor.Text = text;
+        SequenceSaveText.Text = "已填入从视频生成的序列，还没保存。核对后点“保存”。";
+        UpdateSequenceDirty();
+        CheckSequence();
+    }
+
     /// <summary>True when there are no unsaved changes, or the user chose to save or drop them.</summary>
     private bool ConfirmDiscardSequence(string action)
     {

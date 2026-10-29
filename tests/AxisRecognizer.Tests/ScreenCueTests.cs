@@ -98,7 +98,7 @@ public class ScreenCueTests : IDisposable
         foreach (var (shape, ally, color) in new[] { ("dot", true, Teal), ("star", true, Teal), ("dot", false, Red), ("diamond", false, Red) })
         {
             using var crop = Marker(shape, color, new Scalar(40, 30, 90));
-            var g = CueReader.GlyphGeometry(crop);
+            var g = CueReader.GlyphGeometry(crop, ally);
             Assert.NotNull(g);
             Assert.Equal(shape, CueReader.ShapeByGeometry(ally, g.Value.Area));
         }

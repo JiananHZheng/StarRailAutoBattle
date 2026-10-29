@@ -104,7 +104,11 @@ public sealed record ScreenCueFrame(
     /// <summary>Lit boss phase dots (remaining phases); 0 when no boss bar is shown.</summary>
     int PhaseDots = 0,
     /// <summary>Round and remaining action value from the bar under the axis, or null when unclear.</summary>
-    AvBarReading? AvBar = null);
+    AvBarReading? AvBar = null,
+    /// <summary>Ultimates' insert cards right of the current cell, left to right (empty when none or no axis).</summary>
+    IReadOnlyList<Rect>? InsertCards = null,
+    /// <summary>Share of the current cell's pixels that are near white (the turn-start flash whitens most of it).</summary>
+    double CellWhite = 0);
 
 /// <summary>Reads screen cues by comparing crops with the knowledge base's labeled cue samples (no model calls).</summary>
 public sealed partial class CueReader : IDisposable
@@ -321,30 +325,72 @@ public sealed partial class CueReader : IDisposable
     /// The marker glyph: bright teal (ally) or bright red (enemy) pixels, resized to a normalized mask so shapes can
     /// be compared whatever the background. Null mask when too few glyph pixels are visible (flash, cut-in).
     /// </summary>
-    public static (float[]? Mask, int Teal, int Red) GlyphMask(Mat crop)
+    /// <summary>Bright teal and bright red pixels of a marker crop (the caller disposes both).</summary>
+    private static (Mat Teal, Mat Red) GlyphColors(Mat crop)
     {
         using var hsv = new Mat();
         Cv2.CvtColor(crop, hsv, ColorConversionCodes.BGR2HSV);
-        using var teal = new Mat();
+        var teal = new Mat();
         // Measured on the open videos: the teal dot is about H 92–95, S 110–130, V 190–205; the red dot on a purple
-        // background about H 174, S 130, V 190. Purple backgrounds sit near H 150, the dark red battlefield below V 160.
+        // background about H 174, S 130, V 190. Purple backgrounds sit near H 150; the red battlefield of 铁墓 can be
+        // as bright as the red dot, which is why the side is decided at the crop's center only.
         Cv2.InRange(hsv, new Scalar(78, 90, 150), new Scalar(106, 255, 255), teal);
         using var redLow = new Mat();
         Cv2.InRange(hsv, new Scalar(0, 105, 165), new Scalar(12, 255, 255), redLow);
         using var redHigh = new Mat();
         Cv2.InRange(hsv, new Scalar(168, 105, 165), new Scalar(180, 255, 255), redHigh);
-        using var red = new Mat();
+        var red = new Mat();
         Cv2.BitwiseOr(redLow, redHigh, red);
-        var tealCount = Cv2.CountNonZero(teal);
-        var redCount = Cv2.CountNonZero(red);
-        // The main-action dot is small: about 15–25 pixels of a 39×39 crop at 1080p.
-        if (Math.Max(tealCount, redCount) < crop.Width * crop.Height * 0.006)
-        {
-            return (null, tealCount, redCount);
-        }
+        return (teal, red);
+    }
 
-        using var glyph = new Mat();
-        Cv2.BitwiseOr(teal, red, glyph);
+    /// <summary>Pixels of a color mask inside the disk at the crop's center, where every glyph has its core.</summary>
+    private static int CenterCount(Mat mask)
+    {
+        using var disk = new Mat(mask.Size(), MatType.CV_8UC1, Scalar.All(0));
+        Cv2.Circle(disk, new Point(mask.Width / 2, mask.Height / 2), (int)Math.Round(Math.Min(mask.Width, mask.Height) * 0.22), Scalar.All(255), -1);
+        using var inside = new Mat();
+        Cv2.BitwiseAnd(mask, disk, inside);
+        return Cv2.CountNonZero(inside);
+    }
+
+    /// <summary>The marker's side from the glyph's core color: true ally (teal), false enemy (red), null unclear.</summary>
+    private static bool? SideOf(int centerTeal, int centerRed) =>
+        centerTeal >= 6 && centerTeal >= 2 * centerRed ? true
+        : centerRed >= 6 && centerRed >= 2 * centerTeal ? false
+        : null;
+
+    /// <summary>
+    /// The marker glyph: the side's color only (teal or red, decided at the center), resized to a normalized mask so
+    /// shapes can be compared whatever the background. Teal and Red are the center counts. Null mask when the side is
+    /// unclear or too few glyph pixels are visible (flash, cut-in).
+    /// </summary>
+    public static (float[]? Mask, int Teal, int Red) GlyphMask(Mat crop)
+    {
+        var (teal, red) = GlyphColors(crop);
+        using (teal)
+        using (red)
+        {
+            var tealCount = CenterCount(teal);
+            var redCount = CenterCount(red);
+            if (SideOf(tealCount, redCount) is not { } ally)
+            {
+                return (null, tealCount, redCount);
+            }
+
+            var glyph = ally ? teal : red;
+            // The main-action dot is small: about 15–25 pixels of a 39×39 crop at 1080p.
+            if (Cv2.CountNonZero(glyph) < crop.Width * crop.Height * 0.006)
+            {
+                return (null, tealCount, redCount);
+            }
+
+            return (NormalizedMask(glyph), tealCount, redCount);
+        }
+    }
+
+    private static float[]? NormalizedMask(Mat glyph)
+    {
         using var small = new Mat();
         Cv2.Resize(glyph, small, new Size(MaskSize, MaskSize), 0, 0, InterpolationFlags.Area);
         var values = new float[MaskSize * MaskSize];
@@ -367,7 +413,7 @@ public sealed partial class CueReader : IDisposable
         norm = Math.Sqrt(norm);
         if (norm < 1e-6)
         {
-            return (null, tealCount, redCount);
+            return null;
         }
 
         for (var i = 0; i < values.Length; i++)
@@ -375,7 +421,7 @@ public sealed partial class CueReader : IDisposable
             values[i] = (float)(values[i] / norm);
         }
 
-        return (values, tealCount, redCount);
+        return values;
     }
 
     /// <summary>
@@ -383,20 +429,19 @@ public sealed partial class CueReader : IDisposable
     /// how far it reaches along the axes compared with the diagonals — about 1 for a dot, 1.4 for a diamond (corners
     /// on the axes) and well above that for the four-point star.
     /// </summary>
-    public static (double Area, double AxisRatio)? GlyphGeometry(Mat crop)
+    public static (double Area, double AxisRatio)? GlyphGeometry(Mat crop, bool ally)
     {
-        using var hsv = new Mat();
-        Cv2.CvtColor(crop, hsv, ColorConversionCodes.BGR2HSV);
-        using var teal = new Mat();
-        Cv2.InRange(hsv, new Scalar(78, 90, 150), new Scalar(106, 255, 255), teal);
-        using var redLow = new Mat();
-        Cv2.InRange(hsv, new Scalar(0, 105, 165), new Scalar(12, 255, 255), redLow);
-        using var redHigh = new Mat();
-        Cv2.InRange(hsv, new Scalar(168, 105, 165), new Scalar(180, 255, 255), redHigh);
-        using var glyph = new Mat();
-        Cv2.BitwiseOr(redLow, redHigh, glyph);
-        Cv2.BitwiseOr(glyph, teal, glyph);
+        var (teal, red) = GlyphColors(crop);
+        using (teal)
+        using (red)
+        {
+            return CoreGeometry(ally ? teal : red, crop.Width, crop.Height);
+        }
+    }
 
+    private static (double Area, double AxisRatio)? CoreGeometry(Mat glyph, int width, int height)
+    {
+        var crop = glyph;
         using var labels = new Mat();
         using var stats = new Mat();
         using var centroids = new Mat();
@@ -422,7 +467,6 @@ public sealed partial class CueReader : IDisposable
         double cx = centroids.At<double>(core, 0), cy = centroids.At<double>(core, 1);
         double axis = 0, diagonal = 0;
         var area = 0;
-        int width = crop.Width, height = crop.Height;
         for (var y = 0; y < height; y++)
         {
             for (var x = 0; x < width; x++)
@@ -471,7 +515,7 @@ public sealed partial class CueReader : IDisposable
             return new CueReading(CueNames.Marker, null, mask is null ? "none" : null, 0, null, 0);
         }
 
-        bool? ally = teal >= 2 * red ? true : red >= 2 * teal ? false : null;
+        var ally = SideOf(teal, red);
         var ranked = _markerShapes
             .GroupBy(s => s.Shape)
             .Select(g => (Shape: g.Key, Score: g.Max(s => Dot(mask, s.Mask))))
@@ -479,7 +523,7 @@ public sealed partial class CueReader : IDisposable
             .ToList();
         var (shape, score) = ranked[0];
         var secondScore = ranked.Count > 1 ? ranked[1].Score : 0;
-        var geometric = ally is { } a && GlyphGeometry(crop) is { } g ? ShapeByGeometry(a, g.Area) : null;
+        var geometric = ally is { } a && GlyphGeometry(crop, a) is { } g ? ShapeByGeometry(a, g.Area) : null;
         var label = ally is { } side ? LabelOf(side, shape) : null;
         // The geometry is an independent check, so agreeing readings need no extra margin over the second shape.
         var confident = label is not null && geometric == shape && score >= Settings.AcceptScore;
@@ -568,20 +612,23 @@ public sealed partial class CueReader : IDisposable
             phase = ReadPhaseText(text);
         }
 
-        var (brightness, saturation) = (0.0, 0.0);
+        var (brightness, saturation, white) = (0.0, 0.0, 0.0);
         if (axisResult.AxisFound && axisResult.Slots.FirstOrDefault(s => s.Kind == SlotKind.Current) is { } current)
         {
-            (brightness, saturation) = CellBrightness(frame, current.FeatureRect);
+            (brightness, saturation, white) = CellLight(frame, current.FeatureRect);
         }
         else if (lastCurrentCell is { } last)
         {
-            (brightness, saturation) = CellBrightness(frame, last);
+            (brightness, saturation, white) = CellLight(frame, last);
         }
 
         var (bannerLabel, banner, bannerX) = ReadBanner(frame, axisResult.Content);
         return new ScreenCueFrame(marker, phase, brightness, saturation, BattleStartScore(frame, axisResult.Content),
             ReadSelection(frame, axisResult.Content), bannerLabel, banner, bannerX, PhaseDots(frame, axisResult.Content),
-            ReadAvBar(frame, axisResult.Content));
+            ReadAvBar(frame, axisResult.Content),
+            axisResult.AxisFound && axisResult.Slots.FirstOrDefault(s => s.Kind == SlotKind.Current) is { } cell
+                ? FindInsertCards(frame, axisResult.Content, cell.FeatureRect) : null,
+            white);
     }
 
     /// <summary>Area of the basic-attack and skill buttons (bottom right), relative to game height (16:9).</summary>
@@ -818,13 +865,25 @@ public sealed partial class CueReader : IDisposable
     /// <summary>Mean value and saturation (HSV, 0–255) of a rect's inner part.</summary>
     public static (double Value, double Saturation) CellBrightness(Mat frame, Rect cell)
     {
+        var (value, saturation, _) = CellLight(frame, cell);
+        return (value, saturation);
+    }
+
+    /// <summary>
+    /// Mean value and saturation of a rect's inner part, and the share of its pixels that are near white. The turn-start
+    /// flash whitens the whole cell (share high); an ultimate's light beam crossing it only a strip.
+    /// </summary>
+    public static (double Value, double Saturation, double WhiteShare) CellLight(Mat frame, Rect cell)
+    {
         var inner = Geometry.Clamp(new Rect(cell.X + cell.Width / 6, cell.Y + cell.Height / 6, cell.Width * 2 / 3, cell.Height * 2 / 3),
             frame.Width, frame.Height);
         using var crop = new Mat(frame, inner);
         using var hsv = new Mat();
         Cv2.CvtColor(crop, hsv, ColorConversionCodes.BGR2HSV);
         var mean = Cv2.Mean(hsv);
-        return (mean.Val2, mean.Val1);
+        using var white = new Mat();
+        Cv2.InRange(hsv, new Scalar(0, 0, 175), new Scalar(180, 60, 255), white);
+        return (mean.Val2, mean.Val1, Cv2.CountNonZero(white) / (double)(inner.Width * inner.Height));
     }
 
     /// <summary>

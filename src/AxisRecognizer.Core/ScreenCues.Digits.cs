@@ -30,6 +30,8 @@ public sealed partial class CueReader
     /// <summary>"|" is much thinner than any digit ("1" is about 0.33 of its height wide).</summary>
     private const double SeparatorMaxAspect = 0.22;
 
+    private const int MaxBarHeads = 2;
+
     /// <summary>Where the bar can be: the action-axis column, relative to game height (16:9).</summary>
     public static readonly RelRect AvBarSearch = new(0.0, 0.08, 0.24, 0.82);
 
@@ -46,9 +48,12 @@ public sealed partial class CueReader
     {
         using var gray = new Mat();
         Cv2.CvtColor(bar, gray, ColorConversionCodes.BGR2GRAY);
+        // The bar's left end looks the same in every sample, and sliding each one over the axis column was most of the
+        // reading time (31 ms of 9 samples in Release); two are enough to locate it.
         var headWidth = Math.Max(4, (int)(bar.Width * BarHeadShare));
-        using (var head = new Mat(gray, new Rect(0, 0, headWidth, bar.Height)).Clone())
+        if (_barHeads.Count < MaxBarHeads)
         {
+            using var head = new Mat(gray, new Rect(0, 0, headWidth, bar.Height)).Clone();
             head.GetArray(out byte[] pixels);
             _barHeads.Add((pixels, head.Width, head.Height, bar.Width, bar.Height));
         }

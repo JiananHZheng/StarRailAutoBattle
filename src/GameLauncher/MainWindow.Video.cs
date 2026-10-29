@@ -25,6 +25,9 @@ public partial class MainWindow
     private CancellationTokenSource? _videoCts;
     private string? _videoRunDir;
 
+    /// <summary>The last recognized video (file, range, time offset), for generating its 凹分 sequence.</summary>
+    private (string Path, double Start, double? End, double Offset, string Label)? _videoSource;
+
     private async Task RefreshAccountAsync()
     {
         if (BilibiliRecorder.RuntimeVersion() is null)
@@ -167,7 +170,9 @@ public partial class MainWindow
         }
 
         _videoRunDir = runDir;
+        _videoSource = null;
         EditResultButton.IsEnabled = false;
+        MakeSequenceButton.IsEnabled = false;
         OpenRunFolderButton.Visibility = Visibility.Visible;
         _videoCts = new CancellationTokenSource();
         var token = _videoCts.Token;
@@ -236,6 +241,8 @@ public partial class MainWindow
             _storage.Log("video", $"来源={(link is null ? "自录文件" : "链接")} | 帧={result.Frames} | 有行动轴={result.AxisFrames} | 低清晰度={result.LowResolution}");
 
             EditResultButton.IsEnabled = true;
+            _videoSource = (videoPath, recognizeStart, recognizeEnd, link is not null ? start ?? 0 : 0, link?.VideoId ?? IOPath.GetFileNameWithoutExtension(videoPath));
+            MakeSequenceButton.IsEnabled = result.AxisFrames > 0;
             var summary = result.AxisFrames == 0
                 ? $"识别了 {result.Frames} 帧，但都没有找到行动轴（可能不是战斗画面，或画面布局还没有标定）。"
                 : $"识别了 {result.Frames} 帧，其中 {result.AxisFrames} 帧找到行动轴。";
@@ -304,6 +311,82 @@ public partial class MainWindow
         {
             // No program is associated with .txt: fall back to Notepad.
             Process.Start(new ProcessStartInfo("notepad.exe") { ArgumentList = { path }, UseShellExecute = false })?.Dispose();
+        }
+    }
+
+    private async void MakeSequenceButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (_videoSource is not { } source || _videoRunDir is null)
+        {
+            return;
+        }
+
+        KnowledgeBase kb;
+        try
+        {
+            kb = KnowledgeBase.Load(AxisData.KbRoot(AxisData.Resolve(AppContext.BaseDirectory)));
+        }
+        catch (Exception ex) when (ex is InvalidOperationException or IOException or UnauthorizedAccessException or JsonException)
+        {
+            SetVideoStatus(StatusKind.Error, "找不到识别知识库", ex.Message);
+            return;
+        }
+
+        // Optional team, slots 1–4 left to right as in the team bar.
+        var team = new List<string?>();
+        var lookup = ExpectedSequence.KbLookup(kb);
+        foreach (var name in SequenceTeamBox.Text.Split([',', '，', '、', ' ', '　'], StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+        {
+            var found = lookup(name);
+            if (found.UnitId is null)
+            {
+                SetVideoStatus(StatusKind.Error, "请先修正队伍", $"队伍里的“{name}”：{found.Error}");
+                return;
+            }
+
+            team.Add(found.UnitId);
+        }
+
+        if (team.Count > 4)
+        {
+            SetVideoStatus(StatusKind.Error, "请先修正队伍", "队伍最多四个角色。");
+            return;
+        }
+
+        _videoCts = new CancellationTokenSource();
+        var token = _videoCts.Token;
+        SetVideoBusy(true);
+        MakeSequenceButton.IsEnabled = false;
+        SetVideoStatus(StatusKind.Busy, "正在生成凹分序列…", "按画面事件逐帧整理行动顺序（在本机运行，不调用大模型）。", progress: 0);
+        try
+        {
+            var progress = new Progress<double>(f => VideoProgress.Value = f * 100);
+            var result = await Task.Run(
+                () => BattleSequence.Run(kb, source.Path, SampleInterval, source.Start, source.End, source.Offset, progress, token, team), token);
+            var text = BattleSequence.ToSequenceText(kb, result, $"{source.Label}，知识库 v{kb.Version}");
+            // The tool's own draft stays in the run folder; the editor gets a copy to correct.
+            File.WriteAllText(IOPath.Combine(_videoRunDir, "sequence_draft.txt"), text, new UTF8Encoding(false));
+            _storage.Log("video", $"生成凹分序列 | 事件={result.Events.Count} | 问题={result.Problems.Count}");
+            var actions = result.Events.Count(ev => ev.Kind == BattleEventKind.Action);
+            SetVideoStatus(result.Problems.Count > 0 ? StatusKind.Warning : StatusKind.Success, "凹分序列已生成",
+                $"整理出 {actions} 个行动，已填进“凹分序列”页（还没保存）。请核对单位、招式和行号提示后再保存。",
+                note: result.Problems.Count > 0 ? string.Join("；", result.Problems) : null);
+            OpenSequenceDraft(text, $"{source.Label} {DateTime.Now:MMdd-HHmm}");
+        }
+        catch (OperationCanceledException)
+        {
+            SetVideoStatus(StatusKind.Warning, "已取消", "生成凹分序列已取消。");
+        }
+        catch (Exception ex) when (ex is IOException or InvalidDataException or InvalidOperationException or UnauthorizedAccessException)
+        {
+            SetVideoStatus(StatusKind.Error, "生成凹分序列失败", ex.Message);
+        }
+        finally
+        {
+            SetVideoBusy(false);
+            MakeSequenceButton.IsEnabled = _videoSource is not null;
+            _videoCts?.Dispose();
+            _videoCts = null;
         }
     }
 

@@ -69,6 +69,23 @@ public sealed class Recognizer
 
     public int IndexedSamples => _index.Count;
 
+    /// <summary>
+    /// Names a portrait crop that is not an axis cell (e.g. an ultimate's insert card): the confident unit, or null.
+    /// The crop's framing differs from the samples', so this is only trusted with the usual score and margin.
+    /// </summary>
+    public string? NamePortrait(Mat crop)
+    {
+        var ranked = Rank(CellLocator.Feature(crop, null, null, _kb.Settings));
+        if (ranked.Count == 0)
+        {
+            return null;
+        }
+
+        var second = ranked.Count > 1 ? ranked[1].Score : 0;
+        return ranked[0].Score >= _kb.Settings.AcceptScore && ranked[0].Score - second >= _kb.Settings.AcceptMargin
+            && ranked[0].UnitId != KnowledgeBase.EmptyUnitId ? ranked[0].UnitId : null;
+    }
+
     public FrameResult Recognize(Mat frame)
     {
         var watch = Stopwatch.StartNew();
@@ -87,6 +104,27 @@ public sealed class Recognizer
                 && cells.Count(c => c.Kind == SlotKind.Main) >= 2);
         var slots = cells.Select(cell => RecognizeCell(frame, cell)).ToList();
         return new FrameResult(frame.Width, frame.Height, content, layout.Id, null, slots, watch.Elapsed.TotalMilliseconds, axisFound);
+    }
+
+    /// <summary>
+    /// Only the current cell (for the event reader, which needs nothing else): the axis counts as found when the
+    /// current cell's outline matches and a main cell sits right under it. Main cells are located but not recognized.
+    /// </summary>
+    public FrameResult RecognizeCurrent(Mat frame)
+    {
+        var watch = Stopwatch.StartNew();
+        var content = Geometry.DetectContent(frame);
+        var layout = _kb.LayoutFor(content.Width / (double)content.Height);
+        if (layout?.Axis is not { } axis)
+        {
+            return Recognize(frame);
+        }
+
+        var cells = AxisDetector.DetectCurrent(frame, content, axis);
+        var current = cells[0];
+        var axisFound = current.FrameScore <= axis.MaxFrameScore && cells.Count > 1;
+        var slot = RecognizeCell(frame, new CellSpec("current", SlotKind.Current, 1, current.Rect, axis.CurrentFeature, axis.CurrentIgnore, false, current.FrameScore));
+        return new FrameResult(frame.Width, frame.Height, content, layout.Id, null, [slot], watch.Elapsed.TotalMilliseconds, axisFound);
     }
 
     private SlotResult RecognizeCell(Mat frame, CellSpec cell)

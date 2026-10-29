@@ -98,6 +98,15 @@
                             </StackPanel>
                         </Border>
 
+                        <Border Style="{StaticResource Card}">
+                            <StackPanel>
+                                <TextBlock Style="{StaticResource LabelText}" Text="队伍（生成凹分序列用，可选）" />
+                                <TextBox x:Name="SequenceTeamBox" AutomationProperties.Name="队伍，从左到右" />
+                                <TextBlock Style="{StaticResource HelpText}"
+                                           Text="按队伍栏从左到右写四个角色，用逗号或空格隔开，例如：昔涟，长夜月，风堇，记忆主（攻略视频的简介里一般有）。填了以后，队伍栏终结技按钮熄灭时能认出是谁放的终结技；不填时只标“队伍第几位”。" />
+                            </StackPanel>
+                        </Border>
+
                         <WrapPanel Margin="0,4,0,14">
                             <Button x:Name="VideoStartButton" Content="启动" Style="{StaticResource PrimaryButton}" Click="VideoStartButton_Click" Margin="0,0,10,0" />
                             <Button x:Name="VideoCancelButton" Content="取消" Style="{StaticResource SecondaryButton}"
@@ -105,6 +114,9 @@
                             <Button x:Name="EditResultButton" Content="编辑结果" Style="{StaticResource SecondaryButton}"
                                     Click="EditResultButton_Click" IsEnabled="False" Margin="0,0,10,0"
                                     ToolTip="用记事本等文本编辑器打开识别结果的可编辑副本（result_edit.txt）。工具生成的原始结果保持只读，不会被改动。" />
+                            <Button x:Name="MakeSequenceButton" Content="生成凹分序列" Style="{StaticResource SecondaryButton}"
+                                    Click="MakeSequenceButton_Click" IsEnabled="False" Margin="0,0,10,0"
+                                    ToolTip="按画面事件（回合开始、终结技、换波、转阶段、读数）把这段视频整理成凹分序列，填进“凹分序列”页，核对后再保存。比识别结果慢，3 分钟视频约需 5 分钟。" />
                             <Button x:Name="OpenRunFolderButton" Content="打开结果文件夹" Style="{StaticResource SecondaryButton}"
                                     Click="OpenRunFolderButton_Click" Visibility="Collapsed" />
                         </WrapPanel>
@@ -126,7 +138,7 @@
             </TabItem>
 
             <!-- ==================== Expected sequence ==================== -->
-            <TabItem Header="凹分序列" AutomationProperties.Name="凹分序列页">
+            <TabItem x:Name="SequenceTab" Header="凹分序列" AutomationProperties.Name="凹分序列页">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="0,14,0,0">
                     <StackPanel>
                         <Border Style="{StaticResource Card}">

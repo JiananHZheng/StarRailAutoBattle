@@ -52,6 +52,8 @@ internal static class Program
                     return Video(words.ElementAtOrDefault(1) ?? "", args);
                 case "cue":
                     return Cue(words.ElementAtOrDefault(1) ?? "", args, dataRoot);
+                case "sequence":
+                    return Sequence(args, dataRoot);
                 case "record":
                     return Record(args, dataRoot);
                 case "help":
@@ -132,6 +134,11 @@ internal static class Program
               axis video frames <视频> --out <目录> [--every 1.0] [--start 秒] [--end 秒]
               axis video sheet <视频> --out <图.jpg> [--crop x,y,w,h（画面比例）] [--every 秒] [--start 秒] [--end 秒] [--cols 6] [--width 320]
                                     （开发用：把多帧的同一区域拼成一张图，方便对照画面线索）
+
+            凹分序列
+              axis sequence <视频> [--every 秒，默认 1/15] [--start 秒] [--end 秒] [--out 序列.txt] [--team 一号位,二号位,三号位,四号位] [--trace 1]
+                                    （从攻略视频识别预期序列，输出凹分序列页的格式；读数和视频时间写在 # 注释里）
+                                    （--team 按队伍栏从左到右给出四个角色，用来认出终结技是谁放的；不给时只标“队伍第几位”）
 
             画面线索（行动轴以外的识别：当前格左侧标记、右下角状态文字、回合开始白闪、战斗开始）
               axis cue add <视频> --at 秒[,秒…] --cue marker|phase-text --label 标签 [--label-source claude-assisted|user] [--notes 备注]
@@ -1203,6 +1210,49 @@ internal static class Program
         }
     }
 
+    // ---------------- sequence ----------------
+
+    /// <summary>Strategy video → expected sequence text (the format of the launcher's 凹分序列 page).</summary>
+    private static int Sequence(Args args, string dataRoot)
+    {
+        var video = args.Positional.ElementAtOrDefault(1) ?? throw new UsageException("缺少视频路径。");
+        var kb = KnowledgeBase.Load(KbRoot(dataRoot));
+        double? end = args.Get("end") is { } e ? double.Parse(e, CultureInfo.InvariantCulture) : null;
+        var every = args.Double("every", VideoRecognition.DefaultEvery);
+        var offset = RecordingOffset(video);
+        List<string?>? team = null;
+        if (args.Get("team") is { } teamText)
+        {
+            // Team slots 1–4 left to right, as in the team bar (strategy videos usually list them in the description).
+            var lookup = ExpectedSequence.KbLookup(kb);
+            team = teamText.Split(',', StringSplitOptions.TrimEntries).Select(name =>
+                lookup(name) is { UnitId: { } id } ? id : throw new UsageException($"--team 里的“{name}”：{lookup(name).Error}")).ToList<string?>();
+        }
+
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+        var result = BattleSequence.Run(kb, video, every, args.Double("start", 0), end, offset, team: team);
+        var text = BattleSequence.ToSequenceText(kb, result, $"{OriginOf(video)}，知识库 v{kb.Version}");
+        if (args.Get("out") is { } outFile)
+        {
+            File.WriteAllText(outFile, text, Utf8);
+        }
+
+        Console.Write(text);
+        var check = ExpectedSequence.Parse(text, ExpectedSequence.KbLookup(kb));
+        Console.WriteLine($"# —— 格式检查：{(check.IsValid ? "通过" : "有错误")}，{check.Issues.Count} 条问题；用时 {watch.Elapsed.TotalSeconds:0} 秒");
+        foreach (var issue in check.Issues)
+        {
+            Console.WriteLine("# " + issue);
+        }
+
+        if (args.Get("trace") is not null)
+        {
+            result.Trace.ToList().ForEach(t => Console.WriteLine("# 过程 " + t));
+        }
+
+        return 0;
+    }
+
     // ---------------- cue ----------------
 
     private static int Cue(string sub, Args args, string dataRoot)
@@ -1239,7 +1289,7 @@ internal static class Program
                     foreach (var sample in kb.Cues.Where(c => c.Cue == CueNames.Marker))
                     {
                         using var crop = kb.ReadCue(sample);
-                        var g = CueReader.GlyphGeometry(crop);
+                        var g = CueReader.GlyphGeometry(crop, sample.Label.StartsWith("ally", StringComparison.Ordinal));
                         Console.WriteLine($"{sample.Id}\t{sample.Label}\t{(g is { } v ? $"面积 {v.Area:0.0000}\t轴/斜 {v.AxisRatio:0.00}\t→ {CueReader.ShapeByGeometry(sample.Label.StartsWith("ally", StringComparison.Ordinal), v.Area) ?? "?"}" : "无核心")}");
                     }
                 }
@@ -1347,6 +1397,65 @@ internal static class Program
                 return 0;
             }
 
+            case "bench":
+            {
+                // Developer timing: each reader on its own, on the same frames (decoding not counted).
+                var video = args.Positional.ElementAtOrDefault(2) ?? throw new UsageException("缺少视频路径。");
+                double? end = args.Get("end") is { } e ? double.Parse(e, CultureInfo.InvariantCulture) : null;
+                var recognizer = new Recognizer(kb);
+                using var reader = new CueReader(kb);
+                var times = new Dictionary<string, List<double>>();
+                void Time(string name, Action action)
+                {
+                    var watch = System.Diagnostics.Stopwatch.StartNew();
+                    action();
+                    (times.TryGetValue(name, out var list) ? list : times[name] = []).Add(watch.Elapsed.TotalMilliseconds);
+                }
+
+                foreach (var (_, frame) in VideoFrames.Sample(video, args.Double("every", 0.5), args.Double("start", 0), end))
+                {
+                    using (frame)
+                    {
+                        FrameResult? result = null;
+                        Time("行动轴头像（全部格）", () => result = recognizer.Recognize(frame));
+                        Time("行动轴头像（只当前格）", () => recognizer.RecognizeCurrent(frame));
+                        var content = result!.Content;
+                        Time("当前格标记", () =>
+                        {
+                            if (reader.MarkerRect(result) is { } r)
+                            {
+                                using var crop = new Mat(frame, r);
+                                reader.ReadMarker(crop);
+                            }
+                        });
+                        Time("右下角状态文字", () =>
+                        {
+                            using var crop = new Mat(frame, reader.PhaseTextRect(content, frame.Width, frame.Height));
+                            reader.ReadPhaseText(crop);
+                        });
+                        Time("战斗开始", () => CueReader.BattleStartScore(frame, content));
+                        Time("选招按钮", () => CueReader.ReadSelection(frame, content));
+                        Time("横幅文字", () => reader.ReadBanner(frame, content));
+                        Time("阶段点", () => CueReader.PhaseDots(frame, content));
+                        Time("轮次行动值", () => reader.ReadAvBar(frame, content));
+                        Time("插入卡", () =>
+                        {
+                            if (result.AxisFound && result.Slots.FirstOrDefault(s => s.Kind == SlotKind.Current) is { } cell)
+                            {
+                                CueReader.FindInsertCards(frame, content, cell.FeatureRect);
+                            }
+                        });
+                    }
+                }
+
+                foreach (var (name, list) in times)
+                {
+                    Console.WriteLine($"{name}\t平均 {list.Average():0.0} ms\t最长 {list.Max():0.0} ms\t（{list.Count} 帧）");
+                }
+
+                return 0;
+            }
+
             case "scan":
             {
                 var video = args.Positional.ElementAtOrDefault(2) ?? throw new UsageException("缺少视频路径。");
@@ -1357,7 +1466,7 @@ internal static class Program
                 var tiles = new List<Mat>();
                 Rect? lastCurrent = null;
                 var timing = new List<(double Axis, double Cues)>();
-                Console.WriteLine("时间\t标记\t分数\t次选\t状态文字\t分数\t当前格亮度\t饱和度\t战斗开始\t选招\t横幅\t横幅中心\t阶段点\t轮次|行动值");
+                Console.WriteLine("时间\t标记\t分数\t次选\t状态文字\t分数\t当前格亮度\t饱和度\t战斗开始\t选招\t横幅\t横幅中心\t阶段点\t轮次|行动值\t插入卡");
                 try
                 {
                     foreach (var (time, frame) in VideoFrames.Sample(video, args.Double("every", 0.25), args.Double("start", 0), end))
@@ -1382,13 +1491,14 @@ internal static class Program
                                 cues.PhaseText.Label ?? $"?{cues.PhaseText.Best}",
                                 cues.PhaseText.Score.ToString("0.000", CultureInfo.InvariantCulture),
                                 cues.CellBrightness.ToString("0", CultureInfo.InvariantCulture),
-                                cues.CellSaturation.ToString("0", CultureInfo.InvariantCulture),
+                                cues.CellSaturation.ToString("0", CultureInfo.InvariantCulture) + $" 白{cues.CellWhite:0.00}",
                                 cues.BattleStart.ToString("0.00", CultureInfo.InvariantCulture),
                                 cues.Selection ?? "",
                                 $"{cues.BannerLabel} {cues.Banner.ToString("0.00", CultureInfo.InvariantCulture)}",
                                 cues.BannerX.ToString("0.000", CultureInfo.InvariantCulture),
                                 cues.PhaseDots.ToString(CultureInfo.InvariantCulture),
-                                cues.AvBar is { } av ? $"{av.Text} {av.Score:0.00}" : ""));
+                                cues.AvBar is { } av ? $"{av.Text} {av.Score:0.00}" : "",
+                                cues.InsertCards is { Count: > 0 } cards ? string.Join(" ", cards.Select(c => $"{c.X},{c.Y}")) : ""));
 
                             if (args.Get("probe") is not null && reader.MarkerRect(result) is { } pr)
                             {
@@ -1402,6 +1512,8 @@ internal static class Program
                                 Console.WriteLine($"\t探针：青 {teal} 红 {red} / {crop.Width * crop.Height}，中心 HSV {c.Val0:0} {c.Val1:0} {c.Val2:0}");
                                 var circles = CueReader.ButtonCircles(frame, result.Content);
                                 Console.WriteLine("\t按钮圆：" + (circles.Count == 0 ? "无" : string.Join("  ", circles.Select(b => $"({b.X:0.000},{b.Y:0.000}) r={b.R:0.000}"))));
+                                var ults = CueReader.ReadUltButtons(frame, result.Content);
+                                Console.WriteLine("\t终结技按钮：" + (ults.Count == 0 ? "无" : string.Join("  ", ults.Select(b => $"{b.Slot}号 亮{b.Lit:0.00} y{b.Y:0.000} r{b.R:0.000}"))));
                                 var dots = CueReader.PhaseDotCandidates(frame, result.Content);
                                 Console.WriteLine("\t阶段点候选：" + (dots.Count == 0 ? "无" : string.Join("  ", dots.Select(d => $"({d.X:0.000},{d.Y:0.000}) {d.W}×{d.H} 面积{d.Area} 红{d.Glow}{(d.Lit ? " ✓" : "")}"))));
                                 var reticles = reader.TargetReticles(frame, result.Content);

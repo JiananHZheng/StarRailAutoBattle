@@ -116,6 +116,7 @@ powershell -ExecutionPolicy Bypass -File scripts\publish.ps1
   - `recording.avi` + `recording_info.txt`（链接录制：视频、标题、UP 主、页面转载声明、访问时间、清晰度、实际录到的区间、文件校验值）；
   - `result.txt`（只读原始结果）、`result_detail.tsv`（只读逐格明细）、`result_edit.txt`（点“编辑结果”后生成）、`run_info.txt`（知识库和工具版本、来源、帧数）。
 - 凹分序列：`axis-data\sequences\<名称>.txt`（UTF-8 文本，一份序列一个文件，供自动操作的程序读取）。
+- 视频页识别完成后点“生成凹分序列”：工具生成的原稿存为该运行文件夹的 `sequence_draft.txt`，同时填进“凹分序列”页（核对后由你保存）。
 - 只有视频页在你点“启动”后访问 B 站；不上传任何本机路径，不需要任何 API Key。录到的视频只在本地算法沙箱内研究使用。
 
 ## Windows 人工验收清单
