@@ -16,12 +16,28 @@ public enum RecordingFailure
     InvalidRange,
     WriteFailed,
     Cancelled,
+
+    /// <summary>The stream is DRM-protected; it is never decrypted.</summary>
+    Protected,
+
+    /// <summary>Only downloading was requested and it did not work.</summary>
+    DownloadFailed,
+}
+
+/// <summary>How a clip is obtained: download the stream inside the recorder's page, or capture its playback.</summary>
+public enum RecordingMethod
+{
+    /// <summary>Download; capture the playback when downloading does not work.</summary>
+    Auto,
+    Download,
+    Capture,
 }
 
 public enum RecordingStage
 {
     Opening,
     Preparing,
+    Downloading,
     Seeking,
     Recording,
     Finishing,
@@ -38,7 +54,7 @@ public sealed record RecordingProgress(RecordingStage Stage, double MediaTime, d
 
 /// <param name="Start">Seconds into the video where recording starts.</param>
 /// <param name="End">Seconds where it stops; null = end of the video.</param>
-/// <param name="OutputDirectory">Receives recording.avi and recording_info.txt.</param>
+/// <param name="OutputDirectory">Receives recording.mp4 (downloaded) or recording.avi (captured), and recording_info.txt.</param>
 /// <param name="BrowserDataFolder">The recorder's own browser profile (never the user's Edge profile; nobody logs in).</param>
 public sealed record RecordingRequest(BilibiliLink Link, double Start, double? End, string OutputDirectory, string BrowserDataFolder)
 {
@@ -46,6 +62,8 @@ public sealed record RecordingRequest(BilibiliLink Link, double Start, double? E
     public double OutputFps { get; init; } = 15;
 
     public int JpegQuality { get; init; } = 95;
+
+    public RecordingMethod Method { get; init; } = RecordingMethod.Auto;
 }
 
 public sealed record RecordingResult
@@ -73,6 +91,12 @@ public sealed record RecordingResult
 
     public double RecordedEnd { get; init; }
 
+    /// <summary>Video time of the file's time 0. A download starts on the key frame at or before the requested start.</summary>
+    public double FileStart { get; init; }
+
+    /// <summary>True when the stream was downloaded, false when the playback was captured.</summary>
+    public bool Downloaded { get; init; }
+
     /// <summary>Whether the recorder's own browser profile was logged in to Bilibili.</summary>
     public bool SignedIn { get; init; }
 
@@ -96,6 +120,8 @@ public static class RecordingMessages
         RecordingFailure.Stalled => "视频长时间没有继续播放（可能是网络缓慢或被页面暂停），已停止录制。" + UseOwnFile,
         RecordingFailure.InvalidRange => "所选时间段超出了视频长度。",
         RecordingFailure.WriteFailed => "无法写入录制文件，请检查磁盘空间和文件夹权限。",
+        RecordingFailure.Protected => "这个视频受版权保护（DRM 加密）。程序不会解密，已停止。" + UseOwnFile,
+        RecordingFailure.DownloadFailed => "无法下载这个视频。" + UseOwnFile,
         _ => "录制已取消。",
     };
 }
