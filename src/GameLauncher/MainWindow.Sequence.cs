@@ -177,7 +177,7 @@ public partial class MainWindow
         _sequenceCheckTimer.Start();
     }
 
-    // R47: typed text gets a space after the index; doubled spaces and unused symbols are not added.
+    // R48: typed text gets a space after the index; doubled spaces and unused symbols are not added.
     private void SequenceEditor_PreviewTextInput(object sender, TextCompositionEventArgs e)
     {
         if (e.TextComposition is FrameworkTextComposition ime)

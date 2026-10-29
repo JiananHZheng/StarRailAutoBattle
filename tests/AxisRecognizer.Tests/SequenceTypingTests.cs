@@ -17,7 +17,7 @@ public class SequenceTypingTests
     }
 
     [Fact]
-    public void R47_example_index_space_doubled_space_and_unknown_symbol()
+    public void R48_example_index_space_doubled_space_and_unknown_symbol()
     {
         Assert.Equal("3 昔涟 战技", Type("3", "昔", "涟", " ", " ", "|", "战技"));
     }
@@ -27,13 +27,13 @@ public class SequenceTypingTests
     [InlineData("12 风堇", "1", "2", "风堇")]
     [InlineData("２ 昔涟", "２", "昔涟")]
     [InlineData("0-1 U0003", "0", "-", "1", "U0003")]
-    public void R47_space_goes_after_the_whole_index(string expected, params string[] pieces)
+    public void R48_space_goes_after_the_whole_index(string expected, params string[] pieces)
     {
         Assert.Equal(expected, Type(pieces));
     }
 
     [Fact]
-    public void R47_no_space_inside_an_unfinished_index_or_away_from_line_start()
+    public void R48_no_space_inside_an_unfinished_index_or_away_from_line_start()
     {
         Assert.Equal("3-", Type("3", "-"));
         Assert.Equal("2 昔涟 敌2", Type("2", "昔涟", " ", "敌", "2"));
@@ -41,13 +41,13 @@ public class SequenceTypingTests
     }
 
     [Fact]
-    public void R47_index_space_on_every_line()
+    public void R48_index_space_on_every_line()
     {
         Assert.Equal("1 长夜月\r\n2 昔涟", Type("1", "长夜月", "\r\n", "2", "昔涟"));
     }
 
     [Fact]
-    public void R47_symbols_of_the_format_stay_others_are_dropped()
+    public void R48_symbols_of_the_format_stay_others_are_dropped()
     {
         // R20, R22: condition symbols in both widths.
         Assert.Equal("2 昔涟 敌(-1) @ 轮次=1 行动值=120~160", Type("2", "昔涟", " ", "敌(-1)", " ", "@", " ", "轮次=1", " ", "行动值=120~160"));
@@ -60,13 +60,13 @@ public class SequenceTypingTests
     }
 
     [Fact]
-    public void R47_comments_are_not_filtered()
+    public void R48_comments_are_not_filtered()
     {
         Assert.Equal("1 长夜月 # 看不清  →|", Type("1", "长夜月", " ", "#", " ", "看不清", " ", " ", "→|"));
     }
 
     [Fact]
-    public void R47_space_next_to_an_existing_space_is_not_added()
+    public void R48_space_next_to_an_existing_space_is_not_added()
     {
         // Caret right before a space.
         Assert.Equal(string.Empty, SequenceTyping.Filter("3 昔涟", 1, 0, " "));

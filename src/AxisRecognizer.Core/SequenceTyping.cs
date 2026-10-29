@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 namespace AxisRecognizer;
 
 /// <summary>
-/// Typing help for the hand-written expected sequence (R47): a space after the line's index, no doubled spaces,
+/// Typing help for the hand-written expected sequence (R48): a space after the line's index, no doubled spaces,
 /// and symbols the format never uses are dropped. Comments after # are left alone; pasted text is not filtered.
 /// </summary>
 public static partial class SequenceTyping
@@ -48,7 +48,7 @@ public static partial class SequenceTyping
                 continue;
             }
 
-            // R47: "3" or "3-1" then anything but more of the index gets a space in between.
+            // R48: "3" or "3-1" then anything but more of the index gets a space in between.
             if (!char.IsDigit(c) && c is not ('-' or '－') && IndexRegex().IsMatch(line))
             {
                 result.Append(' ');
